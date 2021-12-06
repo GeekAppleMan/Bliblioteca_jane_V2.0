@@ -8,5 +8,6 @@ namespace Proyecto_Biblioteca.NewFolder1
 {
     class Class1
     {
+        //Hola
     }
 }
