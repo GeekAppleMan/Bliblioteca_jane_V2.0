@@ -133,44 +133,8 @@ namespace Proyecto_Biblioteca
                         string id_alumno = buscar_id_alumno();
                         string fecha_salida = DateTime.Now.Date.ToString("d");
                         string id_devolucion = Convert.ToString(buscar_id_dev());
-                        //bool verificar = false;
-                        //for (int i = 0; i < tabla_pedido.Rows.Count; i++)
-                        //{
-                        //    if (tabla_pedido.Rows[i]["Id_libro"].ToString() == id_libro)
-                        //    {
-                        //        int resul = cantidad_libro(tabla_pedido.Rows[i]["Id_libro"].ToString());
-                        //        if (resul == Convert.ToInt32(tabla_pedido.Rows[i]["Cantidad"].ToString()))
-                        //        {
-                        //            MessageBox.Show("Has agregado todos los libros disponibles");
-                        //        }
-                        //        else
-                        //        {
-                        //            DialogResult result = MessageBox.Show("Seguro que desea añadir el mismo libro?", "Confirmar", MessageBoxButtons.YesNo);
-                        //            if (result == DialogResult.Yes)
-                        //            {
-                        //                //agregar +1 a la cantidad
-                        //                tabla_pedido.Rows[i]["Cantidad"] = Convert.ToInt32(Convert.ToInt32(tabla_pedido.Rows[i]["Cantidad"].ToString()) + 1);
-                        //                grid[1, i].Value = Convert.ToInt32(tabla_pedido.Rows[i]["Cantidad"].ToString());
-                        //            }
-                        //            else if (result == DialogResult.No)
-                        //            {
-                        //            }
-                        //            else if (result == DialogResult.Cancel)
-                        //            {
-                        //            }
-                        //        }
-                        //        verificar = true;
-                        //    }
-                        //}
-                        //if (verificar == true)
-                        //{
-
-                        //}
-                        //else
-                        //{
                         tabla_pedido.Rows.Add(id_libro, cantidad, id_usuario, id_alumno, fecha_salida, id_devolucion);
                         grid.Rows.Add(nombre_libro, cantidad, DateTime.Now.Date.ToString("d"), fecha_Dev.ToString("d"));
-                        //}
                     }
                     else
                     {
