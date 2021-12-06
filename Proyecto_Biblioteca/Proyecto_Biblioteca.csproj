@@ -117,6 +117,7 @@
     <Compile Include="Frm_registrar.Designer.cs">
       <DependentUpon>Frm_registrar.cs</DependentUpon>
     </Compile>
+    <Compile Include="NewFolder1\Class1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Frm_Inicio.resx">
