@@ -102,3 +102,38 @@ C:\Users\Jaime\Desktop\Nueva carpeta\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\P
 C:\Users\Jaime\Desktop\Nueva carpeta\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\obj\Debug\Proyecto_Biblioteca.csproj.CoreCompileInputs.cache
 C:\Users\Jaime\Desktop\Nueva carpeta\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\obj\Debug\Proyecto_Biblioteca.exe
 C:\Users\Jaime\Desktop\Nueva carpeta\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\obj\Debug\Proyecto_Biblioteca.pdb
+C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\bin\Debug\Proyecto_Biblioteca.exe.config
+C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\bin\Debug\Proyecto_Biblioteca.exe
+C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\bin\Debug\Proyecto_Biblioteca.pdb
+C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\bin\Debug\Google.Protobuf.dll
+C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\bin\Debug\MySql.Data.dll
+C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\bin\Debug\System.Buffers.dll
+C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\bin\Debug\System.Memory.dll
+C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\bin\Debug\ZstdNet.dll
+C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\bin\Debug\Google.Protobuf.pdb
+C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\bin\Debug\Google.Protobuf.xml
+C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\bin\Debug\MySql.Data.xml
+C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\bin\Debug\System.Buffers.xml
+C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\bin\Debug\System.Memory.xml
+C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\obj\Debug\Proyecto_Biblioteca.csproj.AssemblyReference.cache
+C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\obj\Debug\Proyecto_Biblioteca.Frm_Historial.resources
+C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\obj\Debug\Proyecto_Biblioteca.Frm_Inicio.resources
+C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\obj\Debug\Proyecto_Biblioteca.Frm_Login.resources
+C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\obj\Debug\Proyecto_Biblioteca.Frm_main.resources
+C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\obj\Debug\Proyecto_Biblioteca.Frm_Prestamos.resources
+C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\obj\Debug\Proyecto_Biblioteca.Frm_registrar.resources
+C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\obj\Debug\Proyecto_Biblioteca.Properties.Resources.resources
+C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\obj\Debug\Proyecto_Biblioteca.csproj.GenerateResource.cache
+C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\obj\Debug\Proyecto_Biblioteca.csproj.CoreCompileInputs.cache
+C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\obj\Debug\Proyecto_Biblioteca.exe
+C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\obj\Debug\Proyecto_Biblioteca.pdb
