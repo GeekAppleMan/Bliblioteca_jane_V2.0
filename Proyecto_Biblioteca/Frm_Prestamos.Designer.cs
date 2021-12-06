@@ -43,15 +43,15 @@ namespace Proyecto_Biblioteca
             this.txt_matricula_alumno = new System.Windows.Forms.TextBox();
             this.lbl_libro = new System.Windows.Forms.Label();
             this.dgv_prestamos = new System.Windows.Forms.DataGridView();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.panel_agragar = new System.Windows.Forms.Panel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.Libro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha_Salida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Devolucion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel_agragar = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel_grid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_prestamos)).BeginInit();
             this.panel_agragar.SuspendLayout();
@@ -243,31 +243,6 @@ namespace Proyecto_Biblioteca
             this.dgv_prestamos.TabIndex = 0;
             this.dgv_prestamos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_prestamos_CellClick);
             // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.HeaderText = "Modificar";
-            this.dataGridViewImageColumn1.Image = global::Proyecto_Biblioteca.Properties.Resources.editar;
-            this.dataGridViewImageColumn1.MinimumWidth = 6;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.Width = 125;
-            // 
-            // dataGridViewImageColumn2
-            // 
-            this.dataGridViewImageColumn2.HeaderText = "Eliminar";
-            this.dataGridViewImageColumn2.Image = global::Proyecto_Biblioteca.Properties.Resources.eliminar;
-            this.dataGridViewImageColumn2.MinimumWidth = 6;
-            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            this.dataGridViewImageColumn2.Width = 125;
-            // 
-            // panel_agragar
-            // 
-            this.panel_agragar.Controls.Add(this.dgv_prestamos);
-            this.panel_agragar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_agragar.Location = new System.Drawing.Point(235, 0);
-            this.panel_agragar.Name = "panel_agragar";
-            this.panel_agragar.Size = new System.Drawing.Size(565, 450);
-            this.panel_agragar.TabIndex = 2;
-            // 
             // Libro
             // 
             this.Libro.HeaderText = "Libro";
@@ -296,6 +271,24 @@ namespace Proyecto_Biblioteca
             this.Devolucion.Name = "Devolucion";
             this.Devolucion.ReadOnly = true;
             // 
+            // panel_agragar
+            // 
+            this.panel_agragar.Controls.Add(this.dgv_prestamos);
+            this.panel_agragar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_agragar.Location = new System.Drawing.Point(235, 0);
+            this.panel_agragar.Name = "panel_agragar";
+            this.panel_agragar.Size = new System.Drawing.Size(565, 450);
+            this.panel_agragar.TabIndex = 2;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.HeaderText = "Modificar";
+            this.dataGridViewImageColumn1.Image = global::Proyecto_Biblioteca.Properties.Resources.editar;
+            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn1.MinimumWidth = 6;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Width = 125;
+            // 
             // Eliminar
             // 
             this.Eliminar.HeaderText = "Eliminar";
@@ -304,6 +297,14 @@ namespace Proyecto_Biblioteca
             this.Eliminar.MinimumWidth = 6;
             this.Eliminar.Name = "Eliminar";
             this.Eliminar.ReadOnly = true;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.HeaderText = "Eliminar";
+            this.dataGridViewImageColumn2.Image = global::Proyecto_Biblioteca.Properties.Resources.eliminar;
+            this.dataGridViewImageColumn2.MinimumWidth = 6;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.Width = 125;
             // 
             // Frm_Prestamos
             // 
@@ -314,6 +315,7 @@ namespace Proyecto_Biblioteca
             this.Controls.Add(this.panel_grid);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_Prestamos";
+            this.Opacity = 0.95D;
             this.Text = "Frm_Prestamos";
             this.Load += new System.EventHandler(this.Frm_Prestamos_Load);
             this.panel_grid.ResumeLayout(false);

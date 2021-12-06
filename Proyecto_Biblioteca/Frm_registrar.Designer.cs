@@ -200,6 +200,7 @@ namespace Proyecto_Biblioteca
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_registrar";
+            this.Opacity = 0.95D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_registrar";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Frm_registrar_FormClosed);

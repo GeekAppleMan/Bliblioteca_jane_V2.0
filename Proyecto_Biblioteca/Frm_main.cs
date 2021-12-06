@@ -118,5 +118,11 @@ namespace Proyecto_Biblioteca
         {
             lbltitulo.Text = "Ajustes";
         }
+
+        private void btn_historial_prestamos_Click(object sender, EventArgs e)
+        {
+            lbltitulo.Text = "Historial";
+            abrir_form(new Frm_Historial());
+        }
     }
 }

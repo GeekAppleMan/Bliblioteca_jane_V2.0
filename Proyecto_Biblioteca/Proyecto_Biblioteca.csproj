@@ -85,8 +85,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class\Cls_Conexion.cs" />
-    <Compile Include="Class\Cls_Prestamos.cs" />
+    <Compile Include="Cls_Conexion.cs" />
+    <Compile Include="Cls_Historial.cs" />
+    <Compile Include="Cls_Prestamos.cs" />
+    <Compile Include="Frm_Historial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Historial.Designer.cs">
+      <DependentUpon>Frm_Historial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,9 +124,11 @@
     <Compile Include="Frm_registrar.Designer.cs">
       <DependentUpon>Frm_registrar.cs</DependentUpon>
     </Compile>
-    <Compile Include="NewFolder1\Class1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Frm_Historial.resx">
+      <DependentUpon>Frm_Historial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_Inicio.resx">
       <DependentUpon>Frm_Inicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -279,5 +288,9 @@
   <ItemGroup>
     <None Include="Resources\eliminar.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_saved_search_16890.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -213,6 +213,16 @@ namespace Proyecto_Biblioteca.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap folder_saved_search_16890 {
+            get {
+                object obj = ResourceManager.GetObject("folder_saved_search_16890", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icono_menu {
             get {
                 object obj = ResourceManager.GetObject("icono-menu", resourceCulture);
