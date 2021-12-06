@@ -85,9 +85,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cls_Conexion.cs" />
-    <Compile Include="Cls_Historial.cs" />
-    <Compile Include="Cls_Prestamos.cs" />
+    <Compile Include="Clases\Cls_Conexion.cs" />
+    <Compile Include="Clases\Cls_Historial.cs" />
+    <Compile Include="Clases\Cls_Prestamos.cs" />
     <Compile Include="Frm_Historial.cs">
       <SubType>Form</SubType>
     </Compile>
