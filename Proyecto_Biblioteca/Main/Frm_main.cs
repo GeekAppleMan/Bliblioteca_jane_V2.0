@@ -126,7 +126,8 @@ namespace Proyecto_Biblioteca
         private void btn_historial_prestamos_Click(object sender, EventArgs e)
         {
             lbltitulo.Text = "Historial";
-            
+            abrir_form(new Frm_historial());
+
         }
 
         private void btn_devolucion_Click(object sender, EventArgs e)

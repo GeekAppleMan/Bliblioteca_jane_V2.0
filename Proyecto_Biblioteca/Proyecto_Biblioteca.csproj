@@ -86,13 +86,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\Cls_Conexion.cs" />
-    <Compile Include="Clases\Cls_Historial.cs" />
+    <Compile Include="Clases\Cls_Devoluciones.cs" />
     <Compile Include="Clases\Cls_Prestamos.cs" />
     <Compile Include="Devolucion\Frm_Devolucion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Devolucion\Frm_Devolucion.Designer.cs">
       <DependentUpon>Frm_Devolucion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_historial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_historial.Designer.cs">
+      <DependentUpon>Frm_historial.cs</DependentUpon>
     </Compile>
     <Compile Include="Inicio\Frm_Inicio.cs">
       <SubType>Form</SubType>
@@ -128,6 +134,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Devolucion\Frm_Devolucion.resx">
       <DependentUpon>Frm_Devolucion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_historial.resx">
+      <DependentUpon>Frm_historial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Frm_Inicio.resx">
       <DependentUpon>Frm_Inicio.cs</DependentUpon>
