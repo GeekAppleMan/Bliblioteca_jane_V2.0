@@ -94,10 +94,10 @@
     <Compile Include="Devolucion\Frm_Devolucion.Designer.cs">
       <DependentUpon>Frm_Devolucion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_historial.cs">
+    <Compile Include="Historial\Frm_historial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_historial.Designer.cs">
+    <Compile Include="Historial\Frm_historial.Designer.cs">
       <DependentUpon>Frm_historial.cs</DependentUpon>
     </Compile>
     <Compile Include="Inicio\Frm_Inicio.cs">
@@ -135,7 +135,7 @@
     <EmbeddedResource Include="Devolucion\Frm_Devolucion.resx">
       <DependentUpon>Frm_Devolucion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_historial.resx">
+    <EmbeddedResource Include="Historial\Frm_historial.resx">
       <DependentUpon>Frm_historial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Frm_Inicio.resx">
