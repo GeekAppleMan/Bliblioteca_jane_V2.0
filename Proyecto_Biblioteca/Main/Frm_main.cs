@@ -47,6 +47,8 @@ namespace Proyecto_Biblioteca
                 btnusuarios.TextAlign = ContentAlignment.MiddleRight;
                 btnalumnos.TextAlign = ContentAlignment.MiddleRight;
                 btn_historial_prestamos.TextAlign = ContentAlignment.MiddleRight;
+                btn_devolucion.TextAlign = ContentAlignment.MiddleRight;
+                btn_configuracion.TextAlign = ContentAlignment.MiddleRight; 
                 lbl_jane.Text = "JS";
                 lbl_jane.TextAlign = ContentAlignment.MiddleLeft;
             }
@@ -59,6 +61,8 @@ namespace Proyecto_Biblioteca
                 btnusuarios.TextAlign = ContentAlignment.MiddleCenter;
                 btnalumnos.TextAlign = ContentAlignment.MiddleCenter;
                 btn_historial_prestamos.TextAlign = ContentAlignment.MiddleCenter;
+                btn_devolucion.TextAlign = ContentAlignment.MiddleCenter;
+                btn_configuracion.TextAlign = ContentAlignment.MiddleCenter;
                 lbl_jane.Text = "Jane Software";
                 lbl_jane.TextAlign = ContentAlignment.MiddleCenter;
             }
@@ -122,7 +126,13 @@ namespace Proyecto_Biblioteca
         private void btn_historial_prestamos_Click(object sender, EventArgs e)
         {
             lbltitulo.Text = "Historial";
-            abrir_form(new Frm_Historial());
+            
+        }
+
+        private void btn_devolucion_Click(object sender, EventArgs e)
+        {
+            lbltitulo.Text = "Devoluciones";
+            abrir_form(new Frm_Devoluciones());
         }
     }
 }

@@ -126,7 +126,6 @@ C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V
 C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\bin\Debug\System.Memory.xml
 C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\obj\Debug\Proyecto_Biblioteca.csproj.AssemblyReference.cache
-C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\obj\Debug\Proyecto_Biblioteca.Frm_Historial.resources
 C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\obj\Debug\Proyecto_Biblioteca.Frm_Inicio.resources
 C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\obj\Debug\Proyecto_Biblioteca.Frm_Login.resources
 C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\obj\Debug\Proyecto_Biblioteca.Frm_main.resources
@@ -209,3 +208,4 @@ C:\xampp\htdocs\Repos\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\obj\Debug\Proyec
 C:\xampp\htdocs\Repos\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\obj\Debug\Proyecto_Biblioteca.csproj.CopyComplete
 C:\xampp\htdocs\Repos\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\obj\Debug\Proyecto_Biblioteca.exe
 C:\xampp\htdocs\Repos\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\obj\Debug\Proyecto_Biblioteca.pdb
+C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\obj\Debug\Proyecto_Biblioteca.Frm_Devoluciones.resources

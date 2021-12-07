@@ -1,7 +1,7 @@
 ﻿
 namespace Proyecto_Biblioteca
 {
-    partial class Frm_Historial
+    partial class Frm_Devoluciones
     {
         /// <summary>
         /// Required designer variable.
@@ -42,6 +42,7 @@ namespace Proyecto_Biblioteca
             this.Alumno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha_salida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Devolucion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Devolver = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel_busqueda.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_prestamos)).BeginInit();
@@ -129,7 +130,8 @@ namespace Proyecto_Biblioteca
             this.Usuario,
             this.Alumno,
             this.Fecha_salida,
-            this.Devolucion});
+            this.Devolucion,
+            this.Devolver});
             this.dgv_prestamos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_prestamos.Location = new System.Drawing.Point(0, 0);
             this.dgv_prestamos.Name = "dgv_prestamos";
@@ -176,7 +178,15 @@ namespace Proyecto_Biblioteca
             this.Devolucion.MinimumWidth = 6;
             this.Devolucion.Name = "Devolucion";
             // 
-            // Frm_Historial
+            // Devolver
+            // 
+            this.Devolver.HeaderText = "Devolver";
+            this.Devolver.Image = global::Proyecto_Biblioteca.Properties.Resources.icons8_devolver_libro_96;
+            this.Devolver.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Devolver.MinimumWidth = 6;
+            this.Devolver.Name = "Devolver";
+            // 
+            // Frm_Devoluciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -185,7 +195,7 @@ namespace Proyecto_Biblioteca
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel_busqueda);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Frm_Historial";
+            this.Name = "Frm_Devoluciones";
             this.Opacity = 0.95D;
             this.Text = "Frm_Historial";
             this.panel_busqueda.ResumeLayout(false);
@@ -211,5 +221,6 @@ namespace Proyecto_Biblioteca
         private System.Windows.Forms.DataGridViewTextBoxColumn Alumno;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha_salida;
         private System.Windows.Forms.DataGridViewTextBoxColumn Devolucion;
+        private System.Windows.Forms.DataGridViewImageColumn Devolver;
     }
 }
