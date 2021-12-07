@@ -158,7 +158,7 @@ namespace Proyecto_Biblioteca
         private string buscar_id_libro()
         {
             string id_libro = "";
-            string query = "SELECT Id_libro FROM tb_libro WHERE Codigo_Libro = " + "'" + codigo + "'";
+            string query = "SELECT id_libro FROM tb_libro WHERE codigo_libro = " + "'" + codigo + "'";
             MySqlConnection databaseConnection = new MySqlConnection(connectionString);
             MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
             commandDatabase.CommandTimeout = 60;
@@ -193,7 +193,7 @@ namespace Proyecto_Biblioteca
         private string buscar_id_usuario()
         {
             string id_usuario = "";
-            string query = "SELECT Id_usuario FROM tb_usuarios WHERE Matricula = " + "'" + matricula_usu + "'";
+            string query = "SELECT id_usuario FROM tb_usuarios WHERE matricula = " + "'" + matricula_usu + "'";
             MySqlConnection databaseConnection = new MySqlConnection(connectionString);
             MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
             commandDatabase.CommandTimeout = 60;
@@ -230,7 +230,7 @@ namespace Proyecto_Biblioteca
         private string buscar_id_alumno()
         {
             string id_alumno = "";
-            string query = "SELECT Id_Alumno FROM tb_alumno WHERE Matricula = " + "'" + matricula_alum + "'";
+            string query = "SELECT id_alumno FROM tb_alumno WHERE matricula = " + "'" + matricula_alum + "'";
             MySqlConnection databaseConnection = new MySqlConnection(connectionString);
             MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
             commandDatabase.CommandTimeout = 60;
@@ -276,7 +276,7 @@ namespace Proyecto_Biblioteca
                 DateTime fecha_Dev = fecha_dev.AddDays(dias);
                 for (int i = 0; i < tabla_pedido.Rows.Count; i++)
                 {
-                    string query = "INSERT INTO tb_devolucion (`Id_devolucion`, `Fecha_max_dev`, `Fecha_dev`) VALUES " + "(" + "'" + tabla_pedido.Rows[i]["Id_devolucion"] + "'" + "," + "'" + fecha_Max.ToString("d") + "'" + "," + "'" + fecha_Dev.ToString("d") + "'" + ")";
+                    string query = "INSERT INTO tb_devolucion (`id_devolucion`, `fecha_max_dev`, `fecha_dev`) VALUES " + "(" + "'" + tabla_pedido.Rows[i]["Id_devolucion"] + "'" + "," + "'" + fecha_Max.ToString("d") + "'" + "," + "'" + fecha_Dev.ToString("d") + "'" + ")";
                     MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                     MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                     commandDatabase.CommandTimeout = 60;
@@ -296,7 +296,7 @@ namespace Proyecto_Biblioteca
             int id = 0;
             try
             {
-                string query = "select * from tb_devolucion order by Id_devolucion desc limit 1";
+                string query = "select * from tb_devolucion order by id_devolucion desc limit 1";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;
@@ -325,7 +325,7 @@ namespace Proyecto_Biblioteca
         {
             try
             {
-                string query = "SELECT Estatus FROM tb_libro WHERE Codigo_Libro = " + "'" + codigo + "'";
+                string query = "SELECT estatus FROM tb_libro WHERE codigo_libro = " + "'" + codigo + "'";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;
@@ -364,7 +364,7 @@ namespace Proyecto_Biblioteca
         {
             try
             {
-                string query = "SELECT Id_Alumno FROM tb_alumno WHERE Matricula = " + "'" + matricula_alum + "'";
+                string query = "SELECT id_alumno FROM tb_alumno WHERE matricula = " + "'" + matricula_alum + "'";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;
@@ -400,7 +400,7 @@ namespace Proyecto_Biblioteca
                 for (int i = 0; i < tabla_pedido.Rows.Count; i++)
                 {
                     int resul = 0;
-                    string query = "INSERT INTO tb_prestamo (`Id_libro`, `Cantidad`, `Id_usuario`, `Id_Alumno`, `Fecha_salida`, `Id_devolucion`) VALUES " + "(" + "'" + tabla_pedido.Rows[i]["Id_libro"].ToString() + "'" + "," + "'" + tabla_pedido.Rows[i]["Cantidad"].ToString() + "'" + "," + "'" + tabla_pedido.Rows[i]["Id_usuario"].ToString() + "'" + "," + "'" + tabla_pedido.Rows[i]["Id_Alumno"].ToString() + "'" + "," + "'" + tabla_pedido.Rows[i]["Fecha_salida"].ToString() + "'" + "," + "'" + tabla_pedido.Rows[i]["Id_devolucion"].ToString() + "'" + ")";
+                    string query = "INSERT INTO tb_prestamo (`id_libro`, `cantidad`, `id_usuario`, `id_alumno`, `fecha_salida`, `id_devolucion`) VALUES " + "(" + "'" + tabla_pedido.Rows[i]["Id_libro"].ToString() + "'" + "," + "'" + tabla_pedido.Rows[i]["Cantidad"].ToString() + "'" + "," + "'" + tabla_pedido.Rows[i]["Id_usuario"].ToString() + "'" + "," + "'" + tabla_pedido.Rows[i]["Id_Alumno"].ToString() + "'" + "," + "'" + tabla_pedido.Rows[i]["Fecha_salida"].ToString() + "'" + "," + "'" + tabla_pedido.Rows[i]["Id_devolucion"].ToString() + "'" + ")";
                     MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                     MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                     commandDatabase.CommandTimeout = 60;
@@ -426,7 +426,7 @@ namespace Proyecto_Biblioteca
         {
             try
             {
-                string query = "UPDATE `tb_libro` SET Estatus= " + "'" + "2" + "'" + " WHERE Id_libro = " + "'" + id_libro + "'" + " AND Cantidad_libros = 0";
+                string query = "UPDATE `tb_libro` SET estatus= " + "'" + "2" + "'" + " WHERE id_libro = " + "'" + id_libro + "'" + " AND cantidad_libros = 0";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;
@@ -445,7 +445,7 @@ namespace Proyecto_Biblioteca
             int resul = buscar_cantidad_libro(id_libro) - cantidad;
             try
             {
-                string query = "UPDATE `tb_libro` SET Cantidad_libros= " + "'" + resul + "'" + " WHERE Id_libro = " + "'" + id_libro + "'";
+                string query = "UPDATE `tb_libro` SET cantidad_libros= " + "'" + resul + "'" + " WHERE id_libro = " + "'" + id_libro + "'";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;
@@ -467,7 +467,7 @@ namespace Proyecto_Biblioteca
            
             try
             {
-                string query = "SELECT Cantidad_libros FROM tb_libro WHERE Id_libro = " + "'" + id_libro + "'";
+                string query = "SELECT cantidad_libros FROM tb_libro WHERE id_libro = " + "'" + id_libro + "'";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;
@@ -500,7 +500,7 @@ namespace Proyecto_Biblioteca
             int cantidad = 0;
             try
             {
-                string query = "SELECT Cantidad_libros FROM tb_libro WHERE Id_libro = " + "'" + id_libro + "'";
+                string query = "SELECT cantidad_libros FROM tb_libro WHERE id_libro = " + "'" + id_libro + "'";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;
@@ -533,7 +533,7 @@ namespace Proyecto_Biblioteca
             string Nombre_libro = "";
             try
             {
-                string query = "SELECT Nombre FROM tb_libro WHERE Codigo_Libro = " + "'" + codigo + "'";
+                string query = "SELECT nombre FROM tb_libro WHERE codigo_libro = " + "'" + codigo + "'";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;
