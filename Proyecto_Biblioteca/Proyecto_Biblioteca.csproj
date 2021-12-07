@@ -88,28 +88,28 @@
     <Compile Include="Clases\Cls_Conexion.cs" />
     <Compile Include="Clases\Cls_Historial.cs" />
     <Compile Include="Clases\Cls_Prestamos.cs" />
-    <Compile Include="Frm_Historial.cs">
+    <Compile Include="Historial\Frm_Historial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Historial.Designer.cs">
+    <Compile Include="Historial\Frm_Historial.Designer.cs">
       <DependentUpon>Frm_Historial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Inicio.cs">
+    <Compile Include="Inicio\Frm_Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Inicio.Designer.cs">
+    <Compile Include="Inicio\Frm_Inicio.Designer.cs">
       <DependentUpon>Frm_Inicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_login.cs">
+    <Compile Include="Login\Frm_login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_login.Designer.cs">
+    <Compile Include="Login\Frm_login.Designer.cs">
       <DependentUpon>Frm_login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_main.cs">
+    <Compile Include="Main\Frm_main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_main.Designer.cs">
+    <Compile Include="Main\Frm_main.Designer.cs">
       <DependentUpon>Frm_main.cs</DependentUpon>
     </Compile>
     <Compile Include="Prestamos\Frm_Prestamos.cs">
@@ -126,16 +126,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Frm_Historial.resx">
+    <EmbeddedResource Include="Historial\Frm_Historial.resx">
       <DependentUpon>Frm_Historial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Inicio.resx">
+    <EmbeddedResource Include="Inicio\Frm_Inicio.resx">
       <DependentUpon>Frm_Inicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_login.resx">
+    <EmbeddedResource Include="Login\Frm_login.resx">
       <DependentUpon>Frm_login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_main.resx">
+    <EmbeddedResource Include="Main\Frm_main.resx">
       <DependentUpon>Frm_main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Prestamos\Frm_Prestamos.resx">
