@@ -112,16 +112,16 @@
     <Compile Include="Frm_main.Designer.cs">
       <DependentUpon>Frm_main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Prestamos.cs">
+    <Compile Include="Prestamos\Frm_Prestamos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Prestamos.Designer.cs">
+    <Compile Include="Prestamos\Frm_Prestamos.Designer.cs">
       <DependentUpon>Frm_Prestamos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_registrar.cs">
+    <Compile Include="Usuarios\Frm_registrar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_registrar.Designer.cs">
+    <Compile Include="Usuarios\Frm_registrar.Designer.cs">
       <DependentUpon>Frm_registrar.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -138,10 +138,10 @@
     <EmbeddedResource Include="Frm_main.resx">
       <DependentUpon>Frm_main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Prestamos.resx">
+    <EmbeddedResource Include="Prestamos\Frm_Prestamos.resx">
       <DependentUpon>Frm_Prestamos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_registrar.resx">
+    <EmbeddedResource Include="Usuarios\Frm_registrar.resx">
       <DependentUpon>Frm_registrar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
