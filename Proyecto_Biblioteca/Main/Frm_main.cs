@@ -133,7 +133,7 @@ namespace Proyecto_Biblioteca
         private void btn_devolucion_Click(object sender, EventArgs e)
         {
             lbltitulo.Text = "Devoluciones";
-            abrir_form(new Frm_Devoluciones());
+            abrir_form(new Frm_Devolucion());
         }
     }
 }

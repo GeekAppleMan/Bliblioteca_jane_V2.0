@@ -1,7 +1,7 @@
 ﻿
 namespace Proyecto_Biblioteca
 {
-    partial class Frm_Devoluciones
+    partial class Frm_Devolucion
     {
         /// <summary>
         /// Required designer variable.
@@ -43,6 +43,7 @@ namespace Proyecto_Biblioteca
             this.Fecha_salida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Devolucion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Devolver = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel_busqueda.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_prestamos)).BeginInit();
@@ -94,6 +95,7 @@ namespace Proyecto_Biblioteca
             this.txt_matricula_alumno.Name = "txt_matricula_alumno";
             this.txt_matricula_alumno.Size = new System.Drawing.Size(262, 21);
             this.txt_matricula_alumno.TabIndex = 0;
+            this.txt_matricula_alumno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_matricula_alumno_KeyPress);
             // 
             // lbl_matricula
             // 
@@ -141,6 +143,7 @@ namespace Proyecto_Biblioteca
             this.dgv_prestamos.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dgv_prestamos.Size = new System.Drawing.Size(800, 400);
             this.dgv_prestamos.TabIndex = 2;
+            this.dgv_prestamos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_prestamos_CellClick);
             // 
             // Libro
             // 
@@ -186,7 +189,16 @@ namespace Proyecto_Biblioteca
             this.Devolver.MinimumWidth = 6;
             this.Devolver.Name = "Devolver";
             // 
-            // Frm_Devoluciones
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.HeaderText = "Devolver";
+            this.dataGridViewImageColumn1.Image = global::Proyecto_Biblioteca.Properties.Resources.icons8_devolver_libro_96;
+            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn1.MinimumWidth = 6;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Width = 114;
+            // 
+            // Frm_Devolucion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -195,7 +207,7 @@ namespace Proyecto_Biblioteca
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel_busqueda);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Frm_Devoluciones";
+            this.Name = "Frm_Devolucion";
             this.Opacity = 0.95D;
             this.Text = "Frm_Historial";
             this.panel_busqueda.ResumeLayout(false);
@@ -222,5 +234,6 @@ namespace Proyecto_Biblioteca
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha_salida;
         private System.Windows.Forms.DataGridViewTextBoxColumn Devolucion;
         private System.Windows.Forms.DataGridViewImageColumn Devolver;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
     }
 }

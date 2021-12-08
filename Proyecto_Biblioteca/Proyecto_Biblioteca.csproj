@@ -94,6 +94,12 @@
     <Compile Include="Devolucion\Frm_Devolucion.Designer.cs">
       <DependentUpon>Frm_Devolucion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Devolucion\Frm_devolver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Devolucion\Frm_devolver.Designer.cs">
+      <DependentUpon>Frm_devolver.cs</DependentUpon>
+    </Compile>
     <Compile Include="Historial\Frm_historial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Devolucion\Frm_Devolucion.resx">
       <DependentUpon>Frm_Devolucion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Devolucion\Frm_devolver.resx">
+      <DependentUpon>Frm_devolver.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Historial\Frm_historial.resx">
       <DependentUpon>Frm_historial.cs</DependentUpon>
