@@ -30,18 +30,18 @@ namespace Proyecto_Biblioteca
         private void InitializeComponent()
         {
             this.dgv_prestamos = new System.Windows.Forms.DataGridView();
-            this.txt_matricula_alumno = new System.Windows.Forms.TextBox();
-            this.lbl_matricula = new System.Windows.Forms.Label();
-            this.panel_busqueda = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.button1 = new System.Windows.Forms.Button();
             this.Libro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Alumno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha_salida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Devolucion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_matricula_alumno = new System.Windows.Forms.TextBox();
+            this.lbl_matricula = new System.Windows.Forms.Label();
+            this.panel_busqueda = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_prestamos)).BeginInit();
             this.panel_busqueda.SuspendLayout();
             this.SuspendLayout();
@@ -71,72 +71,6 @@ namespace Proyecto_Biblioteca
             this.dgv_prestamos.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dgv_prestamos.Size = new System.Drawing.Size(800, 400);
             this.dgv_prestamos.TabIndex = 4;
-            // 
-            // txt_matricula_alumno
-            // 
-            this.txt_matricula_alumno.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_matricula_alumno.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txt_matricula_alumno.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_matricula_alumno.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_matricula_alumno.Location = new System.Drawing.Point(355, 16);
-            this.txt_matricula_alumno.Name = "txt_matricula_alumno";
-            this.txt_matricula_alumno.Size = new System.Drawing.Size(262, 21);
-            this.txt_matricula_alumno.TabIndex = 0;
-            // 
-            // lbl_matricula
-            // 
-            this.lbl_matricula.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_matricula.AutoSize = true;
-            this.lbl_matricula.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_matricula.Location = new System.Drawing.Point(114, 14);
-            this.lbl_matricula.Name = "lbl_matricula";
-            this.lbl_matricula.Size = new System.Drawing.Size(220, 23);
-            this.lbl_matricula.TabIndex = 0;
-            this.lbl_matricula.Text = "Matricula del alumno";
-            // 
-            // panel_busqueda
-            // 
-            this.panel_busqueda.Controls.Add(this.button1);
-            this.panel_busqueda.Controls.Add(this.panel2);
-            this.panel_busqueda.Controls.Add(this.txt_matricula_alumno);
-            this.panel_busqueda.Controls.Add(this.lbl_matricula);
-            this.panel_busqueda.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_busqueda.Location = new System.Drawing.Point(0, 0);
-            this.panel_busqueda.Name = "panel_busqueda";
-            this.panel_busqueda.Size = new System.Drawing.Size(800, 50);
-            this.panel_busqueda.TabIndex = 3;
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Location = new System.Drawing.Point(353, 41);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(269, 1);
-            this.panel2.TabIndex = 13;
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.HeaderText = "Devolver";
-            this.dataGridViewImageColumn1.Image = global::Proyecto_Biblioteca.Properties.Resources.icons8_devolver_libro_96;
-            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn1.MinimumWidth = 6;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.Width = 115;
-            // 
-            // button1
-            // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.BackgroundImage = global::Proyecto_Biblioteca.Properties.Resources.folder_saved_search_16890;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(636, 1);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(48, 47);
-            this.button1.TabIndex = 1;
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // Libro
             // 
@@ -174,6 +108,73 @@ namespace Proyecto_Biblioteca
             this.Devolucion.MinimumWidth = 6;
             this.Devolucion.Name = "Devolucion";
             // 
+            // txt_matricula_alumno
+            // 
+            this.txt_matricula_alumno.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_matricula_alumno.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txt_matricula_alumno.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_matricula_alumno.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_matricula_alumno.Location = new System.Drawing.Point(355, 16);
+            this.txt_matricula_alumno.Name = "txt_matricula_alumno";
+            this.txt_matricula_alumno.Size = new System.Drawing.Size(262, 21);
+            this.txt_matricula_alumno.TabIndex = 0;
+            // 
+            // lbl_matricula
+            // 
+            this.lbl_matricula.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_matricula.AutoSize = true;
+            this.lbl_matricula.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_matricula.Location = new System.Drawing.Point(114, 14);
+            this.lbl_matricula.Name = "lbl_matricula";
+            this.lbl_matricula.Size = new System.Drawing.Size(220, 23);
+            this.lbl_matricula.TabIndex = 0;
+            this.lbl_matricula.Text = "Matricula del alumno";
+            // 
+            // panel_busqueda
+            // 
+            this.panel_busqueda.Controls.Add(this.button1);
+            this.panel_busqueda.Controls.Add(this.panel2);
+            this.panel_busqueda.Controls.Add(this.txt_matricula_alumno);
+            this.panel_busqueda.Controls.Add(this.lbl_matricula);
+            this.panel_busqueda.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_busqueda.Location = new System.Drawing.Point(0, 0);
+            this.panel_busqueda.Name = "panel_busqueda";
+            this.panel_busqueda.Size = new System.Drawing.Size(800, 50);
+            this.panel_busqueda.TabIndex = 3;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button1.BackgroundImage = global::Proyecto_Biblioteca.Properties.Resources.folder_saved_search_16890;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(636, 1);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(48, 47);
+            this.button1.TabIndex = 1;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Location = new System.Drawing.Point(353, 41);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(269, 1);
+            this.panel2.TabIndex = 13;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.HeaderText = "Devolver";
+            this.dataGridViewImageColumn1.Image = global::Proyecto_Biblioteca.Properties.Resources.icons8_devolver_libro_96;
+            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn1.MinimumWidth = 6;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Width = 115;
+            // 
             // Frm_historial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -185,6 +186,7 @@ namespace Proyecto_Biblioteca
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_historial";
             this.Text = "Frm_historial";
+            this.Load += new System.EventHandler(this.Frm_historial_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_prestamos)).EndInit();
             this.panel_busqueda.ResumeLayout(false);
             this.panel_busqueda.PerformLayout();

@@ -12,9 +12,21 @@ namespace Proyecto_Biblioteca
 {
     public partial class Frm_historial : Form
     {
+        Proyecto_Biblioteca.Clases.Cls_Historial obj = new Proyecto_Biblioteca.Clases.Cls_Historial();
         public Frm_historial()
         {
             InitializeComponent();
+        }
+
+        private void Frm_historial_Load(object sender, EventArgs e)
+        {
+           
+            obj.buscar(dgv_prestamos, txt_matricula_alumno.Text);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            obj.buscar(dgv_prestamos, txt_matricula_alumno.Text);
         }
     }
 }
