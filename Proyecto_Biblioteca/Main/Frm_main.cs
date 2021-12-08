@@ -105,6 +105,7 @@ namespace Proyecto_Biblioteca
 
         private void btnlibros_Click(object sender, EventArgs e)
         {
+            abrir_form(new Proyecto_Biblioteca.Libros.Frm_libros());
             lbltitulo.Text = "Libros";
         }
 

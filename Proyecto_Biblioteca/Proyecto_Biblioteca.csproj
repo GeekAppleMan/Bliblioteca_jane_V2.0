@@ -113,6 +113,12 @@
     <Compile Include="Inicio\Frm_Inicio.Designer.cs">
       <DependentUpon>Frm_Inicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Libros\Frm_libros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Libros\Frm_libros.Designer.cs">
+      <DependentUpon>Frm_libros.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login\Frm_login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Frm_Inicio.resx">
       <DependentUpon>Frm_Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Libros\Frm_libros.resx">
+      <DependentUpon>Frm_libros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\Frm_login.resx">
       <DependentUpon>Frm_login.cs</DependentUpon>
