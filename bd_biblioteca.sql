@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-12-2021 a las 07:11:33
+-- Tiempo de generación: 09-12-2021 a las 20:13:43
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.12
 
@@ -59,7 +59,10 @@ CREATE TABLE `tb_devolucion` (
 --
 
 INSERT INTO `tb_devolucion` (`id_devolucion`, `fecha_max_dev`, `fecha_dev`) VALUES
-(1, '09/12/2021', '07/12/2021');
+(3, '12/12/2021', '10/12/2021'),
+(4, '12/12/2021', '10/12/2021'),
+(5, '12/12/2021', '10/12/2021'),
+(6, '15/12/2021', '13/12/2021');
 
 -- --------------------------------------------------------
 
@@ -104,8 +107,8 @@ CREATE TABLE `tb_libro` (
 --
 
 INSERT INTO `tb_libro` (`id_libro`, `codigo_libro`, `cantidad_libros`, `nombre`, `autor`, `genero`, `pais_autor`, `no_pag`, `año_edicion`, `estatus`) VALUES
-(1, '7501055307906', 0, 'Harry potter', 'prueba', 'prueba', 'a', 0, '2000', 2),
-(2, '7501013101408', 3, 'harry potter 2', 'prueba', 'prueba', 'prueba', 200, '2001', 1);
+(1, '7501055307906', 15, 'Harry potter', 'prueba', 'prueba', 'a', 20, '2000', 1),
+(2, '7501013101408', 16, 'harry potter 2', 'prueba', 'prueba', 'prueba', 200, '2001', 1);
 
 -- --------------------------------------------------------
 
@@ -128,7 +131,9 @@ CREATE TABLE `tb_prestamo` (
 --
 
 INSERT INTO `tb_prestamo` (`id_prestamo`, `id_libro`, `cantidad`, `id_usuario`, `id_alumno`, `fecha_salida`, `id_devolucion`) VALUES
-(67, 1, 2, 1, 1, '06/12/2021', 1);
+(72, 1, 2, 1, 1, '07/12/2021', 4),
+(73, 2, 2, 1, 1, '07/12/2021', 5),
+(74, 2, 1, 1, 1, '07/12/2021', 6);
 
 -- --------------------------------------------------------
 
@@ -228,7 +233,7 @@ ALTER TABLE `tb_libro`
 -- AUTO_INCREMENT de la tabla `tb_prestamo`
 --
 ALTER TABLE `tb_prestamo`
-  MODIFY `id_prestamo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+  MODIFY `id_prestamo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
 
 --
 -- AUTO_INCREMENT de la tabla `tb_usuarios`
