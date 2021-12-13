@@ -30,7 +30,7 @@ namespace Proyecto_Biblioteca.Devolucion
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txt_matricula_alumno = new System.Windows.Forms.TextBox();
+            this.txt_codigo_libro = new System.Windows.Forms.TextBox();
             this.lbl_matricula = new System.Windows.Forms.Label();
             this.btnaceptar = new System.Windows.Forms.Button();
             this.btncancelar = new System.Windows.Forms.Button();
@@ -45,16 +45,16 @@ namespace Proyecto_Biblioteca.Devolucion
             this.panel2.Size = new System.Drawing.Size(269, 1);
             this.panel2.TabIndex = 16;
             // 
-            // txt_matricula_alumno
+            // txt_codigo_libro
             // 
-            this.txt_matricula_alumno.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_matricula_alumno.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txt_matricula_alumno.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_matricula_alumno.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_matricula_alumno.Location = new System.Drawing.Point(36, 110);
-            this.txt_matricula_alumno.Name = "txt_matricula_alumno";
-            this.txt_matricula_alumno.Size = new System.Drawing.Size(262, 21);
-            this.txt_matricula_alumno.TabIndex = 0;
+            this.txt_codigo_libro.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_codigo_libro.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txt_codigo_libro.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_codigo_libro.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_codigo_libro.Location = new System.Drawing.Point(36, 110);
+            this.txt_codigo_libro.Name = "txt_codigo_libro";
+            this.txt_codigo_libro.Size = new System.Drawing.Size(262, 21);
+            this.txt_codigo_libro.TabIndex = 0;
             // 
             // lbl_matricula
             // 
@@ -75,6 +75,7 @@ namespace Proyecto_Biblioteca.Devolucion
             this.btnaceptar.TabIndex = 1;
             this.btnaceptar.Text = "Devolver";
             this.btnaceptar.UseVisualStyleBackColor = true;
+            this.btnaceptar.Click += new System.EventHandler(this.btnaceptar_Click);
             // 
             // btncancelar
             // 
@@ -95,7 +96,7 @@ namespace Proyecto_Biblioteca.Devolucion
             this.Controls.Add(this.btncancelar);
             this.Controls.Add(this.btnaceptar);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.txt_matricula_alumno);
+            this.Controls.Add(this.txt_codigo_libro);
             this.Controls.Add(this.lbl_matricula);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_devolver";
@@ -110,7 +111,7 @@ namespace Proyecto_Biblioteca.Devolucion
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox txt_matricula_alumno;
+        private System.Windows.Forms.TextBox txt_codigo_libro;
         private System.Windows.Forms.Label lbl_matricula;
         private System.Windows.Forms.Button btnaceptar;
         private System.Windows.Forms.Button btncancelar;

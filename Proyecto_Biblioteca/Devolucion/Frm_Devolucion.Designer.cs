@@ -222,10 +222,8 @@ namespace Proyecto_Biblioteca
 
         private System.Windows.Forms.Panel panel_busqueda;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dgv_prestamos;
         private System.Windows.Forms.Label lbl_matricula;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox txt_matricula_alumno;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Libro;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
@@ -235,5 +233,7 @@ namespace Proyecto_Biblioteca
         private System.Windows.Forms.DataGridViewTextBoxColumn Devolucion;
         private System.Windows.Forms.DataGridViewImageColumn Devolver;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        public System.Windows.Forms.DataGridView dgv_prestamos;
+        public System.Windows.Forms.TextBox txt_matricula_alumno;
     }
 }

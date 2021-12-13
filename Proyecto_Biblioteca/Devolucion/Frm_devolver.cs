@@ -21,5 +21,12 @@ namespace Proyecto_Biblioteca.Devolucion
         {
             this.Close();
         }
+
+        private void btnaceptar_Click(object sender, EventArgs e)
+        {
+            Cls_Historial obj_historial = new Cls_Historial();
+            obj_historial.regresar_libro(txt_codigo_libro.Text);
+            txt_codigo_libro.Text = "";
+        }
     }
 }

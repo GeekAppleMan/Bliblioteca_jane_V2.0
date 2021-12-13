@@ -44,8 +44,10 @@ namespace Proyecto_Biblioteca
         {
             if (e.ColumnIndex == 6)
             {
+                Cls_Historial.index = e.RowIndex;
                 Proyecto_Biblioteca.Devolucion.Frm_devolver obj_devolver = new Proyecto_Biblioteca.Devolucion.Frm_devolver();
                 obj_devolver.ShowDialog();
+                obj_historial.prestamos(dgv_prestamos, txt_matricula_alumno.Text);
             }
         }
     }
