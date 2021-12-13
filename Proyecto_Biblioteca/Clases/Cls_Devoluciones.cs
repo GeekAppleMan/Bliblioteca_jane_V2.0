@@ -160,7 +160,7 @@ namespace Proyecto_Biblioteca
             string resul = "";
             try
             {
-                string query = "SELECT Nombres,Apellidos FROM tb_usuarios WHERE Id_Usuario = " + "'" + id_usuario + "'";
+                string query = "SELECT usuario FROM tb_usuarios WHERE Id_Usuario = " + "'" + id_usuario + "'";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;
@@ -174,7 +174,7 @@ namespace Proyecto_Biblioteca
                     while (reader.Read())
                     {
 
-                        resul = (reader.GetString(0) + " " + reader.GetString(1));
+                        resul = (reader.GetString(0));
 
                     }
                 }

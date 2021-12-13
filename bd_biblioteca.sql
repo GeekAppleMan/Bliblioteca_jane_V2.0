@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-12-2021 a las 20:13:43
+-- Tiempo de generación: 13-12-2021 a las 03:58:58
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.12
 
@@ -32,15 +32,16 @@ CREATE TABLE `tb_alumno` (
   `matricula` varchar(50) NOT NULL,
   `nombres` varchar(50) NOT NULL,
   `apellidos` varchar(50) NOT NULL,
-  `domicilio` varchar(80) NOT NULL
+  `domicilio` varchar(80) NOT NULL,
+  `estatus` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `tb_alumno`
 --
 
-INSERT INTO `tb_alumno` (`id_alumno`, `matricula`, `nombres`, `apellidos`, `domicilio`) VALUES
-(1, '17340346', 'jaime', '', '');
+INSERT INTO `tb_alumno` (`id_alumno`, `matricula`, `nombres`, `apellidos`, `domicilio`, `estatus`) VALUES
+(1, '17340346', 'Jaime Alberto', 'Sanchez Martinez', 'Cuba 790', 1);
 
 -- --------------------------------------------------------
 
@@ -144,17 +145,17 @@ INSERT INTO `tb_prestamo` (`id_prestamo`, `id_libro`, `cantidad`, `id_usuario`, 
 CREATE TABLE `tb_usuarios` (
   `id_usuario` int(11) NOT NULL,
   `matricula` varchar(50) NOT NULL,
-  `nombres` varchar(50) NOT NULL,
-  `apellidos` varchar(50) NOT NULL,
-  `domicilio` varchar(80) NOT NULL
+  `usuario` varchar(50) NOT NULL,
+  `contraseña` varchar(50) NOT NULL,
+  `estatus` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `tb_usuarios`
 --
 
-INSERT INTO `tb_usuarios` (`id_usuario`, `matricula`, `nombres`, `apellidos`, `domicilio`) VALUES
-(1, '17340346', 'Jaime ', 'Sanchez', '');
+INSERT INTO `tb_usuarios` (`id_usuario`, `matricula`, `usuario`, `contraseña`, `estatus`) VALUES
+(1, '17340346', 'GeekAppleMan', '123', 1);
 
 --
 -- Índices para tablas volcadas
@@ -256,7 +257,7 @@ ALTER TABLE `tb_libro`
 --
 ALTER TABLE `tb_prestamo`
   ADD CONSTRAINT `tb_prestamo_ibfk_1` FOREIGN KEY (`Id_libro`) REFERENCES `tb_libro` (`Id_libro`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `tb_prestamo_ibfk_2` FOREIGN KEY (`Id_usuario`) REFERENCES `tb_usuarios` (`Id_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `tb_prestamo_ibfk_2` FOREIGN KEY (`Id_usuario`) REFERENCES `tb_usuarios` (`id_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `tb_prestamo_ibfk_3` FOREIGN KEY (`Id_Alumno`) REFERENCES `tb_alumno` (`Id_Alumno`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `tb_prestamo_ibfk_4` FOREIGN KEY (`Id_devolucion`) REFERENCES `tb_devolucion` (`Id_devolucion`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;

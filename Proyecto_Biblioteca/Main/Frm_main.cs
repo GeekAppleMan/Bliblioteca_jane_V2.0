@@ -111,11 +111,13 @@ namespace Proyecto_Biblioteca
 
         private void btnusuarios_Click(object sender, EventArgs e)
         {
+            abrir_form(new Frm_usuarios());
             lbltitulo.Text = "Usuarios";
         }
 
         private void btnalumnos_Click(object sender, EventArgs e)
         {
+            abrir_form(new Frm_Alumnos());
             lbltitulo.Text = "Alumnos";
         }
 
@@ -126,15 +128,14 @@ namespace Proyecto_Biblioteca
 
         private void btn_historial_prestamos_Click(object sender, EventArgs e)
         {
-            lbltitulo.Text = "Historial";
             abrir_form(new Frm_historial());
-
+            lbltitulo.Text = "Historial";
         }
 
         private void btn_devolucion_Click(object sender, EventArgs e)
         {
-            lbltitulo.Text = "Devoluciones";
             abrir_form(new Frm_Devolucion());
+            lbltitulo.Text = "Devoluciones";
         }
     }
 }
