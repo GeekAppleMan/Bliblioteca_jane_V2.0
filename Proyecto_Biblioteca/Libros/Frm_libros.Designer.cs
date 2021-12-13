@@ -30,6 +30,10 @@ namespace Proyecto_Biblioteca.Libros
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.txt_codigo_libro = new System.Windows.Forms.TextBox();
+            this.lbl_codigo = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgv_libros = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,10 +47,6 @@ namespace Proyecto_Biblioteca.Libros
             this.Estatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Modificar = new System.Windows.Forms.DataGridViewImageColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.txt_codigo_libro = new System.Windows.Forms.TextBox();
-            this.lbl_codigo = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_libros)).BeginInit();
@@ -65,6 +65,52 @@ namespace Proyecto_Biblioteca.Libros
             this.panel1.Size = new System.Drawing.Size(800, 50);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button1.BackgroundImage = global::Proyecto_Biblioteca.Properties.Resources.folder_saved_search_16890;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(598, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(48, 47);
+            this.button1.TabIndex = 16;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Location = new System.Drawing.Point(315, 43);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(269, 1);
+            this.panel3.TabIndex = 17;
+            // 
+            // txt_codigo_libro
+            // 
+            this.txt_codigo_libro.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_codigo_libro.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txt_codigo_libro.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_codigo_libro.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_codigo_libro.Location = new System.Drawing.Point(317, 18);
+            this.txt_codigo_libro.Name = "txt_codigo_libro";
+            this.txt_codigo_libro.Size = new System.Drawing.Size(262, 21);
+            this.txt_codigo_libro.TabIndex = 14;
+            // 
+            // lbl_codigo
+            // 
+            this.lbl_codigo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_codigo.AutoSize = true;
+            this.lbl_codigo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_codigo.Location = new System.Drawing.Point(127, 17);
+            this.lbl_codigo.Name = "lbl_codigo";
+            this.lbl_codigo.Size = new System.Drawing.Size(167, 23);
+            this.lbl_codigo.TabIndex = 15;
+            this.lbl_codigo.Text = "Codigo del libro";
             // 
             // panel2
             // 
@@ -163,59 +209,18 @@ namespace Proyecto_Biblioteca.Libros
             // Modificar
             // 
             this.Modificar.HeaderText = "Modificar";
+            this.Modificar.Image = global::Proyecto_Biblioteca.Properties.Resources.editar;
+            this.Modificar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.Modificar.MinimumWidth = 6;
             this.Modificar.Name = "Modificar";
             // 
             // Eliminar
             // 
             this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Image = global::Proyecto_Biblioteca.Properties.Resources.eliminar1;
+            this.Eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.Eliminar.MinimumWidth = 6;
             this.Eliminar.Name = "Eliminar";
-            // 
-            // button1
-            // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.BackgroundImage = global::Proyecto_Biblioteca.Properties.Resources.folder_saved_search_16890;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(598, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(48, 47);
-            this.button1.TabIndex = 16;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Location = new System.Drawing.Point(315, 43);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(269, 1);
-            this.panel3.TabIndex = 17;
-            // 
-            // txt_codigo_libro
-            // 
-            this.txt_codigo_libro.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_codigo_libro.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txt_codigo_libro.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_codigo_libro.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_codigo_libro.Location = new System.Drawing.Point(317, 18);
-            this.txt_codigo_libro.Name = "txt_codigo_libro";
-            this.txt_codigo_libro.Size = new System.Drawing.Size(262, 21);
-            this.txt_codigo_libro.TabIndex = 14;
-            // 
-            // lbl_codigo
-            // 
-            this.lbl_codigo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_codigo.AutoSize = true;
-            this.lbl_codigo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_codigo.Location = new System.Drawing.Point(127, 17);
-            this.lbl_codigo.Name = "lbl_codigo";
-            this.lbl_codigo.Size = new System.Drawing.Size(167, 23);
-            this.lbl_codigo.TabIndex = 15;
-            this.lbl_codigo.Text = "Codigo del libro";
             // 
             // Frm_libros
             // 
@@ -227,6 +232,7 @@ namespace Proyecto_Biblioteca.Libros
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_libros";
             this.Text = "Frm_libros";
+            this.Load += new System.EventHandler(this.Frm_libros_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -240,6 +246,10 @@ namespace Proyecto_Biblioteca.Libros
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dgv_libros;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TextBox txt_codigo_libro;
+        private System.Windows.Forms.Label lbl_codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
@@ -251,9 +261,5 @@ namespace Proyecto_Biblioteca.Libros
         private System.Windows.Forms.DataGridViewTextBoxColumn Estatus;
         private System.Windows.Forms.DataGridViewImageColumn Modificar;
         private System.Windows.Forms.DataGridViewImageColumn Eliminar;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox txt_codigo_libro;
-        private System.Windows.Forms.Label lbl_codigo;
     }
 }
