@@ -17,8 +17,7 @@ namespace Proyecto_Biblioteca
         public void prestamos(DataGridView tabla, string matricula)
         {
             tabla.Rows.Clear();
-            string id_alumno = buscar_id_alumno(matricula);
-            string query = "SELECT * FROM tb_prestamo WHERE id_alumno = " + "'" + id_alumno + "'";
+            string query = "SELECT tl.nombre, tp.cantidad, tu.usuario, ta.nombres, tp.fecha_salida, td.fecha_dev,tl.id_libro,tp.id_prestamo,tl.codigo_libro,td.id_devolucion FROM tb_prestamo tp INNER JOIN tb_alumno ta ON tp.id_alumno = ta.id_alumno INNER JOIN tb_libro tl ON tp.id_libro = tl.id_libro INNER JOIN tb_usuarios tu ON tp.id_usuario = tu.id_usuario INNER JOIN tb_devolucion td ON tp.id_devolucion = td.id_devolucion WHERE ta.matricula LIKE " + "'%" + matricula + "%'";
             MySqlConnection databaseConnection = new MySqlConnection(connectionString);
             MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
             commandDatabase.CommandTimeout = 60;
@@ -36,47 +35,16 @@ namespace Proyecto_Biblioteca
                         tabla_prestamo.Columns.Add("id_libro");
                         tabla_prestamo.Columns.Add("id_prestamo");
                         tabla_prestamo.Columns.Add("codigo_libro");
-                        tabla_prestamo.Columns.Add("nombre_libro");
                         tabla_prestamo.Columns.Add("cantidad");
-                        tabla_prestamo.Columns.Add("nombre_usuario");
-                        tabla_prestamo.Columns.Add("nombre_alumno");
-                        tabla_prestamo.Columns.Add("fecha_salida");
-                        tabla_prestamo.Columns.Add("fecha_dev");
                         tabla_prestamo.Columns.Add("id_devolucion");
 
-                        string id_prestamo = reader.GetString(0);
-                        string id_libro = reader.GetString(1);
-                        string cantidad = reader.GetString(2);
-                        string id_usuario = reader.GetString(3);
-                        string fecha_salida = reader.GetString(5);
-                        string id_devolucion = reader.GetString(6);
-
-                        string nombre_libro = buscar_nombre_libro(id_libro);
-                        string codigo_libro = buscar_codigo_libro(id_libro);
-                        string nombre_usuario = buscar_nombre_apellidos_usuario(id_usuario);
-                        string nombre_alumno = buscar_nombre_apellidos_alumno(id_alumno);
-                        string fecha_dev = buscar_fecha_devolucion(id_devolucion);
-
-                        tabla.Rows.Add(nombre_libro, cantidad, nombre_usuario, nombre_alumno, fecha_salida, fecha_dev);
-                        tabla_prestamo.Rows.Add(id_libro,id_prestamo, codigo_libro ,nombre_libro, cantidad, nombre_usuario, nombre_alumno, fecha_salida, fecha_dev,id_devolucion);
+                        tabla.Rows.Add(reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5));
+                        tabla_prestamo.Rows.Add(reader.GetString(6),reader.GetString(7),reader.GetString(8),reader.GetString(1),reader.GetString(9));
                     }
                     else
                     {
-                        string id_prestamo = reader.GetString(0);
-                        string id_libro = reader.GetString(1);
-                        string cantidad = reader.GetString(2);
-                        string id_usuario = reader.GetString(3);
-                        string fecha_salida = reader.GetString(5);
-                        string id_devolucion = reader.GetString(6);
-
-                        string nombre_libro = buscar_nombre_libro(id_libro);
-                        string codigo_libro = buscar_codigo_libro(id_libro);
-                        string nombre_usuario = buscar_nombre_apellidos_usuario(id_usuario);
-                        string nombre_alumno = buscar_nombre_apellidos_alumno(id_alumno);
-                        string fecha_dev = buscar_fecha_devolucion(id_devolucion);
-
-                        tabla.Rows.Add(nombre_libro, cantidad, nombre_usuario, nombre_alumno, fecha_salida, fecha_dev);
-                        tabla_prestamo.Rows.Add(id_libro,id_prestamo,codigo_libro,nombre_libro, cantidad, nombre_usuario, nombre_alumno, fecha_salida, fecha_dev,id_devolucion);
+                        tabla.Rows.Add(reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5));
+                        tabla_prestamo.Rows.Add(reader.GetString(6), reader.GetString(7), reader.GetString(8), reader.GetString(1), reader.GetString(9));
                     }
                   
                 }
@@ -87,212 +55,6 @@ namespace Proyecto_Biblioteca
             }
 
             databaseConnection.Close();
-        }
-        public string buscar_id_alumno(string matricula_alum)
-        {
-            string resul = "";
-            try
-            {
-                string query = "SELECT id_alumno FROM tb_alumno WHERE matricula = " + "'" + matricula_alum + "'";
-                MySqlConnection databaseConnection = new MySqlConnection(connectionString);
-                MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
-                commandDatabase.CommandTimeout = 60;
-                MySqlDataReader reader;
-                databaseConnection.Open();
-
-                reader = commandDatabase.ExecuteReader();
-
-                if (reader.HasRows)
-                {
-                    while (reader.Read())
-                    {
-                        resul = reader.GetString(0);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("No se encontro el alumno");
-                }
-
-                databaseConnection.Close();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Ocurrio un error comuniquese con el equipo de sistemas");
-            }
-            return resul;
-        }
-        private string buscar_nombre_libro(string id_libro)
-        {
-            string resul = "";
-            try
-            {
-                string query = "SELECT nombre FROM tb_libro WHERE id_libro = " + "'" + id_libro + "'";
-                MySqlConnection databaseConnection = new MySqlConnection(connectionString);
-                MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
-                commandDatabase.CommandTimeout = 60;
-                MySqlDataReader reader;
-                databaseConnection.Open();
-
-                reader = commandDatabase.ExecuteReader();
-
-                if (reader.HasRows)
-                {
-                    while (reader.Read())
-                    {
-                        resul = reader.GetString(0);
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("No se encontro el libro");
-                }
-
-                databaseConnection.Close();
-            }
-            catch (Exception )
-            {
-                MessageBox.Show("Ocurrio un error comuniquese con el equipo de sistemas");
-            }
-            return resul;
-        }
-        private string buscar_codigo_libro(string id_libro)
-        {
-            string resul = "";
-            try
-            {
-                string query = "SELECT codigo_libro FROM tb_libro WHERE id_libro = " + "'" + id_libro + "'";
-                MySqlConnection databaseConnection = new MySqlConnection(connectionString);
-                MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
-                commandDatabase.CommandTimeout = 60;
-                MySqlDataReader reader;
-                databaseConnection.Open();
-
-                reader = commandDatabase.ExecuteReader();
-
-                if (reader.HasRows)
-                {
-                    while (reader.Read())
-                    {
-                        resul = reader.GetString(0);
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("No se encontro el libro");
-                }
-
-                databaseConnection.Close();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Ocurrio un error comuniquese con el equipo de sistemas");
-            }
-            return resul;
-        }
-        private string buscar_nombre_apellidos_alumno(string id_alumno)
-        {
-            string resul = "";
-            try
-            {
-                string query = "SELECT nombres,apellidos FROM tb_alumno WHERE id_alumno = " + "'" + id_alumno + "'";
-                MySqlConnection databaseConnection = new MySqlConnection(connectionString);
-                MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
-                commandDatabase.CommandTimeout = 60;
-                MySqlDataReader reader;
-                databaseConnection.Open();
-
-                reader = commandDatabase.ExecuteReader();
-
-                if (reader.HasRows)
-                {
-                    while (reader.Read())
-                    {
-
-                        resul = reader.GetString(0) + " " + reader.GetString(1);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("No se encontro el alumno");
-                }
-
-                databaseConnection.Close();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Ocurrio un error comuniquese con el equipo de sistemas");
-            }
-            return resul;
-        }
-        private string buscar_nombre_apellidos_usuario(string id_usuario)
-
-        {
-            string resul = "";
-            try
-            {
-                string query = "SELECT usuario FROM tb_usuarios WHERE Id_Usuario = " + "'" + id_usuario + "'";
-                MySqlConnection databaseConnection = new MySqlConnection(connectionString);
-                MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
-                commandDatabase.CommandTimeout = 60;
-                MySqlDataReader reader;
-                databaseConnection.Open();
-
-                reader = commandDatabase.ExecuteReader();
-
-                if (reader.HasRows)
-                {
-                    while (reader.Read())
-                    {
-
-                        resul = (reader.GetString(0));
-
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("No se encontro el usuario");
-                }
-
-                databaseConnection.Close();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Ocurrio un error comuniquese con el equipo de sistemas");
-            }
-            return resul;
-        }
-        private string buscar_fecha_devolucion(string id_dev)
-        {
-            string resul = "";
-            try
-            {
-                string query = "SELECT * FROM tb_devolucion WHERE id_devolucion = " + "'" + id_dev + "'";
-                MySqlConnection databaseConnection = new MySqlConnection(connectionString);
-                MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
-                commandDatabase.CommandTimeout = 60;
-                MySqlDataReader reader;
-                databaseConnection.Open();
-                reader = commandDatabase.ExecuteReader();
-                if (reader.HasRows)
-                {
-                    while (reader.Read())
-                    {
-
-                        resul = (reader.GetString(1));
-
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("No se encontro la devolucion");
-                }
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Ocurrio un error comuniquese con el equipo de sistemas");
-            }
-            return resul;
         }
         public void regresar_libro(string codigo_libro)
         {
