@@ -125,8 +125,8 @@ namespace Proyecto_Biblioteca
                                     id_dev = id_dev + 1;
                                 }
                             }
-                            grid.Rows.Add(reader.GetString(4), 1, DateTime.Now.Date.ToString("HH:mm:ss"), fecha_Dev.ToString("d"));
-                            tabla_pedido.Rows.Add(reader.GetString(3), 1, reader.GetString(8), reader.GetString(0), DateTime.Now.Date.ToString("HH:mm:ss"), id_dev, fecha_Max_Dev.ToString("d"), fecha_Dev.ToString("d"));
+                            grid.Rows.Add(reader.GetString(4), 1, ahora, fecha_Dev.ToString("d"));
+                            tabla_pedido.Rows.Add(reader.GetString(3), 1, reader.GetString(8), reader.GetString(0), ahora, id_dev, fecha_Max_Dev.ToString("d"), fecha_Dev.ToString("d"));
                         }
                       
                     }

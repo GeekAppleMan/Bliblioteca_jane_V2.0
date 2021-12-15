@@ -34,7 +34,6 @@ namespace Proyecto_Biblioteca
             this.panel7 = new System.Windows.Forms.Panel();
             this.lbl_nombre_libro = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.btn_imagen = new System.Windows.Forms.Button();
             this.txt_nombre_alumno = new System.Windows.Forms.Label();
             this.picture_alumno = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -108,7 +107,6 @@ namespace Proyecto_Biblioteca
             // panel6
             // 
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.btn_imagen);
             this.panel6.Controls.Add(this.txt_nombre_alumno);
             this.panel6.Controls.Add(this.picture_alumno);
             this.panel6.Location = new System.Drawing.Point(291, 6);
@@ -116,17 +114,6 @@ namespace Proyecto_Biblioteca
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(364, 277);
             this.panel6.TabIndex = 13;
-            // 
-            // btn_imagen
-            // 
-            this.btn_imagen.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Italic);
-            this.btn_imagen.Location = new System.Drawing.Point(19, 180);
-            this.btn_imagen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_imagen.Name = "btn_imagen";
-            this.btn_imagen.Size = new System.Drawing.Size(109, 44);
-            this.btn_imagen.TabIndex = 19;
-            this.btn_imagen.Text = "Imagen";
-            this.btn_imagen.UseVisualStyleBackColor = true;
             // 
             // txt_nombre_alumno
             // 
@@ -448,7 +435,6 @@ namespace Proyecto_Biblioteca
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label lbl_nombre_libro;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button btn_imagen;
         private System.Windows.Forms.Label txt_nombre_alumno;
         private System.Windows.Forms.PictureBox picture_alumno;
         private System.Windows.Forms.Panel panel5;
