@@ -16,6 +16,9 @@ namespace Proyecto_Biblioteca
         public static string matricula_usu { get; set; }
         int cantidad_tblibro { get; set; }
         public int dias { get; set; }
+
+        string ahora = DateTime.Now.ToString("MM/dd/yyyy hh:mm tt");
+
         public void completar_tabla(DataGridView grid, string matricula,string codigo)
         {
             bool alumno = false;
@@ -122,8 +125,8 @@ namespace Proyecto_Biblioteca
                                     id_dev = id_dev + 1;
                                 }
                             }
-                            grid.Rows.Add(reader.GetString(4), 1, DateTime.Now.Date.ToString("d"), fecha_Dev.ToString("d"));
-                            tabla_pedido.Rows.Add(reader.GetString(3), 1, reader.GetString(8), reader.GetString(0), DateTime.Now.Date.ToString("d"), id_dev, fecha_Max_Dev.ToString("d"), fecha_Dev.ToString("d"));
+                            grid.Rows.Add(reader.GetString(4), 1, DateTime.Now.Date.ToString("HH:mm:ss"), fecha_Dev.ToString("d"));
+                            tabla_pedido.Rows.Add(reader.GetString(3), 1, reader.GetString(8), reader.GetString(0), DateTime.Now.Date.ToString("HH:mm:ss"), id_dev, fecha_Max_Dev.ToString("d"), fecha_Dev.ToString("d"));
                         }
                       
                     }
@@ -147,8 +150,9 @@ namespace Proyecto_Biblioteca
                         DateTime fecha_dev = Convert.ToDateTime(DateTime.Now.ToString("d"));
                         DateTime fecha_Dev = fecha_dev.AddDays(dias);
 
-                        grid.Rows.Add(reader.GetString(4),1, DateTime.Now.Date.ToString("d"), fecha_Dev.ToString("d"));
-                        tabla_pedido.Rows.Add(reader.GetString(3), 1, reader.GetString(8), reader.GetString(0), DateTime.Now.Date.ToString("d"), id_dev, fecha_Max_Dev.ToString("d"), fecha_Dev.ToString("d"));
+
+                        grid.Rows.Add(reader.GetString(4),1, ahora, fecha_Dev.ToString("d"));
+                        tabla_pedido.Rows.Add(reader.GetString(3), 1, reader.GetString(8), reader.GetString(0), ahora, id_dev, fecha_Max_Dev.ToString("d"), fecha_Dev.ToString("d"));
                     }
                 }
                 
