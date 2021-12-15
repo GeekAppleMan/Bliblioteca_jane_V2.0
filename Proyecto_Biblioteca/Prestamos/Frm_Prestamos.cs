@@ -22,7 +22,52 @@ namespace Proyecto_Biblioteca
         {
 
         }
-        private void btn_terminar_pedido_Click(object sender, EventArgs e)
+        
+        private void añadir()
+        {
+            if (string.IsNullOrEmpty(txt_codigo_libro.Text) || string.IsNullOrEmpty(txt_matricula_alumno.Text))
+            {
+                MessageBox.Show("Completa los datos correctamente");
+            }
+            else
+            {
+                try
+                {
+                    obj_prestamos.dias = Convert.ToInt32(combo_cantidad_dias.Text);
+                    obj_prestamos.completar_tabla(dgv_prestamos, txt_matricula_alumno.Text, txt_codigo_libro.Text);
+                    txt_codigo_libro.Text = "";
+                    DataTable dt = new DataTable();
+                    Cls_Alumnos alum = new Cls_Alumnos();
+                    alum.leer_ruta(dt, txt_matricula_alumno.Text);
+
+                    string path = dt.Rows[0][6].ToString();
+                    var request = WebRequest.Create(path);
+
+                    using (var response = request.GetResponse())
+                    using (var stream = response.GetResponseStream())
+                    {
+                        picture_alumno.Image = Bitmap.FromStream(stream);
+                        System.Drawing.Image img = picture_alumno.Image;
+                        //img.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                        picture_alumno.Image = img;
+                    }
+
+                    //MessageBox.Show(dt.Rows[0][6].ToString());
+                }
+                catch (Exception)
+                {
+
+                }
+             
+            }
+        }
+       
+        private void btnañadir_Click_1(object sender, EventArgs e)
+        {
+            añadir();
+        }
+
+        private void btn_terminar_pedido_Click_1(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Seguro que desea registrar el pedido?", "Confirmar", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
@@ -45,24 +90,8 @@ namespace Proyecto_Biblioteca
             {
             }
         }
-        private void btnañadir_Click(object sender, EventArgs e)
-        {
-            añadir();
-        }
-        private void añadir()
-        {
-            if (string.IsNullOrEmpty(txt_codigo_libro.Text) || string.IsNullOrEmpty(txt_matricula_alumno.Text))
-            {
-                MessageBox.Show("Completa los datos correctamente");
-            }
-            else
-            {
-                obj_prestamos.dias = Convert.ToInt32(combo_cantidad_dias.Text);
-                obj_prestamos.completar_tabla(dgv_prestamos,txt_matricula_alumno.Text,txt_codigo_libro.Text);
-                txt_codigo_libro.Text = "";
-            }
-        }
-        private void dgv_prestamos_CellClick(object sender, DataGridViewCellEventArgs e)
+
+        private void dgv_prestamos_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 4)
             {
@@ -77,25 +106,8 @@ namespace Proyecto_Biblioteca
                 }
             }
         }
-        private void combo_cantidad_dias_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-        private void txt_codigo_libro_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)Keys.Enter)
-            {
-                añadir();
-            }
-            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-        private void txt_nombre_alumno_KeyPress(object sender, KeyPressEventArgs e)
+
+        private void txt_matricula_alumno_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
@@ -107,25 +119,24 @@ namespace Proyecto_Biblioteca
             }
         }
 
-        private void btn_imagen_Click(object sender, EventArgs e)
+        private void txt_codigo_libro_KeyPress_1(object sender, KeyPressEventArgs e)
         {
-            DataTable dt = new DataTable();
-            Cls_Alumnos alum = new Cls_Alumnos();
-            alum.leer_ruta(dt, txt_matricula_alumno.Text);
-
-            string path = dt.Rows[0][6].ToString();
-            var request = WebRequest.Create(path);
-
-            using (var response = request.GetResponse())
-            using (var stream = response.GetResponseStream())
+            if (e.KeyChar == (char)Keys.Enter)
             {
-                picture_alumno.Image = Bitmap.FromStream(stream);
-                System.Drawing.Image img = picture_alumno.Image;
-                //img.RotateFlip(RotateFlipType.Rotate90FlipNone);
-                picture_alumno.Image = img;
+                añadir();
             }
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
 
-            MessageBox.Show(dt.Rows[0][6].ToString());
+        private void combo_cantidad_dias_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

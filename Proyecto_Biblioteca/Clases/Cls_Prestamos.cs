@@ -155,7 +155,7 @@ namespace Proyecto_Biblioteca
                 databaseConnection.Close();
    
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 if (estatus == false && alumno == false && error == true || estatus == false && alumno == true && error == true)
                 {
@@ -163,7 +163,7 @@ namespace Proyecto_Biblioteca
                 }
                 else if(error == false)
                 {
-                    MessageBox.Show("Ocurrio un error comuniquese con el equipo de sistemas");
+                    MessageBox.Show("Ocurrio un error comuniquese con el equipo de sistemas" + ex.Message);
                 }
             }
             
