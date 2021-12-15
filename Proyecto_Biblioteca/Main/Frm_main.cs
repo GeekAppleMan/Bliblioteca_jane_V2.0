@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -136,6 +138,27 @@ namespace Proyecto_Biblioteca
         {
             abrir_form(new Frm_Devolucion());
             lbltitulo.Text = "Devoluciones";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            /*DataTable dt = new DataTable();
+            Cls_Alumnos alum = new Cls_Alumnos();
+            alum.leer_ruta(dt, "2");
+
+            string path = dt.Rows[0][6].ToString();
+            var request = WebRequest.Create(path);
+
+            using (var response = request.GetResponse())
+            using (var stream = response.GetResponseStream())
+            {
+                pbFoto.Image = Bitmap.FromStream(stream);
+                System.Drawing.Image img = pbFoto.Image;
+                //img.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                pbFoto.Image = img;
+            }
+
+            MessageBox.Show(dt.Rows[0][6].ToString());*/
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -77,6 +78,8 @@ namespace Proyecto_Biblioteca
         {
             Cls_Prestamos.matricula_usu = "17340346";
             Frm_main obj_main = new Frm_main();
+            
+
             obj_main.Show();
             this.Hide();
         }

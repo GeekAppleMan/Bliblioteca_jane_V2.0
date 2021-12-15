@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -65,6 +66,26 @@ namespace Proyecto_Biblioteca
                 databaseConnection.Close();
             }
 
+        }
+
+        public void leer_ruta(DataTable dt, string id)
+        {
+            try
+            {
+                string query = "SELECT * FROM tb_alumno WHERE id_alumno = " + id;
+                MySqlConnection databaseConnection = new MySqlConnection(connectionString);
+                MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
+                commandDatabase.CommandTimeout = 60;
+                MySqlDataAdapter Adapter = new MySqlDataAdapter();
+                databaseConnection.Open();
+                Adapter.SelectCommand = commandDatabase;
+                Adapter.Fill(dt);
+                databaseConnection.Close();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }
