@@ -18,11 +18,9 @@ namespace Proyecto_Biblioteca
         public int dias { get; set; }
         public void completar_tabla(DataGridView grid, string matricula,string codigo)
         {
-            
-            
-            
             bool alumno = false;
             bool estatus = false;
+            bool error = false;
             int id_dev = 0;
             try
             {
@@ -33,22 +31,40 @@ namespace Proyecto_Biblioteca
                 MySqlDataReader reader;
                 databaseConnection.Open();
                 reader = commandDatabase.ExecuteReader();
-
                 reader.Read();
 
-                if (reader.GetString(0) != "")
-                {
-                    alumno = true;
-                }
-                if (reader.GetString(7) == "1")
-                {
-                    estatus = true;
-                }
                 try
                 {
-                   
-                   id_dev = Convert.ToInt32(reader.GetString(9)) + 1;
-                   
+                    if (reader.GetString(0) != "")
+                    {
+                        alumno = true;
+                    }
+
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("No se encontro al alumno verifique la matricula");
+                    error = true;
+                    throw;
+                }
+
+                try
+                {
+                    if (reader.GetString(7) == "1")
+                    {
+                        estatus = true;
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("No hay libros disponibles o el codigo ingresado es incorrecto");
+                    error = true;
+                    throw;
+                }
+
+                try
+                {
+                    id_dev = Convert.ToInt32(reader.GetString(9)) + 1;  
                 }
                 catch (Exception)
                 {
@@ -111,18 +127,7 @@ namespace Proyecto_Biblioteca
                         }
                       
                     }
-                    else
-                    {
-                        if (estatus == false)
-                        {
-                            MessageBox.Show("No hay libros disponibles o el codigo ingresado es incorrecto");
-                        }
-                        else if (alumno == false)
-                        {
-                            MessageBox.Show("No se encontro al alumno verifique la matricula");
-                        }
-                    }
-
+                    
                 }
                 else
                 {
@@ -145,17 +150,6 @@ namespace Proyecto_Biblioteca
                         grid.Rows.Add(reader.GetString(4),1, DateTime.Now.Date.ToString("d"), fecha_Dev.ToString("d"));
                         tabla_pedido.Rows.Add(reader.GetString(3), 1, reader.GetString(8), reader.GetString(0), DateTime.Now.Date.ToString("d"), id_dev, fecha_Max_Dev.ToString("d"), fecha_Dev.ToString("d"));
                     }
-                    else
-                    {
-                        if (estatus == false)
-                        {
-                            MessageBox.Show("No hay libros disponibles o el codigo ingresado es incorrecto");
-                        }
-                        else if (alumno == false)
-                        {
-                            MessageBox.Show("No se encontro al alumno verifique la matricula");
-                        }
-                    }
                 }
                 
                 databaseConnection.Close();
@@ -163,7 +157,14 @@ namespace Proyecto_Biblioteca
             }
             catch (Exception)
             {
-                MessageBox.Show("Ocurrio un error comuniquese con el equipo de sistemas");
+                if (estatus == false && alumno == false && error == true || estatus == false && alumno == true && error == true)
+                {
+
+                }
+                else if(error == false)
+                {
+                    MessageBox.Show("Ocurrio un error comuniquese con el equipo de sistemas");
+                }
             }
             
         }
