@@ -35,6 +35,7 @@ namespace Proyecto_Biblioteca
                     obj_prestamos.registrar_pedido();
                     txt_codigo_libro.Text = "";
                     txt_matricula_alumno.Text = "";
+                    combo_cantidad_dias.Text = "";
                     dgv_prestamos.Rows.Clear();
                     obj_prestamos.tabla_pedido.Rows.Clear();
                 }
@@ -55,19 +56,9 @@ namespace Proyecto_Biblioteca
             }
             else
             {
-                obj_prestamos.codigo = txt_codigo_libro.Text;
                 obj_prestamos.dias = Convert.ToInt32(combo_cantidad_dias.Text);
-                obj_prestamos.matricula_alum = txt_matricula_alumno.Text;
-                obj_prestamos.completar_tabla(dgv_prestamos);
-                if (obj_prestamos.estatus == true && obj_prestamos.alumno == true)
-                {
-                    txt_codigo_libro.Text = "";
-                }
-                else
-                {
-
-                }
-                
+                obj_prestamos.completar_tabla(dgv_prestamos,txt_matricula_alumno.Text,txt_codigo_libro.Text);
+                txt_codigo_libro.Text = "";
             }
         }
         private void dgv_prestamos_CellClick(object sender, DataGridViewCellEventArgs e)
