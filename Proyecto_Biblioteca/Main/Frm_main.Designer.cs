@@ -49,7 +49,6 @@ namespace Proyecto_Biblioteca
             this.pic_hora = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel_contenedor = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel_barra_izquierda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_menu)).BeginInit();
             this.panel_barra_titulo.SuspendLayout();
@@ -60,7 +59,6 @@ namespace Proyecto_Biblioteca
             // panel_barra_izquierda
             // 
             this.panel_barra_izquierda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.panel_barra_izquierda.Controls.Add(this.button1);
             this.panel_barra_izquierda.Controls.Add(this.btn_devolucion);
             this.panel_barra_izquierda.Controls.Add(this.btn_historial_prestamos);
             this.panel_barra_izquierda.Controls.Add(this.btn_configuracion);
@@ -73,7 +71,7 @@ namespace Proyecto_Biblioteca
             this.panel_barra_izquierda.Controls.Add(this.lbl_jane);
             this.panel_barra_izquierda.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_barra_izquierda.Location = new System.Drawing.Point(0, 0);
-            this.panel_barra_izquierda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel_barra_izquierda.Margin = new System.Windows.Forms.Padding(2);
             this.panel_barra_izquierda.Name = "panel_barra_izquierda";
             this.panel_barra_izquierda.Size = new System.Drawing.Size(150, 445);
             this.panel_barra_izquierda.TabIndex = 0;
@@ -88,7 +86,7 @@ namespace Proyecto_Biblioteca
             this.btn_devolucion.Image = global::Proyecto_Biblioteca.Properties.Resources.carpeta;
             this.btn_devolucion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_devolucion.Location = new System.Drawing.Point(2, 228);
-            this.btn_devolucion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_devolucion.Margin = new System.Windows.Forms.Padding(2);
             this.btn_devolucion.Name = "btn_devolucion";
             this.btn_devolucion.Size = new System.Drawing.Size(144, 38);
             this.btn_devolucion.TabIndex = 8;
@@ -106,7 +104,7 @@ namespace Proyecto_Biblioteca
             this.btn_historial_prestamos.Image = global::Proyecto_Biblioteca.Properties.Resources.carpeta;
             this.btn_historial_prestamos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_historial_prestamos.Location = new System.Drawing.Point(2, 190);
-            this.btn_historial_prestamos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_historial_prestamos.Margin = new System.Windows.Forms.Padding(2);
             this.btn_historial_prestamos.Name = "btn_historial_prestamos";
             this.btn_historial_prestamos.Size = new System.Drawing.Size(144, 38);
             this.btn_historial_prestamos.TabIndex = 7;
@@ -124,7 +122,7 @@ namespace Proyecto_Biblioteca
             this.btn_configuracion.Image = global::Proyecto_Biblioteca.Properties.Resources.ajustes;
             this.btn_configuracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_configuracion.Location = new System.Drawing.Point(0, 394);
-            this.btn_configuracion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_configuracion.Margin = new System.Windows.Forms.Padding(2);
             this.btn_configuracion.Name = "btn_configuracion";
             this.btn_configuracion.Size = new System.Drawing.Size(144, 38);
             this.btn_configuracion.TabIndex = 6;
@@ -142,7 +140,7 @@ namespace Proyecto_Biblioteca
             this.btnlibros.Image = global::Proyecto_Biblioteca.Properties.Resources.carpeta;
             this.btnlibros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnlibros.Location = new System.Drawing.Point(2, 265);
-            this.btnlibros.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnlibros.Margin = new System.Windows.Forms.Padding(2);
             this.btnlibros.Name = "btnlibros";
             this.btnlibros.Size = new System.Drawing.Size(144, 38);
             this.btnlibros.TabIndex = 3;
@@ -160,7 +158,7 @@ namespace Proyecto_Biblioteca
             this.btnalumnos.Image = global::Proyecto_Biblioteca.Properties.Resources.usuario;
             this.btnalumnos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnalumnos.Location = new System.Drawing.Point(1, 351);
-            this.btnalumnos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnalumnos.Margin = new System.Windows.Forms.Padding(2);
             this.btnalumnos.Name = "btnalumnos";
             this.btnalumnos.Size = new System.Drawing.Size(144, 38);
             this.btnalumnos.TabIndex = 5;
@@ -178,7 +176,7 @@ namespace Proyecto_Biblioteca
             this.btnusuarios.Image = global::Proyecto_Biblioteca.Properties.Resources.usuario;
             this.btnusuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnusuarios.Location = new System.Drawing.Point(2, 308);
-            this.btnusuarios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnusuarios.Margin = new System.Windows.Forms.Padding(2);
             this.btnusuarios.Name = "btnusuarios";
             this.btnusuarios.Size = new System.Drawing.Size(144, 38);
             this.btnusuarios.TabIndex = 4;
@@ -196,7 +194,7 @@ namespace Proyecto_Biblioteca
             this.btnprestamos.Image = global::Proyecto_Biblioteca.Properties.Resources.documento__1_;
             this.btnprestamos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnprestamos.Location = new System.Drawing.Point(2, 147);
-            this.btnprestamos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnprestamos.Margin = new System.Windows.Forms.Padding(2);
             this.btnprestamos.Name = "btnprestamos";
             this.btnprestamos.Size = new System.Drawing.Size(144, 38);
             this.btnprestamos.TabIndex = 2;
@@ -214,7 +212,7 @@ namespace Proyecto_Biblioteca
             this.btninicio.Image = global::Proyecto_Biblioteca.Properties.Resources.pagina_de_inicio__2_;
             this.btninicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btninicio.Location = new System.Drawing.Point(2, 104);
-            this.btninicio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btninicio.Margin = new System.Windows.Forms.Padding(2);
             this.btninicio.Name = "btninicio";
             this.btninicio.Size = new System.Drawing.Size(144, 38);
             this.btninicio.TabIndex = 1;
@@ -227,7 +225,7 @@ namespace Proyecto_Biblioteca
             this.pic_menu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_menu.Image = global::Proyecto_Biblioteca.Properties.Resources.menu__7_;
             this.pic_menu.Location = new System.Drawing.Point(4, 10);
-            this.pic_menu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pic_menu.Margin = new System.Windows.Forms.Padding(2);
             this.pic_menu.Name = "pic_menu";
             this.pic_menu.Size = new System.Drawing.Size(38, 41);
             this.pic_menu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -256,7 +254,7 @@ namespace Proyecto_Biblioteca
             this.panel_barra_titulo.Controls.Add(this.pic_hora);
             this.panel_barra_titulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_barra_titulo.Location = new System.Drawing.Point(150, 0);
-            this.panel_barra_titulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel_barra_titulo.Margin = new System.Windows.Forms.Padding(2);
             this.panel_barra_titulo.Name = "panel_barra_titulo";
             this.panel_barra_titulo.Size = new System.Drawing.Size(700, 41);
             this.panel_barra_titulo.TabIndex = 0;
@@ -280,7 +278,7 @@ namespace Proyecto_Biblioteca
             this.pic_fecha.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.pic_fecha.Image = global::Proyecto_Biblioteca.Properties.Resources.nota__1_;
             this.pic_fecha.Location = new System.Drawing.Point(561, 4);
-            this.pic_fecha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pic_fecha.Margin = new System.Windows.Forms.Padding(2);
             this.pic_fecha.Name = "pic_fecha";
             this.pic_fecha.Size = new System.Drawing.Size(30, 32);
             this.pic_fecha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -317,7 +315,7 @@ namespace Proyecto_Biblioteca
             this.pic_hora.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.pic_hora.Image = global::Proyecto_Biblioteca.Properties.Resources.reloj;
             this.pic_hora.Location = new System.Drawing.Point(10, 5);
-            this.pic_hora.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pic_hora.Margin = new System.Windows.Forms.Padding(2);
             this.pic_hora.Name = "pic_hora";
             this.pic_hora.Size = new System.Drawing.Size(30, 32);
             this.pic_hora.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -332,20 +330,10 @@ namespace Proyecto_Biblioteca
             // 
             this.panel_contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_contenedor.Location = new System.Drawing.Point(150, 41);
-            this.panel_contenedor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel_contenedor.Margin = new System.Windows.Forms.Padding(2);
             this.panel_contenedor.Name = "panel_contenedor";
             this.panel_contenedor.Size = new System.Drawing.Size(700, 404);
             this.panel_contenedor.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(69, 28);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Frm_main
             // 
@@ -358,7 +346,7 @@ namespace Proyecto_Biblioteca
             this.Controls.Add(this.panel_barra_izquierda);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Frm_main";
             this.Opacity = 0.95D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -396,6 +384,5 @@ namespace Proyecto_Biblioteca
         private System.Windows.Forms.Button btn_configuracion;
         private System.Windows.Forms.Button btn_historial_prestamos;
         private System.Windows.Forms.Button btn_devolucion;
-        private System.Windows.Forms.Button button1;
     }
 }

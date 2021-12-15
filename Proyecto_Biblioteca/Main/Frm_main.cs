@@ -140,25 +140,5 @@ namespace Proyecto_Biblioteca
             lbltitulo.Text = "Devoluciones";
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            /*DataTable dt = new DataTable();
-            Cls_Alumnos alum = new Cls_Alumnos();
-            alum.leer_ruta(dt, "2");
-
-            string path = dt.Rows[0][6].ToString();
-            var request = WebRequest.Create(path);
-
-            using (var response = request.GetResponse())
-            using (var stream = response.GetResponseStream())
-            {
-                pbFoto.Image = Bitmap.FromStream(stream);
-                System.Drawing.Image img = pbFoto.Image;
-                //img.RotateFlip(RotateFlipType.Rotate90FlipNone);
-                pbFoto.Image = img;
-            }
-
-            MessageBox.Show(dt.Rows[0][6].ToString());*/
-        }
     }
 }

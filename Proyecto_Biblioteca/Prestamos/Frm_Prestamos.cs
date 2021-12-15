@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -104,6 +105,27 @@ namespace Proyecto_Biblioteca
             {
                 e.Handled = true;
             }
+        }
+
+        private void btn_imagen_Click(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            Cls_Alumnos alum = new Cls_Alumnos();
+            alum.leer_ruta(dt, txt_matricula_alumno.Text);
+
+            string path = dt.Rows[0][6].ToString();
+            var request = WebRequest.Create(path);
+
+            using (var response = request.GetResponse())
+            using (var stream = response.GetResponseStream())
+            {
+                picture_alumno.Image = Bitmap.FromStream(stream);
+                System.Drawing.Image img = picture_alumno.Image;
+                //img.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                picture_alumno.Image = img;
+            }
+
+            MessageBox.Show(dt.Rows[0][6].ToString());
         }
     }
 }

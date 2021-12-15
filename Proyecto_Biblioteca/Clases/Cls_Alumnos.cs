@@ -68,11 +68,11 @@ namespace Proyecto_Biblioteca
 
         }
 
-        public void leer_ruta(DataTable dt, string id)
+        public void leer_ruta(DataTable dt, string matricula)
         {
             try
             {
-                string query = "SELECT * FROM tb_alumno WHERE id_alumno = " + id;
+                string query = "SELECT * FROM tb_alumno WHERE matricula = " + matricula;
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;
