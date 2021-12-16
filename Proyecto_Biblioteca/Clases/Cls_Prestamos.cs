@@ -154,6 +154,10 @@ namespace Proyecto_Biblioteca
                         grid.Rows.Add(reader.GetString(4),1, ahora, fecha_Dev.ToString("d"));
                         tabla_pedido.Rows.Add(reader.GetString(3), 1, reader.GetString(8), reader.GetString(0), ahora, id_dev, fecha_Max_Dev.ToString("d"), fecha_Dev.ToString("d"));
                     }
+                    else
+                    {
+                        MessageBox.Show("No se encontro al alumno o no hay libros disponibles");
+                    }
                 }
                 
                 databaseConnection.Close();
@@ -265,6 +269,105 @@ namespace Proyecto_Biblioteca
             }
 
             return resul;
+        }
+
+        public void buscar_datos_alumno(string matricula,Label Nombre, Label Apellidos,Label Estatus, Label Semestre, Label Carrera, ref string imagen)
+        {
+            try
+            {
+                if (matricula == "")
+                {
+                    Nombre.Text = "Nombre Alumno";
+                    Apellidos.Text = "Apellidos Alumno";
+                    Estatus.Text = "Estatus";
+                    imagen = "";
+                    Semestre.Text = "Semestre";
+                    Carrera.Text = "Carrera";
+                }
+                else
+                {
+                    string query = "SELECT * FROM tb_alumno WHERE matricula LIKE " + "'%" + matricula + "%'";
+                    MySqlConnection databaseConnection = new MySqlConnection(connectionString);
+                    MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
+                    commandDatabase.CommandTimeout = 60;
+                    MySqlDataReader reader;
+                    databaseConnection.Open();
+                    reader = commandDatabase.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            Nombre.Text = reader.GetString(2);
+                            Apellidos.Text = reader.GetString(3);
+                            Estatus.Text = reader.GetString(5);
+                            imagen = reader.GetString(6);
+                            Semestre.Text = reader.GetString(7);
+                            Carrera.Text = reader.GetString(8);
+                            if (Estatus.Text == "1")
+                            {
+                                Estatus.Text = "Activo";
+                            }
+                            else
+                            {
+                                Estatus.Text = "Inactivo";
+                            }
+                        }
+                    }
+                }
+  
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocurrio un error comuniquese con el equipo de sistemas");
+            }
+        }
+        public void buscar_datos_libro(string codigo, Label libro, Label codigo_libro, Label cantidad, Label estatus)
+        {
+            if (codigo == "")
+            {
+                libro.Text = "Nombre Libro";
+                codigo_libro.Text = "Codigo del libro";
+                cantidad.Text = "Cantidad de libros";
+                estatus.Text = "Estatus";
+            }
+            else
+            {
+                try
+                {
+                    string query = "SELECT * FROM tb_libro WHERE codigo_libro LIKE " + "'%" + codigo + "%'";
+                    MySqlConnection databaseConnection = new MySqlConnection(connectionString);
+                    MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
+                    commandDatabase.CommandTimeout = 60;
+                    MySqlDataReader reader;
+                    databaseConnection.Open();
+                    reader = commandDatabase.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            libro.Text = reader.GetString(3);
+                            codigo_libro.Text = reader.GetString(1);
+                            cantidad.Text = reader.GetString(2);
+                            estatus.Text = reader.GetString(9);
+
+                            if (estatus.Text == "1")
+                            {
+                                estatus.Text = "Disponible";
+                            }
+                            else
+                            {
+                                estatus.Text = "No disponible";
+                            }
+                        }
+                    }
+
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Ocurrio un error comuniquese con el equipo de sistemas");
+                }
+            }
+           
         }
     }
 }

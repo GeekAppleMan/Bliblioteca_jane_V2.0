@@ -33,26 +33,9 @@ namespace Proyecto_Biblioteca
             {
                 try
                 {
-                    obj_prestamos.dias = Convert.ToInt32(combo_cantidad_dias.Text);
+                    obj_prestamos.dias = Convert.ToInt32(txt_cantidad_dias.Text);
                     obj_prestamos.completar_tabla(dgv_prestamos, txt_matricula_alumno.Text, txt_codigo_libro.Text);
                     txt_codigo_libro.Text = "";
-                    DataTable dt = new DataTable();
-                    Cls_Alumnos alum = new Cls_Alumnos();
-                    alum.leer_ruta(dt, txt_matricula_alumno.Text);
-
-                    string path = dt.Rows[0][6].ToString();
-                    var request = WebRequest.Create(path);
-
-                    using (var response = request.GetResponse())
-                    using (var stream = response.GetResponseStream())
-                    {
-                        picture_alumno.Image = Bitmap.FromStream(stream);
-                        System.Drawing.Image img = picture_alumno.Image;
-                        //img.RotateFlip(RotateFlipType.Rotate90FlipNone);
-                        picture_alumno.Image = img;
-                    }
-
-                    //MessageBox.Show(dt.Rows[0][6].ToString());
                 }
                 catch (Exception)
                 {
@@ -81,7 +64,7 @@ namespace Proyecto_Biblioteca
                     obj_prestamos.registrar_pedido();
                     txt_codigo_libro.Text = "";
                     txt_matricula_alumno.Text = "";
-                    combo_cantidad_dias.Text = "";
+                    txt_cantidad_dias.Text = "";
                     dgv_prestamos.Rows.Clear();
                     obj_prestamos.tabla_pedido.Rows.Clear();
                 }
@@ -90,6 +73,35 @@ namespace Proyecto_Biblioteca
             {
             }
         }
+
+        private void buscar_alumno()
+        {
+            string imagen = "";
+            obj_prestamos.buscar_datos_alumno(txt_matricula_alumno.Text,lbl_nombre_alumno,lbl_apellidos_alumno,lbl_estatus_alumno,lbl_semestre,lbl_carrera,ref imagen);
+            string path = imagen;
+            if (imagen == "")
+            {
+                picture_alumno.Image = null;
+            }
+            else
+            {
+                var request = WebRequest.Create(path);
+
+                using (var response = request.GetResponse())
+                using (var stream = response.GetResponseStream())
+                {
+                    picture_alumno.Image = Bitmap.FromStream(stream);
+                    System.Drawing.Image img = picture_alumno.Image;
+                    //img.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                    picture_alumno.Image = img;
+                }
+            }
+        }
+        private void buscar_libro()
+        {
+            obj_prestamos.buscar_datos_libro(txt_codigo_libro.Text, lbl_nombre_libro, lbl_codigo, lbl_cant, lbl_estatus);
+        }
+
 
         private void dgv_prestamos_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
@@ -112,6 +124,7 @@ namespace Proyecto_Biblioteca
             if (e.KeyChar == (char)Keys.Enter)
             {
                 txt_codigo_libro.Focus();
+                buscar_alumno();
             }
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
@@ -123,7 +136,9 @@ namespace Proyecto_Biblioteca
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
+                buscar_libro();
                 añadir();
+
             }
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
@@ -131,7 +146,17 @@ namespace Proyecto_Biblioteca
             }
         }
 
-        private void combo_cantidad_dias_KeyPress_1(object sender, KeyPressEventArgs e)
+        private void txt_matricula_alumno_TextChanged(object sender, EventArgs e)
+        {
+            buscar_alumno();
+        }
+
+        private void txt_codigo_libro_TextChanged(object sender, EventArgs e)
+        {
+            buscar_libro();
+        }
+
+        private void txt_cantidad_dias_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {

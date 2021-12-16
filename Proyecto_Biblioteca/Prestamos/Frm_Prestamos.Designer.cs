@@ -32,10 +32,18 @@ namespace Proyecto_Biblioteca
             this.components = new System.ComponentModel.Container();
             this.panel_grid = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.lbl_datos_libro = new System.Windows.Forms.Label();
+            this.lbl_estatus = new System.Windows.Forms.Label();
+            this.lbl_codigo = new System.Windows.Forms.Label();
+            this.lbl_cant = new System.Windows.Forms.Label();
             this.lbl_nombre_libro = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.txt_nombre_alumno = new System.Windows.Forms.Label();
+            this.lbl_carrera = new System.Windows.Forms.Label();
+            this.lbl_semestre = new System.Windows.Forms.Label();
+            this.lbl_estatus_alumno = new System.Windows.Forms.Label();
+            this.lbl_apellidos_alumno = new System.Windows.Forms.Label();
+            this.lbl_nombre_alumno = new System.Windows.Forms.Label();
             this.picture_alumno = new System.Windows.Forms.PictureBox();
+            this.splitter1 = new System.Windows.Forms.Splitter();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnañadir = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -43,7 +51,6 @@ namespace Proyecto_Biblioteca
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_terminar_pedido = new System.Windows.Forms.Button();
             this.lbl_cantidad = new System.Windows.Forms.Label();
-            this.combo_cantidad_dias = new System.Windows.Forms.ComboBox();
             this.txt_codigo_libro = new System.Windows.Forms.TextBox();
             this.lbl_alumno = new System.Windows.Forms.Label();
             this.txt_matricula_alumno = new System.Windows.Forms.TextBox();
@@ -59,9 +66,9 @@ namespace Proyecto_Biblioteca
             this.Fecha_Salida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Devolucion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.txt_cantidad_dias = new System.Windows.Forms.TextBox();
             this.panel_grid.SuspendLayout();
             this.panel7.SuspendLayout();
-            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_alumno)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -72,7 +79,6 @@ namespace Proyecto_Biblioteca
             // 
             this.panel_grid.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel_grid.Controls.Add(this.panel7);
-            this.panel_grid.Controls.Add(this.panel6);
             this.panel_grid.Controls.Add(this.panel5);
             this.panel_grid.Controls.Add(this.panel_agragar);
             this.panel_grid.Dock = System.Windows.Forms.DockStyle.Top;
@@ -85,76 +91,168 @@ namespace Proyecto_Biblioteca
             // panel7
             // 
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.lbl_datos_libro);
+            this.panel7.Controls.Add(this.lbl_estatus);
+            this.panel7.Controls.Add(this.lbl_codigo);
+            this.panel7.Controls.Add(this.lbl_cant);
             this.panel7.Controls.Add(this.lbl_nombre_libro);
-            this.panel7.Location = new System.Drawing.Point(676, 7);
+            this.panel7.Controls.Add(this.lbl_carrera);
+            this.panel7.Controls.Add(this.lbl_semestre);
+            this.panel7.Controls.Add(this.lbl_estatus_alumno);
+            this.panel7.Controls.Add(this.lbl_apellidos_alumno);
+            this.panel7.Controls.Add(this.lbl_nombre_alumno);
+            this.panel7.Controls.Add(this.picture_alumno);
+            this.panel7.Controls.Add(this.splitter1);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Location = new System.Drawing.Point(269, 0);
             this.panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(364, 277);
+            this.panel7.Size = new System.Drawing.Size(795, 300);
             this.panel7.TabIndex = 14;
+            // 
+            // lbl_datos_libro
+            // 
+            this.lbl_datos_libro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_datos_libro.AutoSize = true;
+            this.lbl_datos_libro.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_datos_libro.Location = new System.Drawing.Point(491, 37);
+            this.lbl_datos_libro.Name = "lbl_datos_libro";
+            this.lbl_datos_libro.Size = new System.Drawing.Size(152, 23);
+            this.lbl_datos_libro.TabIndex = 42;
+            this.lbl_datos_libro.Text = "Datos del libro";
+            // 
+            // lbl_estatus
+            // 
+            this.lbl_estatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_estatus.AutoSize = true;
+            this.lbl_estatus.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_estatus.Location = new System.Drawing.Point(643, 135);
+            this.lbl_estatus.Name = "lbl_estatus";
+            this.lbl_estatus.Size = new System.Drawing.Size(77, 23);
+            this.lbl_estatus.TabIndex = 41;
+            this.lbl_estatus.Text = "Estatus";
+            // 
+            // lbl_codigo
+            // 
+            this.lbl_codigo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_codigo.AutoSize = true;
+            this.lbl_codigo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_codigo.Location = new System.Drawing.Point(417, 180);
+            this.lbl_codigo.Name = "lbl_codigo";
+            this.lbl_codigo.Size = new System.Drawing.Size(167, 23);
+            this.lbl_codigo.TabIndex = 40;
+            this.lbl_codigo.Text = "Codigo del libro";
+            // 
+            // lbl_cant
+            // 
+            this.lbl_cant.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_cant.AutoSize = true;
+            this.lbl_cant.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_cant.Location = new System.Drawing.Point(417, 231);
+            this.lbl_cant.Name = "lbl_cant";
+            this.lbl_cant.Size = new System.Drawing.Size(192, 23);
+            this.lbl_cant.TabIndex = 39;
+            this.lbl_cant.Text = "Cantidad de libros";
             // 
             // lbl_nombre_libro
             // 
-            this.lbl_nombre_libro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_nombre_libro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_nombre_libro.AutoSize = true;
             this.lbl_nombre_libro.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nombre_libro.Location = new System.Drawing.Point(15, 25);
+            this.lbl_nombre_libro.Location = new System.Drawing.Point(417, 135);
             this.lbl_nombre_libro.Name = "lbl_nombre_libro";
             this.lbl_nombre_libro.Size = new System.Drawing.Size(141, 23);
-            this.lbl_nombre_libro.TabIndex = 19;
+            this.lbl_nombre_libro.TabIndex = 37;
             this.lbl_nombre_libro.Text = "Nombre Libro";
             // 
-            // panel6
+            // lbl_carrera
             // 
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.txt_nombre_alumno);
-            this.panel6.Controls.Add(this.picture_alumno);
-            this.panel6.Location = new System.Drawing.Point(291, 6);
-            this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(364, 277);
-            this.panel6.TabIndex = 13;
+            this.lbl_carrera.AutoSize = true;
+            this.lbl_carrera.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_carrera.Location = new System.Drawing.Point(207, 183);
+            this.lbl_carrera.Name = "lbl_carrera";
+            this.lbl_carrera.Size = new System.Drawing.Size(85, 23);
+            this.lbl_carrera.TabIndex = 35;
+            this.lbl_carrera.Text = "Carrera";
             // 
-            // txt_nombre_alumno
+            // lbl_semestre
             // 
-            this.txt_nombre_alumno.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_nombre_alumno.AutoSize = true;
-            this.txt_nombre_alumno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nombre_alumno.Location = new System.Drawing.Point(13, 139);
-            this.txt_nombre_alumno.Name = "txt_nombre_alumno";
-            this.txt_nombre_alumno.Size = new System.Drawing.Size(172, 23);
-            this.txt_nombre_alumno.TabIndex = 18;
-            this.txt_nombre_alumno.Text = "Nombre Alumno";
+            this.lbl_semestre.AutoSize = true;
+            this.lbl_semestre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_semestre.Location = new System.Drawing.Point(207, 135);
+            this.lbl_semestre.Name = "lbl_semestre";
+            this.lbl_semestre.Size = new System.Drawing.Size(99, 23);
+            this.lbl_semestre.TabIndex = 34;
+            this.lbl_semestre.Text = "Semestre";
+            // 
+            // lbl_estatus_alumno
+            // 
+            this.lbl_estatus_alumno.AutoSize = true;
+            this.lbl_estatus_alumno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_estatus_alumno.Location = new System.Drawing.Point(13, 231);
+            this.lbl_estatus_alumno.Name = "lbl_estatus_alumno";
+            this.lbl_estatus_alumno.Size = new System.Drawing.Size(77, 23);
+            this.lbl_estatus_alumno.TabIndex = 33;
+            this.lbl_estatus_alumno.Text = "Estatus";
+            // 
+            // lbl_apellidos_alumno
+            // 
+            this.lbl_apellidos_alumno.AutoSize = true;
+            this.lbl_apellidos_alumno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_apellidos_alumno.Location = new System.Drawing.Point(13, 180);
+            this.lbl_apellidos_alumno.Name = "lbl_apellidos_alumno";
+            this.lbl_apellidos_alumno.Size = new System.Drawing.Size(182, 23);
+            this.lbl_apellidos_alumno.TabIndex = 32;
+            this.lbl_apellidos_alumno.Text = "Apellidos Alumno";
+            // 
+            // lbl_nombre_alumno
+            // 
+            this.lbl_nombre_alumno.AutoSize = true;
+            this.lbl_nombre_alumno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_nombre_alumno.Location = new System.Drawing.Point(11, 135);
+            this.lbl_nombre_alumno.Name = "lbl_nombre_alumno";
+            this.lbl_nombre_alumno.Size = new System.Drawing.Size(172, 23);
+            this.lbl_nombre_alumno.TabIndex = 31;
+            this.lbl_nombre_alumno.Text = "Nombre Alumno";
             // 
             // picture_alumno
             // 
-            this.picture_alumno.Location = new System.Drawing.Point(19, 14);
+            this.picture_alumno.Image = global::Proyecto_Biblioteca.Properties.Resources.avatardefault_92824;
+            this.picture_alumno.Location = new System.Drawing.Point(15, 10);
             this.picture_alumno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picture_alumno.Name = "picture_alumno";
             this.picture_alumno.Size = new System.Drawing.Size(127, 106);
             this.picture_alumno.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picture_alumno.TabIndex = 0;
+            this.picture_alumno.TabIndex = 30;
             this.picture_alumno.TabStop = false;
+            // 
+            // splitter1
+            // 
+            this.splitter1.Location = new System.Drawing.Point(0, 0);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(3, 298);
+            this.splitter1.TabIndex = 28;
+            this.splitter1.TabStop = false;
             // 
             // panel5
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.txt_cantidad_dias);
             this.panel5.Controls.Add(this.btnañadir);
             this.panel5.Controls.Add(this.panel2);
             this.panel5.Controls.Add(this.panel1);
             this.panel5.Controls.Add(this.panel3);
             this.panel5.Controls.Add(this.btn_terminar_pedido);
             this.panel5.Controls.Add(this.lbl_cantidad);
-            this.panel5.Controls.Add(this.combo_cantidad_dias);
             this.panel5.Controls.Add(this.txt_codigo_libro);
             this.panel5.Controls.Add(this.lbl_alumno);
             this.panel5.Controls.Add(this.txt_matricula_alumno);
             this.panel5.Controls.Add(this.lbl_libro);
-            this.panel5.Location = new System.Drawing.Point(3, 2);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(269, 281);
+            this.panel5.Size = new System.Drawing.Size(269, 300);
             this.panel5.TabIndex = 12;
             // 
             // btnañadir
@@ -220,30 +318,6 @@ namespace Proyecto_Biblioteca
             this.lbl_cantidad.TabIndex = 19;
             this.lbl_cantidad.Text = "Dias de prestamo";
             // 
-            // combo_cantidad_dias
-            // 
-            this.combo_cantidad_dias.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.combo_cantidad_dias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.combo_cantidad_dias.FormattingEnabled = true;
-            this.combo_cantidad_dias.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10"});
-            this.combo_cantidad_dias.Location = new System.Drawing.Point(8, 183);
-            this.combo_cantidad_dias.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.combo_cantidad_dias.Name = "combo_cantidad_dias";
-            this.combo_cantidad_dias.Size = new System.Drawing.Size(243, 24);
-            this.combo_cantidad_dias.TabIndex = 14;
-            this.combo_cantidad_dias.Text = "1";
-            this.combo_cantidad_dias.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.combo_cantidad_dias_KeyPress_1);
-            // 
             // txt_codigo_libro
             // 
             this.txt_codigo_libro.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -254,6 +328,7 @@ namespace Proyecto_Biblioteca
             this.txt_codigo_libro.Name = "txt_codigo_libro";
             this.txt_codigo_libro.Size = new System.Drawing.Size(237, 21);
             this.txt_codigo_libro.TabIndex = 13;
+            this.txt_codigo_libro.TextChanged += new System.EventHandler(this.txt_codigo_libro_TextChanged);
             this.txt_codigo_libro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_codigo_libro_KeyPress_1);
             // 
             // lbl_alumno
@@ -278,6 +353,7 @@ namespace Proyecto_Biblioteca
             this.txt_matricula_alumno.Name = "txt_matricula_alumno";
             this.txt_matricula_alumno.Size = new System.Drawing.Size(237, 21);
             this.txt_matricula_alumno.TabIndex = 12;
+            this.txt_matricula_alumno.TextChanged += new System.EventHandler(this.txt_matricula_alumno_TextChanged);
             this.txt_matricula_alumno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_matricula_alumno_KeyPress);
             // 
             // lbl_libro
@@ -392,6 +468,19 @@ namespace Proyecto_Biblioteca
             this.Eliminar.Name = "Eliminar";
             this.Eliminar.ReadOnly = true;
             // 
+            // txt_cantidad_dias
+            // 
+            this.txt_cantidad_dias.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txt_cantidad_dias.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_cantidad_dias.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_cantidad_dias.Location = new System.Drawing.Point(8, 188);
+            this.txt_cantidad_dias.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_cantidad_dias.Name = "txt_cantidad_dias";
+            this.txt_cantidad_dias.Size = new System.Drawing.Size(237, 21);
+            this.txt_cantidad_dias.TabIndex = 23;
+            this.txt_cantidad_dias.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_cantidad_dias_KeyPress);
+            //this.txt_cantidad_dias.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_cantidad_dias_KeyUp);
+            // 
             // Frm_Prestamos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -408,8 +497,6 @@ namespace Proyecto_Biblioteca
             this.panel_grid.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_alumno)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
@@ -433,10 +520,6 @@ namespace Proyecto_Biblioteca
         private System.Windows.Forms.DataGridViewTextBoxColumn Devolucion;
         private System.Windows.Forms.DataGridViewImageColumn Eliminar;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label lbl_nombre_libro;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label txt_nombre_alumno;
-        private System.Windows.Forms.PictureBox picture_alumno;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnañadir;
         private System.Windows.Forms.Panel panel2;
@@ -444,10 +527,22 @@ namespace Proyecto_Biblioteca
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btn_terminar_pedido;
         private System.Windows.Forms.Label lbl_cantidad;
-        private System.Windows.Forms.ComboBox combo_cantidad_dias;
         private System.Windows.Forms.TextBox txt_codigo_libro;
         private System.Windows.Forms.Label lbl_alumno;
         private System.Windows.Forms.TextBox txt_matricula_alumno;
         private System.Windows.Forms.Label lbl_libro;
+        private System.Windows.Forms.Label lbl_estatus;
+        private System.Windows.Forms.Label lbl_codigo;
+        private System.Windows.Forms.Label lbl_cant;
+        private System.Windows.Forms.Label lbl_nombre_libro;
+        private System.Windows.Forms.Label lbl_carrera;
+        private System.Windows.Forms.Label lbl_semestre;
+        private System.Windows.Forms.Label lbl_estatus_alumno;
+        private System.Windows.Forms.Label lbl_apellidos_alumno;
+        private System.Windows.Forms.Label lbl_nombre_alumno;
+        private System.Windows.Forms.PictureBox picture_alumno;
+        private System.Windows.Forms.Splitter splitter1;
+        private System.Windows.Forms.Label lbl_datos_libro;
+        private System.Windows.Forms.TextBox txt_cantidad_dias;
     }
 }
