@@ -25,7 +25,14 @@ namespace Proyecto_Biblioteca
 
         private void prestamos()
         {
-            obj_historial.prestamos(dgv_prestamos, txt_matricula_alumno.Text);
+            if (string.IsNullOrEmpty(txt_matricula_alumno.Text))
+            {
+                dgv_prestamos.Rows.Clear();
+            }
+            else
+            {
+                obj_historial.prestamos(dgv_prestamos, txt_matricula_alumno.Text);
+            }
         }
 
         private void txt_matricula_alumno_KeyPress(object sender, KeyPressEventArgs e)
@@ -49,6 +56,11 @@ namespace Proyecto_Biblioteca
                 obj_devolver.ShowDialog();
                 obj_historial.prestamos(dgv_prestamos, txt_matricula_alumno.Text);
             }
+        }
+
+        private void txt_matricula_alumno_TextChanged(object sender, EventArgs e)
+        {
+            prestamos();
         }
     }
 }

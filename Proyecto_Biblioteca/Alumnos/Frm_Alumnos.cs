@@ -37,5 +37,10 @@ namespace Proyecto_Biblioteca
         {
 
         }
+
+        private void txt_alumno_TextChanged(object sender, EventArgs e)
+        {
+            añadir();
+        }
     }
 }

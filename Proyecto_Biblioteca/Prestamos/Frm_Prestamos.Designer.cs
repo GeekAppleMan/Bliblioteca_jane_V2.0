@@ -45,6 +45,7 @@ namespace Proyecto_Biblioteca
             this.picture_alumno = new System.Windows.Forms.PictureBox();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.txt_cantidad_dias = new System.Windows.Forms.TextBox();
             this.btnañadir = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -66,7 +67,6 @@ namespace Proyecto_Biblioteca
             this.Fecha_Salida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Devolucion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.txt_cantidad_dias = new System.Windows.Forms.TextBox();
             this.panel_grid.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_alumno)).BeginInit();
@@ -255,6 +255,19 @@ namespace Proyecto_Biblioteca
             this.panel5.Size = new System.Drawing.Size(269, 300);
             this.panel5.TabIndex = 12;
             // 
+            // txt_cantidad_dias
+            // 
+            this.txt_cantidad_dias.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txt_cantidad_dias.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_cantidad_dias.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_cantidad_dias.Location = new System.Drawing.Point(8, 188);
+            this.txt_cantidad_dias.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_cantidad_dias.Name = "txt_cantidad_dias";
+            this.txt_cantidad_dias.Size = new System.Drawing.Size(237, 21);
+            this.txt_cantidad_dias.TabIndex = 3;
+            this.txt_cantidad_dias.Text = "1";
+            this.txt_cantidad_dias.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_cantidad_dias_KeyPress);
+            // 
             // btnañadir
             // 
             this.btnañadir.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Italic);
@@ -262,7 +275,7 @@ namespace Proyecto_Biblioteca
             this.btnañadir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnañadir.Name = "btnañadir";
             this.btnañadir.Size = new System.Drawing.Size(109, 44);
-            this.btnañadir.TabIndex = 16;
+            this.btnañadir.TabIndex = 4;
             this.btnañadir.Text = "Añadir";
             this.btnañadir.UseVisualStyleBackColor = true;
             this.btnañadir.Click += new System.EventHandler(this.btnañadir_Click_1);
@@ -301,7 +314,7 @@ namespace Proyecto_Biblioteca
             this.btn_terminar_pedido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_terminar_pedido.Name = "btn_terminar_pedido";
             this.btn_terminar_pedido.Size = new System.Drawing.Size(109, 44);
-            this.btn_terminar_pedido.TabIndex = 18;
+            this.btn_terminar_pedido.TabIndex = 5;
             this.btn_terminar_pedido.Text = "Terminar";
             this.btn_terminar_pedido.UseVisualStyleBackColor = true;
             this.btn_terminar_pedido.Click += new System.EventHandler(this.btn_terminar_pedido_Click_1);
@@ -327,7 +340,7 @@ namespace Proyecto_Biblioteca
             this.txt_codigo_libro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_codigo_libro.Name = "txt_codigo_libro";
             this.txt_codigo_libro.Size = new System.Drawing.Size(237, 21);
-            this.txt_codigo_libro.TabIndex = 13;
+            this.txt_codigo_libro.TabIndex = 2;
             this.txt_codigo_libro.TextChanged += new System.EventHandler(this.txt_codigo_libro_TextChanged);
             this.txt_codigo_libro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_codigo_libro_KeyPress_1);
             // 
@@ -352,7 +365,7 @@ namespace Proyecto_Biblioteca
             this.txt_matricula_alumno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_matricula_alumno.Name = "txt_matricula_alumno";
             this.txt_matricula_alumno.Size = new System.Drawing.Size(237, 21);
-            this.txt_matricula_alumno.TabIndex = 12;
+            this.txt_matricula_alumno.TabIndex = 1;
             this.txt_matricula_alumno.TextChanged += new System.EventHandler(this.txt_matricula_alumno_TextChanged);
             this.txt_matricula_alumno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_matricula_alumno_KeyPress);
             // 
@@ -467,19 +480,6 @@ namespace Proyecto_Biblioteca
             this.Eliminar.MinimumWidth = 6;
             this.Eliminar.Name = "Eliminar";
             this.Eliminar.ReadOnly = true;
-            // 
-            // txt_cantidad_dias
-            // 
-            this.txt_cantidad_dias.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txt_cantidad_dias.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_cantidad_dias.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_cantidad_dias.Location = new System.Drawing.Point(8, 188);
-            this.txt_cantidad_dias.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_cantidad_dias.Name = "txt_cantidad_dias";
-            this.txt_cantidad_dias.Size = new System.Drawing.Size(237, 21);
-            this.txt_cantidad_dias.TabIndex = 23;
-            this.txt_cantidad_dias.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_cantidad_dias_KeyPress);
-            //this.txt_cantidad_dias.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_cantidad_dias_KeyUp);
             // 
             // Frm_Prestamos
             // 

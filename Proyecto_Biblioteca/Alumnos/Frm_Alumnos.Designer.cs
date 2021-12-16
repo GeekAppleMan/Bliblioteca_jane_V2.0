@@ -30,11 +30,6 @@ namespace Proyecto_Biblioteca
         private void InitializeComponent()
         {
             this.dgv_alumnos = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_buscar = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.txt_alumno = new System.Windows.Forms.TextBox();
-            this.lbl_alumno = new System.Windows.Forms.Label();
             this.Matricula = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombres = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,6 +37,11 @@ namespace Proyecto_Biblioteca
             this.Estatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Modificar = new System.Windows.Forms.DataGridViewImageColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_buscar = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.txt_alumno = new System.Windows.Forms.TextBox();
+            this.lbl_alumno = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_alumnos)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -72,6 +72,52 @@ namespace Proyecto_Biblioteca
             this.dgv_alumnos.Size = new System.Drawing.Size(800, 400);
             this.dgv_alumnos.TabIndex = 3;
             this.dgv_alumnos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_alumnos_CellContentClick);
+            // 
+            // Matricula
+            // 
+            this.Matricula.HeaderText = "Matricula";
+            this.Matricula.MinimumWidth = 6;
+            this.Matricula.Name = "Matricula";
+            // 
+            // Nombres
+            // 
+            this.Nombres.HeaderText = "Nombres";
+            this.Nombres.MinimumWidth = 6;
+            this.Nombres.Name = "Nombres";
+            // 
+            // Apellidos
+            // 
+            this.Apellidos.HeaderText = "Apellidos";
+            this.Apellidos.MinimumWidth = 6;
+            this.Apellidos.Name = "Apellidos";
+            // 
+            // Domicilio
+            // 
+            this.Domicilio.HeaderText = "Domicilio";
+            this.Domicilio.MinimumWidth = 6;
+            this.Domicilio.Name = "Domicilio";
+            // 
+            // Estatus
+            // 
+            this.Estatus.HeaderText = "Estatus";
+            this.Estatus.MinimumWidth = 6;
+            this.Estatus.Name = "Estatus";
+            // 
+            // Modificar
+            // 
+            this.Modificar.HeaderText = "Modificar";
+            this.Modificar.Image = global::Proyecto_Biblioteca.Properties.Resources.editar;
+            this.Modificar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Modificar.MinimumWidth = 6;
+            this.Modificar.Name = "Modificar";
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Image = global::Proyecto_Biblioteca.Properties.Resources.eliminar;
+            this.Eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Eliminar.MinimumWidth = 6;
+            this.Eliminar.Name = "Eliminar";
             // 
             // panel1
             // 
@@ -120,6 +166,7 @@ namespace Proyecto_Biblioteca
             this.txt_alumno.Name = "txt_alumno";
             this.txt_alumno.Size = new System.Drawing.Size(262, 21);
             this.txt_alumno.TabIndex = 14;
+            this.txt_alumno.TextChanged += new System.EventHandler(this.txt_alumno_TextChanged);
             // 
             // lbl_alumno
             // 
@@ -131,52 +178,6 @@ namespace Proyecto_Biblioteca
             this.lbl_alumno.Size = new System.Drawing.Size(209, 23);
             this.lbl_alumno.TabIndex = 15;
             this.lbl_alumno.Text = "Nombre del alumno";
-            // 
-            // Matricula
-            // 
-            this.Matricula.HeaderText = "Matricula";
-            this.Matricula.MinimumWidth = 6;
-            this.Matricula.Name = "Matricula";
-            // 
-            // Nombres
-            // 
-            this.Nombres.HeaderText = "Nombres";
-            this.Nombres.MinimumWidth = 6;
-            this.Nombres.Name = "Nombres";
-            // 
-            // Apellidos
-            // 
-            this.Apellidos.HeaderText = "Apellidos";
-            this.Apellidos.MinimumWidth = 6;
-            this.Apellidos.Name = "Apellidos";
-            // 
-            // Domicilio
-            // 
-            this.Domicilio.HeaderText = "Domicilio";
-            this.Domicilio.MinimumWidth = 6;
-            this.Domicilio.Name = "Domicilio";
-            // 
-            // Estatus
-            // 
-            this.Estatus.HeaderText = "Estatus";
-            this.Estatus.MinimumWidth = 6;
-            this.Estatus.Name = "Estatus";
-            // 
-            // Modificar
-            // 
-            this.Modificar.HeaderText = "Modificar";
-            this.Modificar.Image = global::Proyecto_Biblioteca.Properties.Resources.editar;
-            this.Modificar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Modificar.MinimumWidth = 6;
-            this.Modificar.Name = "Modificar";
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.Image = global::Proyecto_Biblioteca.Properties.Resources.eliminar;
-            this.Eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Eliminar.MinimumWidth = 6;
-            this.Eliminar.Name = "Eliminar";
             // 
             // Frm_Alumnos
             // 

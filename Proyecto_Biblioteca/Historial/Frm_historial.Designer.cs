@@ -118,6 +118,7 @@ namespace Proyecto_Biblioteca
             this.txt_matricula_alumno.Name = "txt_matricula_alumno";
             this.txt_matricula_alumno.Size = new System.Drawing.Size(262, 21);
             this.txt_matricula_alumno.TabIndex = 0;
+            this.txt_matricula_alumno.TextChanged += new System.EventHandler(this.txt_matricula_alumno_TextChanged);
             // 
             // lbl_matricula
             // 

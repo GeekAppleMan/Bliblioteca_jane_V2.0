@@ -25,7 +25,7 @@ namespace Proyecto_Biblioteca
         
         private void añadir()
         {
-            if (string.IsNullOrEmpty(txt_codigo_libro.Text) || string.IsNullOrEmpty(txt_matricula_alumno.Text))
+            if (string.IsNullOrEmpty(txt_codigo_libro.Text) || string.IsNullOrEmpty(txt_matricula_alumno.Text) || string.IsNullOrEmpty(txt_cantidad_dias.Text))
             {
                 MessageBox.Show("Completa los datos correctamente");
             }
@@ -85,15 +85,22 @@ namespace Proyecto_Biblioteca
             }
             else
             {
-                var request = WebRequest.Create(path);
-
-                using (var response = request.GetResponse())
-                using (var stream = response.GetResponseStream())
+                try
                 {
-                    picture_alumno.Image = Bitmap.FromStream(stream);
-                    System.Drawing.Image img = picture_alumno.Image;
-                    //img.RotateFlip(RotateFlipType.Rotate90FlipNone);
-                    picture_alumno.Image = img;
+                    var request = WebRequest.Create(path);
+
+                    using (var response = request.GetResponse())
+                    using (var stream = response.GetResponseStream())
+                    {
+                        picture_alumno.Image = Bitmap.FromStream(stream);
+                        System.Drawing.Image img = picture_alumno.Image;
+                        //img.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                        picture_alumno.Image = img;
+                    }
+                }
+                catch (Exception)
+                {
+
                 }
             }
         }

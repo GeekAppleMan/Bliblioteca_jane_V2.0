@@ -50,7 +50,8 @@ namespace Proyecto_Biblioteca
                 btnalumnos.TextAlign = ContentAlignment.MiddleRight;
                 btn_historial_prestamos.TextAlign = ContentAlignment.MiddleRight;
                 btn_devolucion.TextAlign = ContentAlignment.MiddleRight;
-                btn_configuracion.TextAlign = ContentAlignment.MiddleRight; 
+                btn_configuracion.TextAlign = ContentAlignment.MiddleRight;
+                btn_rating.TextAlign = ContentAlignment.MiddleRight;
                 lbl_jane.Text = "JS";
                 lbl_jane.TextAlign = ContentAlignment.MiddleLeft;
             }
@@ -65,6 +66,7 @@ namespace Proyecto_Biblioteca
                 btn_historial_prestamos.TextAlign = ContentAlignment.MiddleCenter;
                 btn_devolucion.TextAlign = ContentAlignment.MiddleCenter;
                 btn_configuracion.TextAlign = ContentAlignment.MiddleCenter;
+                btn_rating.TextAlign = ContentAlignment.MiddleCenter;
                 lbl_jane.Text = "Jane Software";
                 lbl_jane.TextAlign = ContentAlignment.MiddleCenter;
             }
@@ -140,5 +142,9 @@ namespace Proyecto_Biblioteca
             lbltitulo.Text = "Devoluciones";
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            lbltitulo.Text = "Ratings";
+        }
     }
 }

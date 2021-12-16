@@ -100,6 +100,7 @@ namespace Proyecto_Biblioteca.Libros
             this.txt_codigo_libro.Name = "txt_codigo_libro";
             this.txt_codigo_libro.Size = new System.Drawing.Size(262, 21);
             this.txt_codigo_libro.TabIndex = 14;
+            this.txt_codigo_libro.TextChanged += new System.EventHandler(this.txt_codigo_libro_TextChanged);
             // 
             // lbl_codigo
             // 

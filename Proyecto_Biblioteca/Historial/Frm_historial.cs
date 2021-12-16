@@ -28,5 +28,10 @@ namespace Proyecto_Biblioteca
         {
             obj.buscar(dgv_prestamos, txt_matricula_alumno.Text);
         }
+
+        private void txt_matricula_alumno_TextChanged(object sender, EventArgs e)
+        {
+            obj.buscar(dgv_prestamos, txt_matricula_alumno.Text);
+        }
     }
 }

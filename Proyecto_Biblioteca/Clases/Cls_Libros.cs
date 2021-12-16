@@ -41,7 +41,7 @@ namespace Proyecto_Biblioteca
             else
             {
                 tabla.Rows.Clear();
-                string query = "SELECT * FROM tb_libro WHERE codigo_libro = " + "'" + codigo_libro + "'";
+                string query = "SELECT * FROM tb_libro WHERE codigo_libro LIKE " + "'%" + codigo_libro + "%'";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;

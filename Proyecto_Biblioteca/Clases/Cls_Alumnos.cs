@@ -42,7 +42,7 @@ namespace Proyecto_Biblioteca
             else
             {
                 tabla.Rows.Clear();
-                string query = "SELECT * FROM tb_alumno WHERE matricula = " + "'" + matricula + "'";
+                string query = "SELECT * FROM tb_alumno WHERE matricula LIKE " + "'%" + matricula + "%'";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;

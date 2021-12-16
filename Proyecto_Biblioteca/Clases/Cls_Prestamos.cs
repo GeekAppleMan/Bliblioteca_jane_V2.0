@@ -46,7 +46,7 @@ namespace Proyecto_Biblioteca
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("No se encontro al alumno verifique la matricula");
+                    MessageBox.Show("No se encontro al alumno verifique la matricula, debe estar completa");
                     error = true;
                     throw;
                 }
@@ -130,6 +130,13 @@ namespace Proyecto_Biblioteca
                         }
                       
                     }
+                    else
+                    {
+                        if (alumno == true && estatus == false)
+                        {
+                            MessageBox.Show("Libro no encontrado o no hay disponibles");
+                        }
+                    }
                     
                 }
                 else
@@ -156,7 +163,10 @@ namespace Proyecto_Biblioteca
                     }
                     else
                     {
-                        MessageBox.Show("No se encontro al alumno o no hay libros disponibles");
+                        if (alumno == true && estatus == false)
+                        {
+                            MessageBox.Show("Libro no encontrado o no hay disponibles");
+                        }
                     }
                 }
                 
@@ -165,11 +175,7 @@ namespace Proyecto_Biblioteca
             }
             catch (Exception ex)
             {
-                if (estatus == false && alumno == false && error == true || estatus == false && alumno == true && error == true)
-                {
-
-                }
-                else if(error == false)
+                if(error == false)
                 {
                     MessageBox.Show("Ocurrio un error comuniquese con el equipo de sistemas" + ex.Message);
                 }

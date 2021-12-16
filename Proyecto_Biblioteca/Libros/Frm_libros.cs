@@ -42,5 +42,10 @@ namespace Proyecto_Biblioteca.Libros
         {
             añadir();
         }
+
+        private void txt_codigo_libro_TextChanged(object sender, EventArgs e)
+        {
+            añadir();
+        }
     }
 }
