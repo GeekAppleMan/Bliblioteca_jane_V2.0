@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-12-2021 a las 03:58:58
+-- Tiempo de generación: 16-12-2021 a las 19:50:08
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.12
 
@@ -33,15 +33,18 @@ CREATE TABLE `tb_alumno` (
   `nombres` varchar(50) NOT NULL,
   `apellidos` varchar(50) NOT NULL,
   `domicilio` varchar(80) NOT NULL,
-  `estatus` int(11) NOT NULL
+  `estatus` int(11) NOT NULL,
+  `foto_perfil` varchar(255) NOT NULL,
+  `semestre` int(11) NOT NULL,
+  `carrera` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `tb_alumno`
 --
 
-INSERT INTO `tb_alumno` (`id_alumno`, `matricula`, `nombres`, `apellidos`, `domicilio`, `estatus`) VALUES
-(1, '17340346', 'Jaime Alberto', 'Sanchez Martinez', 'Cuba 790', 1);
+INSERT INTO `tb_alumno` (`id_alumno`, `matricula`, `nombres`, `apellidos`, `domicilio`, `estatus`, `foto_perfil`, `semestre`, `carrera`) VALUES
+(1, '17340346', 'Jaime Alberto', 'Sanchez Martinez', 'Cuba 790', 1, 'C:\\fotos_test\\itn.png', 9, 'ISC');
 
 -- --------------------------------------------------------
 
@@ -54,16 +57,6 @@ CREATE TABLE `tb_devolucion` (
   `fecha_max_dev` varchar(80) NOT NULL,
   `fecha_dev` varchar(80) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `tb_devolucion`
---
-
-INSERT INTO `tb_devolucion` (`id_devolucion`, `fecha_max_dev`, `fecha_dev`) VALUES
-(3, '12/12/2021', '10/12/2021'),
-(4, '12/12/2021', '10/12/2021'),
-(5, '12/12/2021', '10/12/2021'),
-(6, '15/12/2021', '13/12/2021');
 
 -- --------------------------------------------------------
 
@@ -108,8 +101,8 @@ CREATE TABLE `tb_libro` (
 --
 
 INSERT INTO `tb_libro` (`id_libro`, `codigo_libro`, `cantidad_libros`, `nombre`, `autor`, `genero`, `pais_autor`, `no_pag`, `año_edicion`, `estatus`) VALUES
-(1, '7501055307906', 15, 'Harry potter', 'prueba', 'prueba', 'a', 20, '2000', 1),
-(2, '7501013101408', 16, 'harry potter 2', 'prueba', 'prueba', 'prueba', 200, '2001', 1);
+(1, '1', 23, 'Harry potter', 'prueba', 'prueba', 'a', 20, '2000', 1),
+(2, '2', 0, 'harry potter 2', 'prueba', 'prueba', 'prueba', 200, '2001', 2);
 
 -- --------------------------------------------------------
 
@@ -126,15 +119,6 @@ CREATE TABLE `tb_prestamo` (
   `fecha_salida` varchar(80) NOT NULL,
   `id_devolucion` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `tb_prestamo`
---
-
-INSERT INTO `tb_prestamo` (`id_prestamo`, `id_libro`, `cantidad`, `id_usuario`, `id_alumno`, `fecha_salida`, `id_devolucion`) VALUES
-(72, 1, 2, 1, 1, '07/12/2021', 4),
-(73, 2, 2, 1, 1, '07/12/2021', 5),
-(74, 2, 1, 1, 1, '07/12/2021', 6);
 
 -- --------------------------------------------------------
 
@@ -234,7 +218,7 @@ ALTER TABLE `tb_libro`
 -- AUTO_INCREMENT de la tabla `tb_prestamo`
 --
 ALTER TABLE `tb_prestamo`
-  MODIFY `id_prestamo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
+  MODIFY `id_prestamo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=99;
 
 --
 -- AUTO_INCREMENT de la tabla `tb_usuarios`
@@ -257,7 +241,7 @@ ALTER TABLE `tb_libro`
 --
 ALTER TABLE `tb_prestamo`
   ADD CONSTRAINT `tb_prestamo_ibfk_1` FOREIGN KEY (`Id_libro`) REFERENCES `tb_libro` (`Id_libro`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `tb_prestamo_ibfk_2` FOREIGN KEY (`Id_usuario`) REFERENCES `tb_usuarios` (`id_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `tb_prestamo_ibfk_2` FOREIGN KEY (`Id_usuario`) REFERENCES `tb_usuarios` (`Id_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `tb_prestamo_ibfk_3` FOREIGN KEY (`Id_Alumno`) REFERENCES `tb_alumno` (`Id_Alumno`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `tb_prestamo_ibfk_4` FOREIGN KEY (`Id_devolucion`) REFERENCES `tb_devolucion` (`Id_devolucion`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
