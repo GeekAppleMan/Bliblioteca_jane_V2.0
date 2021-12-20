@@ -219,3 +219,4 @@ C:\xampp\htdocs\Repos\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\obj\Debug\Proyec
 C:\xampp\htdocs\Repos\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\obj\Debug\Proyecto_Biblioteca.Devolucion.Frm_devolver.resources
 C:\xampp\htdocs\Repos\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\obj\Debug\Proyecto_Biblioteca.Libros.Frm_libros.resources
 C:\xampp\htdocs\Repos\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\obj\Debug\Proyecto_Biblioteca.Frm_usuarios.resources
+C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\obj\Debug\Proyecto_Biblioteca.Ratings.Frm_Ratings.resources

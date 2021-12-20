@@ -144,6 +144,7 @@ namespace Proyecto_Biblioteca
 
         private void button1_Click(object sender, EventArgs e)
         {
+            abrir_form(new Proyecto_Biblioteca.Ratings.Frm_Ratings());
             lbltitulo.Text = "Ratings";
         }
     }

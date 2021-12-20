@@ -8,20 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Proyecto_Biblioteca
+namespace Proyecto_Biblioteca.Ratings
 {
-    public partial class Frm_historial : Form
+    public partial class Frm_Ratings : Form
     {
-        Proyecto_Biblioteca.Clases.Cls_Historial obj = new Proyecto_Biblioteca.Clases.Cls_Historial();
-        public Frm_historial()
+        Cls_libros obj_libros = new Cls_libros();
+        public Frm_Ratings()
         {
             InitializeComponent();
-        }
-
-        private void Frm_historial_Load(object sender, EventArgs e)
-        {
-
-            buscar();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -29,17 +23,22 @@ namespace Proyecto_Biblioteca
             buscar();
         }
 
-        private void txt_matricula_alumno_TextChanged(object sender, EventArgs e)
+        private void Frm_Ratings_Load(object sender, EventArgs e)
         {
-            buscar();  
+            buscar();
+        }
+
+        private void txt_codigo_libro_TextChanged(object sender, EventArgs e)
+        {
+            buscar();
         }
 
         private void buscar()
         {
-            obj.buscar(dgv_prestamos, txt_matricula_alumno.Text);
+            obj_libros.mas_prestado(dgv_libros, txt_codigo_libro.Text);
         }
 
-        private void txt_matricula_alumno_KeyPress(object sender, KeyPressEventArgs e)
+        private void txt_codigo_libro_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {

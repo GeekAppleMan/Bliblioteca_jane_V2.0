@@ -110,6 +110,12 @@
     <Compile Include="Alumnos\Frm_Alumnos.Designer.cs">
       <DependentUpon>Frm_Alumnos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ratings\Frm_Ratings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ratings\Frm_Ratings.Designer.cs">
+      <DependentUpon>Frm_Ratings.cs</DependentUpon>
+    </Compile>
     <Compile Include="Usuarios\Frm_usuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Prestamos\Frm_Prestamos.resx">
       <DependentUpon>Frm_Prestamos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ratings\Frm_Ratings.resx">
+      <DependentUpon>Frm_Ratings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registrar\Frm_registrar.resx">
       <DependentUpon>Frm_registrar.cs</DependentUpon>

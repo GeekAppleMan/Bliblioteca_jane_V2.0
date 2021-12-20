@@ -1,7 +1,7 @@
 ﻿
-namespace Proyecto_Biblioteca.Libros
+namespace Proyecto_Biblioteca.Ratings
 {
-    partial class Frm_libros
+    partial class Frm_Ratings
     {
         /// <summary>
         /// Required designer variable.
@@ -34,7 +34,6 @@ namespace Proyecto_Biblioteca.Libros
             this.panel3 = new System.Windows.Forms.Panel();
             this.txt_codigo_libro = new System.Windows.Forms.TextBox();
             this.lbl_codigo = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.dgv_libros = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,11 +44,13 @@ namespace Proyecto_Biblioteca.Libros
             this.no_pag = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Año_edicion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Modificar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Prestamos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_libros)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -63,8 +64,7 @@ namespace Proyecto_Biblioteca.Libros
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 50);
-            this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.TabIndex = 1;
             // 
             // button1
             // 
@@ -114,15 +114,6 @@ namespace Proyecto_Biblioteca.Libros
             this.lbl_codigo.TabIndex = 15;
             this.lbl_codigo.Text = "Codigo del libro";
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.dgv_libros);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 50);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 400);
-            this.panel2.TabIndex = 0;
-            // 
             // dgv_libros
             // 
             this.dgv_libros.AllowUserToAddRows = false;
@@ -142,8 +133,7 @@ namespace Proyecto_Biblioteca.Libros
             this.no_pag,
             this.Año_edicion,
             this.Estatus,
-            this.Modificar,
-            this.Eliminar});
+            this.Prestamos});
             this.dgv_libros.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_libros.Location = new System.Drawing.Point(0, 0);
             this.dgv_libros.Name = "dgv_libros";
@@ -151,8 +141,7 @@ namespace Proyecto_Biblioteca.Libros
             this.dgv_libros.RowHeadersWidth = 51;
             this.dgv_libros.RowTemplate.Height = 24;
             this.dgv_libros.Size = new System.Drawing.Size(800, 400);
-            this.dgv_libros.TabIndex = 0;
-            this.dgv_libros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_libros_CellContentClick);
+            this.dgv_libros.TabIndex = 2;
             // 
             // Codigo
             // 
@@ -208,23 +197,40 @@ namespace Proyecto_Biblioteca.Libros
             this.Estatus.MinimumWidth = 6;
             this.Estatus.Name = "Estatus";
             // 
-            // Modificar
+            // Prestamos
             // 
-            this.Modificar.HeaderText = "Modificar";
-            this.Modificar.Image = global::Proyecto_Biblioteca.Properties.Resources.editar;
-            this.Modificar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Modificar.MinimumWidth = 6;
-            this.Modificar.Name = "Modificar";
+            this.Prestamos.HeaderText = "Prestamos";
+            this.Prestamos.MinimumWidth = 6;
+            this.Prestamos.Name = "Prestamos";
             // 
-            // Eliminar
+            // dataGridViewImageColumn1
             // 
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.Image = global::Proyecto_Biblioteca.Properties.Resources.eliminar1;
-            this.Eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Eliminar.MinimumWidth = 6;
-            this.Eliminar.Name = "Eliminar";
+            this.dataGridViewImageColumn1.HeaderText = "Modificar";
+            this.dataGridViewImageColumn1.Image = global::Proyecto_Biblioteca.Properties.Resources.editar;
+            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn1.MinimumWidth = 6;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Width = 72;
             // 
-            // Frm_libros
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.HeaderText = "Eliminar";
+            this.dataGridViewImageColumn2.Image = global::Proyecto_Biblioteca.Properties.Resources.eliminar1;
+            this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn2.MinimumWidth = 6;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.Width = 73;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.dgv_libros);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 50);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(800, 400);
+            this.panel2.TabIndex = 3;
+            // 
+            // Frm_Ratings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -232,13 +238,13 @@ namespace Proyecto_Biblioteca.Libros
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Frm_libros";
-            this.Text = "Frm_libros";
-            this.Load += new System.EventHandler(this.Frm_libros_Load);
+            this.Name = "Frm_Ratings";
+            this.Text = "Frm_Ratings";
+            this.Load += new System.EventHandler(this.Frm_Ratings_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_libros)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -246,12 +252,14 @@ namespace Proyecto_Biblioteca.Libros
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dgv_libros;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txt_codigo_libro;
         private System.Windows.Forms.Label lbl_codigo;
+        private System.Windows.Forms.DataGridView dgv_libros;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
@@ -261,7 +269,6 @@ namespace Proyecto_Biblioteca.Libros
         private System.Windows.Forms.DataGridViewTextBoxColumn no_pag;
         private System.Windows.Forms.DataGridViewTextBoxColumn Año_edicion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estatus;
-        private System.Windows.Forms.DataGridViewImageColumn Modificar;
-        private System.Windows.Forms.DataGridViewImageColumn Eliminar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Prestamos;
     }
 }
