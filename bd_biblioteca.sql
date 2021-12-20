@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-12-2021 a las 19:50:08
+-- Tiempo de generación: 20-12-2021 a las 08:38:43
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.12
 
@@ -58,6 +58,16 @@ CREATE TABLE `tb_devolucion` (
   `fecha_dev` varchar(80) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `tb_devolucion`
+--
+
+INSERT INTO `tb_devolucion` (`id_devolucion`, `fecha_max_dev`, `fecha_dev`) VALUES
+(1, '20/12/2021', '17/12/2021'),
+(2, '20/12/2021', '17/12/2021'),
+(3, '24/12/2021', '21/12/2021'),
+(4, '24/12/2021', '21/12/2021');
+
 -- --------------------------------------------------------
 
 --
@@ -93,16 +103,17 @@ CREATE TABLE `tb_libro` (
   `pais_autor` varchar(50) NOT NULL,
   `no_pag` int(20) NOT NULL,
   `año_edicion` varchar(50) NOT NULL,
-  `estatus` int(11) NOT NULL
+  `estatus` int(11) NOT NULL,
+  `prestamos` int(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `tb_libro`
 --
 
-INSERT INTO `tb_libro` (`id_libro`, `codigo_libro`, `cantidad_libros`, `nombre`, `autor`, `genero`, `pais_autor`, `no_pag`, `año_edicion`, `estatus`) VALUES
-(1, '1', 23, 'Harry potter', 'prueba', 'prueba', 'a', 20, '2000', 1),
-(2, '2', 0, 'harry potter 2', 'prueba', 'prueba', 'prueba', 200, '2001', 2);
+INSERT INTO `tb_libro` (`id_libro`, `codigo_libro`, `cantidad_libros`, `nombre`, `autor`, `genero`, `pais_autor`, `no_pag`, `año_edicion`, `estatus`, `prestamos`) VALUES
+(1, '1', 16, 'Harry potter', 'prueba', 'prueba', 'a', 20, '2000', 1, 11),
+(2, '2', 199, 'harry potter 2', 'prueba', 'prueba', 'prueba', 200, '2001', 1, 5);
 
 -- --------------------------------------------------------
 
@@ -119,6 +130,16 @@ CREATE TABLE `tb_prestamo` (
   `fecha_salida` varchar(80) NOT NULL,
   `id_devolucion` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `tb_prestamo`
+--
+
+INSERT INTO `tb_prestamo` (`id_prestamo`, `id_libro`, `cantidad`, `id_usuario`, `id_alumno`, `fecha_salida`, `id_devolucion`) VALUES
+(101, 1, 1, 1, 1, '12/16/2021 12:22 p. m.', 1),
+(102, 1, 2, 1, 1, '12/16/2021 12:38 p. m.', 2),
+(103, 1, 1, 1, 1, '12/20/2021 12:28 a. m.', 3),
+(104, 2, 1, 1, 1, '12/20/2021 12:28 a. m.', 4);
 
 -- --------------------------------------------------------
 
@@ -218,7 +239,7 @@ ALTER TABLE `tb_libro`
 -- AUTO_INCREMENT de la tabla `tb_prestamo`
 --
 ALTER TABLE `tb_prestamo`
-  MODIFY `id_prestamo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=99;
+  MODIFY `id_prestamo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
 
 --
 -- AUTO_INCREMENT de la tabla `tb_usuarios`
