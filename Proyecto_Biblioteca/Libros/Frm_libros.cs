@@ -47,5 +47,17 @@ namespace Proyecto_Biblioteca.Libros
         {
             añadir();
         }
+
+        private void txt_codigo_libro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                añadir();
+            }
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

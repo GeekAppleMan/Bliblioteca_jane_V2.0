@@ -199,6 +199,7 @@ namespace Proyecto_Biblioteca
                     reader = commandDatabase.ExecuteReader();
                     databaseConnection.Close();
                     resul = cambiar_cantidad_libro(tabla_pedido.Rows[i]["Id_libro"].ToString(), Convert.ToInt32(tabla_pedido.Rows[i]["Cantidad"].ToString()));
+                    cambiar_prestamos(tabla_pedido.Rows[i]["Id_libro"].ToString());
                     if (resul == 0)
                     {
                         cambiar_estatus(tabla_pedido.Rows[i]["Id_libro"].ToString());
@@ -276,7 +277,49 @@ namespace Proyecto_Biblioteca
 
             return resul;
         }
+        private void cambiar_prestamos(string id_libro)
+        {
+            int result = 0;
+            try
+            {
+                string query = "SELECT prestamos FROM tb_libro WHERE id_libro =  " + "'" + id_libro + "'";
+                MySqlConnection databaseConnection = new MySqlConnection(connectionString);
+                MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
+                commandDatabase.CommandTimeout = 60;
+                MySqlDataReader reader;
+                databaseConnection.Open();
+                reader = commandDatabase.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        result = Convert.ToInt32(reader.GetString(0));
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocurrio un error comuniquese con el equipo de sistemas");
+            }
+            
+            try
+            {
+                result = result + 1;
+                string query = "UPDATE `tb_libro` SET prestamos= " + "'" + result + "'" + " WHERE id_libro = " + "'" + id_libro + "'";
+                MySqlConnection databaseConnection = new MySqlConnection(connectionString);
+                MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
+                commandDatabase.CommandTimeout = 60;
+                MySqlDataReader reader;
+                databaseConnection.Open();
+                reader = commandDatabase.ExecuteReader();
+                databaseConnection.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocurrio un error comuniquese con el equipo de sistemas");
+            }
 
+        }
         public void buscar_datos_alumno(string matricula,Label Nombre, Label Apellidos,Label Estatus, Label Semestre, Label Carrera, ref string imagen)
         {
             try
