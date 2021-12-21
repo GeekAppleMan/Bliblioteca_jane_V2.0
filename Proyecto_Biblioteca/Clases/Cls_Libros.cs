@@ -16,6 +16,7 @@ namespace Proyecto_Biblioteca
 
         public void buscar(DataGridView tabla, string codigo_libro)
         {
+            string estatus = "";
             if (tabla_id.Columns.Count == 0)
             {
                 tabla_id.Columns.Add("Id_libro");
@@ -37,7 +38,15 @@ namespace Proyecto_Biblioteca
                 {
                     while (reader.Read())
                     {
-                        tabla.Rows.Add(reader.GetString(1), reader.GetString(3), reader.GetString(2), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(7), reader.GetString(8), reader.GetString(9));
+                        if (reader.GetString(9) == "1")
+                        {
+                            estatus = "Activo";
+                        }
+                        else if(reader.GetString(9) == "2")
+                        {
+                            estatus = "Inactivo";
+                        }
+                        tabla.Rows.Add(reader.GetString(1), reader.GetString(3), reader.GetString(2), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(7), reader.GetString(8), estatus);
                         tabla_id.Rows.Add(reader.GetString(0));
                     }
                 }
@@ -65,7 +74,16 @@ namespace Proyecto_Biblioteca
                 {
                     while (reader.Read())
                     {
-                        tabla.Rows.Add(reader.GetString(1), reader.GetString(3),reader.GetString(2), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(7), reader.GetString(8), reader.GetString(9));
+
+                        if (reader.GetString(9) == "1")
+                        {
+                            estatus = "Activo";
+                        }
+                        else if (reader.GetString(9) == "2")
+                        {
+                            estatus = "Inactivo";
+                        }
+                        tabla.Rows.Add(reader.GetString(1), reader.GetString(3), reader.GetString(2), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(7), reader.GetString(8), estatus);
                         tabla_id.Rows.Add(reader.GetString(0));
                     }
                 }
@@ -147,7 +165,7 @@ namespace Proyecto_Biblioteca
                 MySqlDataReader reader;
                 databaseConnection.Open();
                 reader = commandDatabase.ExecuteReader();
-                MessageBox.Show("Se actualizado");
+                MessageBox.Show("Se actualizo correctamente");
             }
             catch (Exception)
             {
@@ -168,9 +186,9 @@ namespace Proyecto_Biblioteca
                 reader = commandDatabase.ExecuteReader();
                 MessageBox.Show("Se elimino el libro");
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Ocurrio un problema comuniquese con sistemas" + ex);
+                MessageBox.Show("Ocurrio un problema comuniquese con sistemas");
             }
         }
     }

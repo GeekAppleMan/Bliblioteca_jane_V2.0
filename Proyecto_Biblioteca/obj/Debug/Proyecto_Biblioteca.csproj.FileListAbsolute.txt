@@ -221,3 +221,5 @@ C:\xampp\htdocs\Repos\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\obj\Debug\Proyec
 C:\xampp\htdocs\Repos\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\obj\Debug\Proyecto_Biblioteca.Frm_usuarios.resources
 C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\obj\Debug\Proyecto_Biblioteca.Ratings.Frm_Ratings.resources
 C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\obj\Debug\Proyecto_Biblioteca.Libros.Frm_modificar_libro.resources
+C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\obj\Debug\Proyecto_Biblioteca.Usuarios.Frm_modificar_usuario.resources
+C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\obj\Debug\Proyecto_Biblioteca.Alumnos.Frm_modificar_alumno.resources

@@ -43,7 +43,6 @@ namespace Proyecto_Biblioteca
             if (panel_barra_izquierda.Width == 150)
             {
                 panel_barra_izquierda.Width = 50;
-                btninicio.TextAlign = ContentAlignment.MiddleRight;
                 btnprestamos.TextAlign = ContentAlignment.MiddleRight;
                 btnlibros.TextAlign = ContentAlignment.MiddleRight;
                 btnusuarios.TextAlign = ContentAlignment.MiddleRight;
@@ -58,7 +57,6 @@ namespace Proyecto_Biblioteca
             else
             {
                 panel_barra_izquierda.Width = 150;
-                btninicio.TextAlign = ContentAlignment.MiddleCenter;
                 btnprestamos.TextAlign = ContentAlignment.MiddleCenter;
                 btnlibros.TextAlign = ContentAlignment.MiddleCenter;
                 btnusuarios.TextAlign = ContentAlignment.MiddleCenter;

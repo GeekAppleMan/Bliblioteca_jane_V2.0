@@ -69,6 +69,7 @@ namespace Proyecto_Biblioteca
             this.dgv_usuario.RowTemplate.Height = 24;
             this.dgv_usuario.Size = new System.Drawing.Size(800, 400);
             this.dgv_usuario.TabIndex = 1;
+            this.dgv_usuario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_usuario_CellClick);
             // 
             // Matricula
             // 
