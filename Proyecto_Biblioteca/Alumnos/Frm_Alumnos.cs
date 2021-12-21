@@ -61,9 +61,19 @@ namespace Proyecto_Biblioteca
                 }
                 if (e.ColumnIndex == 6)
                 {
-                    Cls_Alumnos.index = e.RowIndex;
-                    obj_alumnos.eliminar();
-                    añadir();
+                    DialogResult result = MessageBox.Show("¿Seguro que desea eliminar el alumno?", "Confirmar", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        Cls_Alumnos.index = e.RowIndex;
+                        obj_alumnos.eliminar();
+                        añadir();
+                    }
+                    else if (result == DialogResult.No)
+                    {
+                    }
+                    else if (result == DialogResult.Cancel)
+                    {
+                    }
                 }
             }
         }

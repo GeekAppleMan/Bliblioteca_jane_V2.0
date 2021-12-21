@@ -20,7 +20,15 @@ namespace Proyecto_Biblioteca
         }
         private void Frm_Prestamos_Load(object sender, EventArgs e)
         {
-
+            lbl_nombre_alumno.Text = "";
+            lbl_apellidos_alumno.Text = "";
+            lbl_carrera.Text = "";
+            lbl_semestre.Text = "";
+            lbl_estatus_alumno.Text = "";
+            lbl_nombre_libro.Text = "";
+            lbl_codigo.Text = "";
+            lbl_cant.Text = "";
+            lbl_estatus.Text = "";
         }
         
         private void añadir()
@@ -169,6 +177,11 @@ namespace Proyecto_Biblioteca
             {
                 e.Handled = true;
             }
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
