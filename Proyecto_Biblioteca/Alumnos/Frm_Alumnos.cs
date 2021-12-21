@@ -13,6 +13,7 @@ namespace Proyecto_Biblioteca
     public partial class Frm_Alumnos : Form
     {
         Cls_Alumnos obj_alumnos = new Cls_Alumnos();
+        Alumnos.Frm_modificar_alumno obj_modificar = new Alumnos.Frm_modificar_alumno();
         public Frm_Alumnos()
         {
             InitializeComponent();
@@ -33,14 +34,38 @@ namespace Proyecto_Biblioteca
             obj_alumnos.buscar(dgv_alumnos, txt_alumno.Text);
         }
 
-        private void dgv_alumnos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void txt_alumno_TextChanged(object sender, EventArgs e)
         {
             añadir();
+        }
+
+        private void dgv_alumnos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if ((e.ColumnIndex == 5 || e.ColumnIndex == 6) && e.RowIndex == -1)
+            {
+
+            }
+            else
+            {
+                if (e.ColumnIndex == 5)
+                {
+
+                    obj_modificar.txt_matricula.Text = dgv_alumnos[0, e.RowIndex].Value.ToString();
+                    obj_modificar.txt_nombres.Text = dgv_alumnos[1, e.RowIndex].Value.ToString();
+                    obj_modificar.txt_apellidos.Text = dgv_alumnos[2, e.RowIndex].Value.ToString();
+                    obj_modificar.txt_domicilio.Text = dgv_alumnos[3, e.RowIndex].Value.ToString();
+                    obj_modificar.combo_estatus.Text = dgv_alumnos[4, e.RowIndex].Value.ToString();
+                    Cls_Alumnos.index = e.RowIndex;
+                    obj_modificar.ShowDialog();
+                    añadir();
+                }
+                if (e.ColumnIndex == 6)
+                {
+                    Cls_Alumnos.index = e.RowIndex;
+                    obj_alumnos.eliminar();
+                    añadir();
+                }
+            }
         }
     }
 }

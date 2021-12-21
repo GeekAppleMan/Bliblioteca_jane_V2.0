@@ -64,7 +64,7 @@ namespace Proyecto_Biblioteca.Libros
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 50);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            //this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // button1
             // 
@@ -153,7 +153,7 @@ namespace Proyecto_Biblioteca.Libros
             this.dgv_libros.Size = new System.Drawing.Size(800, 400);
             this.dgv_libros.TabIndex = 0;
             this.dgv_libros.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_libros_CellClick);
-            this.dgv_libros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_libros_CellContentClick);
+            //this.dgv_libros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_libros_CellContentClick);
             // 
             // Codigo
             // 

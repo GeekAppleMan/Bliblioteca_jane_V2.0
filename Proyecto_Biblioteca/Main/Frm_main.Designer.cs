@@ -39,7 +39,6 @@ namespace Proyecto_Biblioteca
             this.btnalumnos = new System.Windows.Forms.Button();
             this.btnusuarios = new System.Windows.Forms.Button();
             this.btnprestamos = new System.Windows.Forms.Button();
-            this.btninicio = new System.Windows.Forms.Button();
             this.pic_menu = new System.Windows.Forms.PictureBox();
             this.lbl_jane = new System.Windows.Forms.Label();
             this.panel_barra_titulo = new System.Windows.Forms.Panel();
@@ -68,7 +67,6 @@ namespace Proyecto_Biblioteca
             this.panel_barra_izquierda.Controls.Add(this.btnalumnos);
             this.panel_barra_izquierda.Controls.Add(this.btnusuarios);
             this.panel_barra_izquierda.Controls.Add(this.btnprestamos);
-            this.panel_barra_izquierda.Controls.Add(this.btninicio);
             this.panel_barra_izquierda.Controls.Add(this.pic_menu);
             this.panel_barra_izquierda.Controls.Add(this.lbl_jane);
             this.panel_barra_izquierda.Dock = System.Windows.Forms.DockStyle.Left;
@@ -87,7 +85,7 @@ namespace Proyecto_Biblioteca
             this.btn_rating.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btn_rating.Image = global::Proyecto_Biblioteca.Properties.Resources.negocio__1_;
             this.btn_rating.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_rating.Location = new System.Drawing.Point(4, 372);
+            this.btn_rating.Location = new System.Drawing.Point(4, 338);
             this.btn_rating.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_rating.Name = "btn_rating";
             this.btn_rating.Size = new System.Drawing.Size(192, 47);
@@ -105,7 +103,7 @@ namespace Proyecto_Biblioteca
             this.btn_devolucion.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btn_devolucion.Image = global::Proyecto_Biblioteca.Properties.Resources.carpeta;
             this.btn_devolucion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_devolucion.Location = new System.Drawing.Point(3, 281);
+            this.btn_devolucion.Location = new System.Drawing.Point(3, 247);
             this.btn_devolucion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_devolucion.Name = "btn_devolucion";
             this.btn_devolucion.Size = new System.Drawing.Size(192, 47);
@@ -123,7 +121,7 @@ namespace Proyecto_Biblioteca
             this.btn_historial_prestamos.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btn_historial_prestamos.Image = global::Proyecto_Biblioteca.Properties.Resources.carpeta;
             this.btn_historial_prestamos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_historial_prestamos.Location = new System.Drawing.Point(3, 234);
+            this.btn_historial_prestamos.Location = new System.Drawing.Point(3, 200);
             this.btn_historial_prestamos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_historial_prestamos.Name = "btn_historial_prestamos";
             this.btn_historial_prestamos.Size = new System.Drawing.Size(192, 47);
@@ -141,7 +139,7 @@ namespace Proyecto_Biblioteca
             this.btn_configuracion.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btn_configuracion.Image = global::Proyecto_Biblioteca.Properties.Resources.ajustes;
             this.btn_configuracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_configuracion.Location = new System.Drawing.Point(3, 527);
+            this.btn_configuracion.Location = new System.Drawing.Point(3, 493);
             this.btn_configuracion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_configuracion.Name = "btn_configuracion";
             this.btn_configuracion.Size = new System.Drawing.Size(192, 47);
@@ -159,7 +157,7 @@ namespace Proyecto_Biblioteca
             this.btnlibros.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnlibros.Image = global::Proyecto_Biblioteca.Properties.Resources.carpeta;
             this.btnlibros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnlibros.Location = new System.Drawing.Point(3, 326);
+            this.btnlibros.Location = new System.Drawing.Point(3, 292);
             this.btnlibros.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnlibros.Name = "btnlibros";
             this.btnlibros.Size = new System.Drawing.Size(192, 47);
@@ -177,7 +175,7 @@ namespace Proyecto_Biblioteca
             this.btnalumnos.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnalumnos.Image = global::Proyecto_Biblioteca.Properties.Resources.usuario;
             this.btnalumnos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnalumnos.Location = new System.Drawing.Point(3, 474);
+            this.btnalumnos.Location = new System.Drawing.Point(3, 440);
             this.btnalumnos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnalumnos.Name = "btnalumnos";
             this.btnalumnos.Size = new System.Drawing.Size(192, 47);
@@ -195,7 +193,7 @@ namespace Proyecto_Biblioteca
             this.btnusuarios.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnusuarios.Image = global::Proyecto_Biblioteca.Properties.Resources.usuario;
             this.btnusuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnusuarios.Location = new System.Drawing.Point(3, 421);
+            this.btnusuarios.Location = new System.Drawing.Point(3, 387);
             this.btnusuarios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnusuarios.Name = "btnusuarios";
             this.btnusuarios.Size = new System.Drawing.Size(192, 47);
@@ -213,7 +211,7 @@ namespace Proyecto_Biblioteca
             this.btnprestamos.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnprestamos.Image = global::Proyecto_Biblioteca.Properties.Resources.documento__1_;
             this.btnprestamos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnprestamos.Location = new System.Drawing.Point(3, 181);
+            this.btnprestamos.Location = new System.Drawing.Point(3, 147);
             this.btnprestamos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnprestamos.Name = "btnprestamos";
             this.btnprestamos.Size = new System.Drawing.Size(192, 47);
@@ -221,24 +219,6 @@ namespace Proyecto_Biblioteca
             this.btnprestamos.Text = "     Prestamos";
             this.btnprestamos.UseVisualStyleBackColor = true;
             this.btnprestamos.Click += new System.EventHandler(this.btnprestamos_Click);
-            // 
-            // btninicio
-            // 
-            this.btninicio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btninicio.FlatAppearance.BorderSize = 0;
-            this.btninicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btninicio.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btninicio.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btninicio.Image = global::Proyecto_Biblioteca.Properties.Resources.pagina_de_inicio__2_;
-            this.btninicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btninicio.Location = new System.Drawing.Point(3, 128);
-            this.btninicio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btninicio.Name = "btninicio";
-            this.btninicio.Size = new System.Drawing.Size(192, 47);
-            this.btninicio.TabIndex = 0;
-            this.btninicio.Text = "Inicio";
-            this.btninicio.UseVisualStyleBackColor = true;
-            this.btninicio.Click += new System.EventHandler(this.btninicio_Click);
             // 
             // pic_menu
             // 
@@ -386,7 +366,6 @@ namespace Proyecto_Biblioteca
         private System.Windows.Forms.Label lbl_jane;
         private System.Windows.Forms.Button btnusuarios;
         private System.Windows.Forms.Button btnprestamos;
-        private System.Windows.Forms.Button btninicio;
         private System.Windows.Forms.Button btnlibros;
         private System.Windows.Forms.Button btnalumnos;
         private System.Windows.Forms.PictureBox pic_hora;

@@ -18,16 +18,6 @@ namespace Proyecto_Biblioteca.Libros
             InitializeComponent();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void dgv_libros_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void Frm_libros_Load(object sender, EventArgs e)
         {
             añadir();
@@ -79,6 +69,7 @@ namespace Proyecto_Biblioteca.Libros
                     obj_libro.txt_pais_autor.Text = dgv_libros[5, e.RowIndex].Value.ToString();
                     obj_libro.txt_numero_pag.Text = dgv_libros[6, e.RowIndex].Value.ToString();
                     obj_libro.txt_año_edicion.Text = dgv_libros[7, e.RowIndex].Value.ToString();
+                    obj_libro.combo_estatus.Text = dgv_libros[8, e.RowIndex].Value.ToString();
                     Cls_libros.index = e.RowIndex;
                     obj_libro.ShowDialog();
                     añadir();
