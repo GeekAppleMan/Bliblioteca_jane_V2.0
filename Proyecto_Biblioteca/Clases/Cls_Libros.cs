@@ -5,17 +5,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace Proyecto_Biblioteca
 {
     class Cls_libros : Cls_Conexion
     {
+        public static DataTable tabla_id = new DataTable();
+        public static int index {get;set;}
+
         public void buscar(DataGridView tabla, string codigo_libro)
         {
+            if (tabla_id.Columns.Count == 0)
+            {
+                tabla_id.Columns.Add("Id_libro");
+            }
             if (codigo_libro == "")
             {
+                tabla_id.Rows.Clear();
                 tabla.Rows.Clear();
-                string query = "SELECT * FROM tb_libro";
+                string query = "SELECT * FROM tb_libro WHERE estatus = " + "1";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;
@@ -29,6 +38,7 @@ namespace Proyecto_Biblioteca
                     while (reader.Read())
                     {
                         tabla.Rows.Add(reader.GetString(1), reader.GetString(3), reader.GetString(2), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(7), reader.GetString(8), reader.GetString(9));
+                        tabla_id.Rows.Add(reader.GetString(0));
                     }
                 }
                 else
@@ -40,6 +50,7 @@ namespace Proyecto_Biblioteca
             }
             else
             {
+                tabla_id.Rows.Clear();
                 tabla.Rows.Clear();
                 string query = "SELECT * FROM tb_libro WHERE codigo_libro LIKE " + "'%" + codigo_libro + "%'";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
@@ -55,6 +66,7 @@ namespace Proyecto_Biblioteca
                     while (reader.Read())
                     {
                         tabla.Rows.Add(reader.GetString(1), reader.GetString(3),reader.GetString(2), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(7), reader.GetString(8), reader.GetString(9));
+                        tabla_id.Rows.Add(reader.GetString(0));
                     }
                 }
                 else
@@ -122,6 +134,44 @@ namespace Proyecto_Biblioteca
                 databaseConnection.Close();
             }
 
+        }
+
+        public void modificar(string codigo, string nombre, string cantidad, string autor, string genero, string pais, string numero, string año, string estatus)
+        {
+            try
+            {
+                string query = "UPDATE `tb_libro` SET  `codigo_libro`= " + "'" + codigo + "'" + ",`cantidad_libros`= " + "'" + cantidad + "'" + ",`nombre`= " + "'" + nombre + "'" + ",`autor`= " + "'" + autor + "'" + ",`genero`= " + "'" + genero + "'" + ",`pais_autor`= " + "'" + pais + "'" + ",`no_pag`= " + "'" + numero + "'" + ",`año_edicion`= " + "'" + año + "'" + ",`estatus`= " + "'" + estatus + "'" + "WHERE id_libro = " + "'" + tabla_id.Rows[index]["id_libro"].ToString() + "'";
+                MySqlConnection databaseConnection = new MySqlConnection(connectionString);
+                MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
+                commandDatabase.CommandTimeout = 60;
+                MySqlDataReader reader;
+                databaseConnection.Open();
+                reader = commandDatabase.ExecuteReader();
+                MessageBox.Show("Se actualizado");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocurrio un problema comuniquese con sistemas");
+            }
+        }
+
+        public void eliminar()
+        {
+            try
+            {
+                string query = "UPDATE `tb_libro` SET  `estatus`= " + "'2'" + "WHERE id_libro = " + "'" + tabla_id.Rows[index]["id_libro"].ToString() + "'";
+                MySqlConnection databaseConnection = new MySqlConnection(connectionString);
+                MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
+                commandDatabase.CommandTimeout = 60;
+                MySqlDataReader reader;
+                databaseConnection.Open();
+                reader = commandDatabase.ExecuteReader();
+                MessageBox.Show("Se elimino el libro");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrio un problema comuniquese con sistemas" + ex);
+            }
         }
     }
 }
