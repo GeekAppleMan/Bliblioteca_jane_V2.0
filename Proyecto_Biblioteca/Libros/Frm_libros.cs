@@ -76,9 +76,19 @@ namespace Proyecto_Biblioteca.Libros
                 }
                 if (e.ColumnIndex == 10)
                 {
-                    Cls_libros.index = e.RowIndex;
-                    obj_libros.eliminar();
-                    añadir();
+                    DialogResult result = MessageBox.Show("¿Seguro que desea eliminar el libro?", "Confirmar", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        Cls_libros.index = e.RowIndex;
+                        obj_libros.eliminar();
+                        añadir();
+                    }
+                    else if (result == DialogResult.No)
+                    {
+                    }
+                    else if (result == DialogResult.Cancel)
+                    {
+                    }
                 }
             }
         }

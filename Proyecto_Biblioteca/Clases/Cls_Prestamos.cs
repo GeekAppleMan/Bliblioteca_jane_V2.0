@@ -326,12 +326,12 @@ namespace Proyecto_Biblioteca
             {
                 if (matricula == "")
                 {
-                    Nombre.Text = "Nombre Alumno";
-                    Apellidos.Text = "Apellidos Alumno";
-                    Estatus.Text = "Estatus";
+                    Nombre.Text = "";
+                    Apellidos.Text = "";
+                    Estatus.Text = "";
                     imagen = "";
-                    Semestre.Text = "Semestre";
-                    Carrera.Text = "Carrera";
+                    Semestre.Text = "";
+                    Carrera.Text = "";
                 }
                 else
                 {
@@ -374,10 +374,10 @@ namespace Proyecto_Biblioteca
         {
             if (codigo == "")
             {
-                libro.Text = "Nombre Libro";
-                codigo_libro.Text = "Codigo del libro";
-                cantidad.Text = "Cantidad de libros";
-                estatus.Text = "Estatus";
+                libro.Text = "";
+                codigo_libro.Text = "";
+                cantidad.Text = "";
+                estatus.Text = "";
             }
             else
             {

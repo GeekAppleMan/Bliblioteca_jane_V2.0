@@ -348,6 +348,7 @@ namespace Proyecto_Biblioteca
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Frm_main_FormClosed);
             this.Load += new System.EventHandler(this.Frm_main_Load);
+            this.SizeChanged += new System.EventHandler(this.Frm_main_SizeChanged);
             this.panel_barra_izquierda.ResumeLayout(false);
             this.panel_barra_izquierda.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_menu)).EndInit();

@@ -14,13 +14,23 @@ namespace Proyecto_Biblioteca
     public partial class Frm_Prestamos : Form
     {
         Cls_Prestamos obj_prestamos = new Cls_Prestamos();
+        public static bool tamaño { get; set; }
+
         public Frm_Prestamos()
         {
             InitializeComponent();
         }
         private void Frm_Prestamos_Load(object sender, EventArgs e)
         {
-
+            lbl_nombre_alumno.Text = "";
+            lbl_apellidos_alumno.Text = "";
+            lbl_carrera.Text = "";
+            lbl_semestre.Text = "";
+            lbl_estatus_alumno.Text = "";
+            lbl_nombre_libro.Text = "";
+            lbl_codigo.Text = "";
+            lbl_cant.Text = "";
+            lbl_estatus.Text = "";
         }
         
         private void añadir()
@@ -168,6 +178,20 @@ namespace Proyecto_Biblioteca
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
+            }
+        }
+
+        public void modificar_letra()
+        {
+            if (tamaño == true)
+            {
+                lbl_alumno.Text = "Hola";
+                lbl_alumno.Font = new Font(FontFamily.GenericSansSerif, 100.0F, FontStyle.Bold);
+            }
+            else if (tamaño == false)
+            {
+                lbl_nombre_alumno.Size = new Size(200, 200);
+
             }
         }
     }
