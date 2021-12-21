@@ -164,12 +164,10 @@ namespace Proyecto_Biblioteca
                 if (this.WindowState == FormWindowState.Maximized)
                 {
                     Frm_Prestamos.tamaño = true;
-                    obj_prestamos.modificar_letra();
                 }
                 else if (this.WindowState == FormWindowState.Normal)
                 {
                     Frm_Prestamos.tamaño = false;
-                    obj_prestamos.modificar_letra();
                 }
             }
         }

@@ -75,6 +75,7 @@ namespace Proyecto_Biblioteca
             this.Fecha_Salida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Devolucion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panel5.SuspendLayout();
             this.panel_grid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -426,7 +427,7 @@ namespace Proyecto_Biblioteca
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label10.Location = new System.Drawing.Point(107, 15);
+            this.label10.Location = new System.Drawing.Point(110, 15);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(152, 23);
             this.label10.TabIndex = 54;
@@ -447,7 +448,7 @@ namespace Proyecto_Biblioteca
             this.lbl_datos_libro.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_datos_libro.AutoSize = true;
             this.lbl_datos_libro.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_datos_libro.Location = new System.Drawing.Point(126, -107);
+            this.lbl_datos_libro.Location = new System.Drawing.Point(129, -107);
             this.lbl_datos_libro.Name = "lbl_datos_libro";
             this.lbl_datos_libro.Size = new System.Drawing.Size(152, 23);
             this.lbl_datos_libro.TabIndex = 42;
@@ -606,6 +607,12 @@ namespace Proyecto_Biblioteca
             this.Eliminar.Name = "Eliminar";
             this.Eliminar.ReadOnly = true;
             // 
+            // timer2
+            // 
+            this.timer2.Enabled = true;
+            this.timer2.Interval = 1;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
             // Frm_Prestamos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -619,7 +626,6 @@ namespace Proyecto_Biblioteca
             this.Opacity = 0.95D;
             this.Text = "Frm_Prestamos";
             this.Load += new System.EventHandler(this.Frm_Prestamos_Load);
-            //this.SizeChanged += new System.EventHandler(this.Frm_Prestamos_SizeChanged);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel_grid.ResumeLayout(false);
@@ -647,7 +653,6 @@ namespace Proyecto_Biblioteca
         private System.Windows.Forms.Button btn_terminar_pedido;
         private System.Windows.Forms.Label lbl_cantidad;
         private System.Windows.Forms.TextBox txt_codigo_libro;
-        private System.Windows.Forms.Label lbl_alumno;
         private System.Windows.Forms.TextBox txt_matricula_alumno;
         private System.Windows.Forms.Label lbl_libro;
         private System.Windows.Forms.Panel panel1;
@@ -682,5 +687,7 @@ namespace Proyecto_Biblioteca
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lbl_codigo;
         private System.Windows.Forms.Label lbl_estatus;
+        public System.Windows.Forms.Label lbl_alumno;
+        private System.Windows.Forms.Timer timer2;
     }
 }
