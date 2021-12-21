@@ -14,6 +14,8 @@ namespace Proyecto_Biblioteca
 {
     public partial class Frm_main : Form
     {
+        Frm_Prestamos obj_prestamos = new Frm_Prestamos();
+        private bool prestamos = false;
         public Frm_main()
         {
             InitializeComponent();
@@ -95,55 +97,81 @@ namespace Proyecto_Biblioteca
 
         private void btninicio_Click(object sender, EventArgs e)
         {
+            prestamos = false;
             abrir_form(new Frm_Inicio());
             lbltitulo.Text = "Inicio";
         }
 
         private void btnprestamos_Click(object sender, EventArgs e)
         {
+            prestamos = true;
             abrir_form(new Frm_Prestamos());
             lbltitulo.Text = "Prestamos";
         }
 
         private void btnlibros_Click(object sender, EventArgs e)
         {
+            prestamos = false;
             abrir_form(new Proyecto_Biblioteca.Libros.Frm_libros());
             lbltitulo.Text = "Libros";
         }
 
         private void btnusuarios_Click(object sender, EventArgs e)
         {
+            prestamos = false;
             abrir_form(new Frm_usuarios());
             lbltitulo.Text = "Usuarios";
         }
 
         private void btnalumnos_Click(object sender, EventArgs e)
         {
+            prestamos = false;
             abrir_form(new Frm_Alumnos());
             lbltitulo.Text = "Alumnos";
         }
 
         private void btn_configuracion_Click(object sender, EventArgs e)
         {
+            prestamos = false;
             lbltitulo.Text = "Ajustes";
         }
 
         private void btn_historial_prestamos_Click(object sender, EventArgs e)
         {
+            prestamos = false;
             abrir_form(new Frm_historial());
             lbltitulo.Text = "Historial";
         }
 
         private void btn_devolucion_Click(object sender, EventArgs e)
         {
+            prestamos = false;
             abrir_form(new Frm_Devolucion());
             lbltitulo.Text = "Devoluciones";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            prestamos = false;
             abrir_form(new Proyecto_Biblioteca.Ratings.Frm_Ratings());
             lbltitulo.Text = "Ratings";
+        }
+
+        private void Frm_main_SizeChanged(object sender, EventArgs e)
+        {
+            if (prestamos == true)
+            {
+                if (this.WindowState == FormWindowState.Maximized)
+                {
+                    Frm_Prestamos.tamaño = true;
+                    obj_prestamos.modificar_letra();
+                }
+                else if (this.WindowState == FormWindowState.Normal)
+                {
+                    Frm_Prestamos.tamaño = false;
+                    obj_prestamos.modificar_letra();
+                }
+            }
         }
     }
 }

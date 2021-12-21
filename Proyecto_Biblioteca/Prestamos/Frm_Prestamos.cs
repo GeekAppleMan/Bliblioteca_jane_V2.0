@@ -14,6 +14,8 @@ namespace Proyecto_Biblioteca
     public partial class Frm_Prestamos : Form
     {
         Cls_Prestamos obj_prestamos = new Cls_Prestamos();
+        public static bool tamaño { get; set; }
+
         public Frm_Prestamos()
         {
             InitializeComponent();
@@ -179,9 +181,18 @@ namespace Proyecto_Biblioteca
             }
         }
 
-        private void panel7_Paint(object sender, PaintEventArgs e)
+        public void modificar_letra()
         {
+            if (tamaño == true)
+            {
+                lbl_alumno.Text = "Hola";
+                lbl_alumno.Font = new Font(FontFamily.GenericSansSerif, 100.0F, FontStyle.Bold);
+            }
+            else if (tamaño == false)
+            {
+                lbl_nombre_alumno.Size = new Size(200, 200);
 
+            }
         }
     }
 }
