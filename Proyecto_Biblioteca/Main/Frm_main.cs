@@ -17,6 +17,7 @@ namespace Proyecto_Biblioteca
         Frm_Prestamos obj_prestamos = new Frm_Prestamos();
         private bool prestamos = false;
         public static int privilegio { get; set; }
+        public static string nombre { get; set; }
         public Frm_main()
         {
             InitializeComponent();
@@ -26,17 +27,16 @@ namespace Proyecto_Biblioteca
             switch (privilegio)
             {
                 case 1:
-                    btnalumnos.Enabled = true;
-                    btnusuarios.Enabled = true;
+                    btnalumnos.Visible = true;
+                    btnusuarios.Visible = true;
                     break;
                 case 2:
-                    btnalumnos.Enabled = false;
-                    btnusuarios.Enabled = false;
+                    btnalumnos.Visible = false;
+                    btnusuarios.Visible = false;
                     break;
                 default:
                     break;
             }
-           
             abrir_form(new Frm_Inicio());
             panel_barra_izquierda.Width = 150;
             timer1.Start();
@@ -66,7 +66,6 @@ namespace Proyecto_Biblioteca
                 btnalumnos.TextAlign = ContentAlignment.MiddleRight;
                 btn_historial_prestamos.TextAlign = ContentAlignment.MiddleRight;
                 btn_devolucion.TextAlign = ContentAlignment.MiddleRight;
-                btn_configuracion.TextAlign = ContentAlignment.MiddleRight;
                 btn_rating.TextAlign = ContentAlignment.MiddleRight;
                 lbl_jane.Text = "JS";
                 lbl_jane.TextAlign = ContentAlignment.MiddleLeft;
@@ -80,7 +79,6 @@ namespace Proyecto_Biblioteca
                 btnalumnos.TextAlign = ContentAlignment.MiddleCenter;
                 btn_historial_prestamos.TextAlign = ContentAlignment.MiddleCenter;
                 btn_devolucion.TextAlign = ContentAlignment.MiddleCenter;
-                btn_configuracion.TextAlign = ContentAlignment.MiddleCenter;
                 btn_rating.TextAlign = ContentAlignment.MiddleCenter;
                 lbl_jane.Text = "Jane Software";
                 lbl_jane.TextAlign = ContentAlignment.MiddleCenter;
@@ -110,13 +108,6 @@ namespace Proyecto_Biblioteca
             }
         }
 
-        private void btninicio_Click(object sender, EventArgs e)
-        {
-            prestamos = false;
-            abrir_form(new Frm_Inicio());
-            lbltitulo.Text = "Inicio";
-        }
-
         private void btnprestamos_Click(object sender, EventArgs e)
         {
             prestamos = true;
@@ -143,12 +134,6 @@ namespace Proyecto_Biblioteca
             prestamos = false;
             abrir_form(new Frm_Alumnos());
             lbltitulo.Text = "Alumnos";
-        }
-
-        private void btn_configuracion_Click(object sender, EventArgs e)
-        {
-            prestamos = false;
-            lbltitulo.Text = "Ajustes";
         }
 
         private void btn_historial_prestamos_Click(object sender, EventArgs e)

@@ -28,6 +28,7 @@ namespace Proyecto_Biblioteca.Clases
                     if (reader.GetString(4) == "1")
                     {
                         Frm_main.privilegio = Convert.ToInt32(reader.GetString(5));
+                        Frm_main.nombre = reader.GetString(2);
                         login.Hide();
                         Frm_main obj_main = new Frm_main();
                         obj_main.Show();

@@ -16,5 +16,10 @@ namespace Proyecto_Biblioteca
         {
             InitializeComponent();
         }
+
+        private void Frm_Inicio_Load(object sender, EventArgs e)
+        {
+            lbl_usuario.Text = "¡Bienvenido " + Frm_main.nombre + "!";
+        }
     }
 }

@@ -54,9 +54,9 @@ namespace Proyecto_Biblioteca
             this.lbl_usuario.ForeColor = System.Drawing.Color.Black;
             this.lbl_usuario.Location = new System.Drawing.Point(159, 68);
             this.lbl_usuario.Name = "lbl_usuario";
-            this.lbl_usuario.Size = new System.Drawing.Size(449, 23);
+            this.lbl_usuario.Size = new System.Drawing.Size(128, 23);
             this.lbl_usuario.TabIndex = 1;
-            this.lbl_usuario.Text = "¡Bienvenido Jaime Alberto Sanchez Martinez!";
+            this.lbl_usuario.Text = "¡Bienvenido!";
             // 
             // lbl_jane
             // 
@@ -86,6 +86,7 @@ namespace Proyecto_Biblioteca
             this.Name = "Frm_Inicio";
             this.Opacity = 0.95D;
             this.Text = "Frm_Inicio";
+            this.Load += new System.EventHandler(this.Frm_Inicio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
