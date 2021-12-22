@@ -191,7 +191,6 @@ namespace Proyecto_Biblioteca
             else if (tamaño == false)
             {
                 lbl_nombre_alumno.Size = new Size(200, 200);
-
             }
         }
     }
