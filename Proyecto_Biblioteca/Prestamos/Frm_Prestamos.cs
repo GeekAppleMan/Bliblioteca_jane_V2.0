@@ -184,31 +184,13 @@ namespace Proyecto_Biblioteca
         {
             if (tamaño == true)
             {
-                lbl_nombre_alumno.Font = new Font("Century Gothic", 12.0F, FontStyle.Regular);
-              
-                panel_datos_alumno.Dock = DockStyle.Fill;
-              
-                
-         
-                panel_datos_libro.Dock = DockStyle.Fill;
+                lbl_nombre_alumno.Font = new Font("Century Gothic", 12.0F, FontStyle.Regular); 
             }
             else if (tamaño == false)
             {
                 lbl_nombre_alumno.Font = new Font("Century Gothic", 12.0F, FontStyle.Regular);
-              
-                panel_datos_alumno.Dock = DockStyle.Bottom;
-                //panel_logo_itn.Width = 200;
-           
-                panel_datos_libro.Dock = DockStyle.Bottom;
-
             }
         }
 
-        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-       
     }
 }
