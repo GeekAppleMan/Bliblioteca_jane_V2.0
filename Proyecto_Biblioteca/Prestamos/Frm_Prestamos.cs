@@ -56,13 +56,12 @@ namespace Proyecto_Biblioteca
              
             }
         }
-       
-        private void btnañadir_Click_1(object sender, EventArgs e)
+        private void btnañadir_Click(object sender, EventArgs e)
         {
             añadir();
         }
 
-        private void btn_terminar_pedido_Click_1(object sender, EventArgs e)
+        private void btn_terminar_pedido_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Seguro que desea registrar el pedido?", "Confirmar", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
@@ -85,7 +84,6 @@ namespace Proyecto_Biblioteca
             {
             }
         }
-
         private void buscar_alumno()
         {
             string imagen = "";
@@ -210,5 +208,7 @@ namespace Proyecto_Biblioteca
         {
 
         }
+
+       
     }
 }

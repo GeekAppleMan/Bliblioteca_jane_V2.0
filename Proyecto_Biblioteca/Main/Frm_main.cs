@@ -16,12 +16,27 @@ namespace Proyecto_Biblioteca
     {
         Frm_Prestamos obj_prestamos = new Frm_Prestamos();
         private bool prestamos = false;
+        public static int privilegio { get; set; }
         public Frm_main()
         {
             InitializeComponent();
         }
         private void Frm_main_Load(object sender, EventArgs e)
         {
+            switch (privilegio)
+            {
+                case 1:
+                    btnalumnos.Enabled = true;
+                    btnusuarios.Enabled = true;
+                    break;
+                case 2:
+                    btnalumnos.Enabled = false;
+                    btnusuarios.Enabled = false;
+                    break;
+                default:
+                    break;
+            }
+           
             abrir_form(new Frm_Inicio());
             panel_barra_izquierda.Width = 150;
             timer1.Start();

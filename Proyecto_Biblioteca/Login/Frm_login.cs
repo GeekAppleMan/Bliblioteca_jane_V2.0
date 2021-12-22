@@ -76,12 +76,9 @@ namespace Proyecto_Biblioteca
 
         private void btn_iniciar_sesion_Click(object sender, EventArgs e)
         {
-            Cls_Prestamos.matricula_usu = "17340346";
-            Frm_main obj_main = new Frm_main();
+            Clases.Cls_login obj_login = new Clases.Cls_login();
+            obj_login.verificar_usuario_contraseña(txt_usuario.Text, txt_contraseña.Text,this);
             
-
-            obj_main.Show();
-            this.Hide();
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)

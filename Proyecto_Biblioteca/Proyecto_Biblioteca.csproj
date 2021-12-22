@@ -94,6 +94,7 @@
     <Compile Include="Clases\Cls_Conexion.cs" />
     <Compile Include="Clases\Cls_Devoluciones.cs" />
     <Compile Include="Clases\Cls_Historial.cs" />
+    <Compile Include="Clases\Cls_login.cs" />
     <Compile Include="Clases\Cls_Prestamos.cs" />
     <Compile Include="Clases\Cls_Libros.cs" />
     <Compile Include="Clases\Cls_Alumnos.cs" />
