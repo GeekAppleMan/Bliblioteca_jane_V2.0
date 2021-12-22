@@ -14,6 +14,7 @@ namespace Proyecto_Biblioteca
     public partial class Frm_Prestamos : Form
     {
         Cls_Prestamos obj_prestamos = new Cls_Prestamos();
+        int cont = 0;
         public static bool tamaño { get; set; }
 
         public Frm_Prestamos()
@@ -22,6 +23,7 @@ namespace Proyecto_Biblioteca
         }
         private void Frm_Prestamos_Load(object sender, EventArgs e)
         {
+            timer1.Start();
             lbl_nombre_alumno.Text = "";
             lbl_apellidos_alumno.Text = "";
             lbl_carrera.Text = "";
@@ -180,17 +182,28 @@ namespace Proyecto_Biblioteca
                 e.Handled = true;
             }
         }
-
-        public void modificar_letra()
+        private void timer2_Tick(object sender, EventArgs e)
         {
             if (tamaño == true)
             {
-                lbl_alumno.Text = "Hola";
-                lbl_alumno.Font = new Font(FontFamily.GenericSansSerif, 100.0F, FontStyle.Bold);
+                lbl_nombre_alumno.Font = new Font("Century Gothic", 12.0F, FontStyle.Regular);
+                panel_foto_alumno.Dock = DockStyle.Left;
+                panel_datos_alumno.Dock = DockStyle.Fill;
+                picture_alumno.Dock = DockStyle.Fill;
+                picture_itn.Dock = DockStyle.Fill;
+                panel_logo_itn.Width = 200;
+                panel_logo_itn.Dock = DockStyle.Left;
+                panel_datos_libro.Dock = DockStyle.Fill;
             }
             else if (tamaño == false)
             {
-                lbl_nombre_alumno.Size = new Size(200, 200);
+                lbl_nombre_alumno.Font = new Font("Century Gothic", 12.0F, FontStyle.Regular);
+                panel_foto_alumno.Dock = DockStyle.Top;
+                panel_datos_alumno.Dock = DockStyle.Bottom;
+                //panel_logo_itn.Width = 200;
+                panel_logo_itn.Dock = DockStyle.Top;
+                panel_datos_libro.Dock = DockStyle.Bottom;
+
             }
         }
     }
