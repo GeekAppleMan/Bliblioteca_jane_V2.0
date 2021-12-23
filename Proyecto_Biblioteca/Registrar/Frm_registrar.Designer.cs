@@ -112,6 +112,7 @@ namespace Proyecto_Biblioteca
             this.txt_matricula.TabIndex = 1;
             this.txt_matricula.Text = "Escribir matricula";
             this.txt_matricula.Enter += new System.EventHandler(this.txt_matricula_Enter);
+            this.txt_matricula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_matricula_KeyPress);
             this.txt_matricula.Leave += new System.EventHandler(this.txt_matricula_Leave);
             // 
             // pic_cerrar

@@ -39,7 +39,6 @@ namespace Proyecto_Biblioteca
             this.Modificar = new System.Windows.Forms.DataGridViewImageColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_agregar_usuario = new System.Windows.Forms.Button();
             this.btn_buscar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txt_usuario = new System.Windows.Forms.TextBox();
@@ -133,7 +132,6 @@ namespace Proyecto_Biblioteca
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Controls.Add(this.btn_agregar_usuario);
             this.panel1.Controls.Add(this.btn_buscar);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.txt_usuario);
@@ -143,21 +141,6 @@ namespace Proyecto_Biblioteca
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 50);
             this.panel1.TabIndex = 2;
-            // 
-            // btn_agregar_usuario
-            // 
-            this.btn_agregar_usuario.BackgroundImage = global::Proyecto_Biblioteca.Properties.Resources.agregar_usuario;
-            this.btn_agregar_usuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_agregar_usuario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_agregar_usuario.FlatAppearance.BorderSize = 0;
-            this.btn_agregar_usuario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_agregar_usuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_agregar_usuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_agregar_usuario.Location = new System.Drawing.Point(11, 3);
-            this.btn_agregar_usuario.Name = "btn_agregar_usuario";
-            this.btn_agregar_usuario.Size = new System.Drawing.Size(48, 47);
-            this.btn_agregar_usuario.TabIndex = 18;
-            this.btn_agregar_usuario.UseVisualStyleBackColor = true;
             // 
             // btn_buscar
             // 
@@ -196,17 +179,18 @@ namespace Proyecto_Biblioteca
             this.txt_usuario.Size = new System.Drawing.Size(262, 21);
             this.txt_usuario.TabIndex = 14;
             this.txt_usuario.TextChanged += new System.EventHandler(this.txt_usuario_TextChanged);
+            this.txt_usuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_usuario_KeyPress);
             // 
             // lbl_usuario
             // 
             this.lbl_usuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_usuario.AutoSize = true;
             this.lbl_usuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_usuario.Location = new System.Drawing.Point(99, 18);
+            this.lbl_usuario.Location = new System.Drawing.Point(81, 18);
             this.lbl_usuario.Name = "lbl_usuario";
-            this.lbl_usuario.Size = new System.Drawing.Size(202, 23);
+            this.lbl_usuario.Size = new System.Drawing.Size(213, 23);
             this.lbl_usuario.TabIndex = 15;
-            this.lbl_usuario.Text = "Nombre del usuario";
+            this.lbl_usuario.Text = "Matricula del usuario";
             // 
             // dataGridViewImageColumn1
             // 
@@ -252,7 +236,6 @@ namespace Proyecto_Biblioteca
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txt_usuario;
         private System.Windows.Forms.Label lbl_usuario;
-        private System.Windows.Forms.Button btn_agregar_usuario;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Matricula;

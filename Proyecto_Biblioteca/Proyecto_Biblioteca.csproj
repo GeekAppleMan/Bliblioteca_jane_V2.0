@@ -118,6 +118,12 @@
     <Compile Include="Alumnos\Frm_Alumnos.Designer.cs">
       <DependentUpon>Frm_Alumnos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Libros\Frm_añadir_libro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Libros\Frm_añadir_libro.Designer.cs">
+      <DependentUpon>Frm_añadir_libro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Libros\Frm_modificar_libro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +209,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Frm_Inicio.resx">
       <DependentUpon>Frm_Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Libros\Frm_añadir_libro.resx">
+      <DependentUpon>Frm_añadir_libro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Libros\Frm_libros.resx">
       <DependentUpon>Frm_libros.cs</DependentUpon>

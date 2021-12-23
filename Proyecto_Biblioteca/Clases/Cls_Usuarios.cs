@@ -81,6 +81,7 @@ namespace Proyecto_Biblioteca
 
                 if (reader.HasRows)
                 {
+                    reader.Read();
                     if (reader.GetString(5) == "1")
                     {
                         estatus = "Activo";

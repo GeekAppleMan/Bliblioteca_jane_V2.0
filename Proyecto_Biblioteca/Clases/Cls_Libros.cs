@@ -191,5 +191,71 @@ namespace Proyecto_Biblioteca
                 MessageBox.Show("Ocurrio un problema comuniquese con sistemas");
             }
         }
+
+        public void registrar(string codigo, string nombre, string cantidad, string autor, string genero, string pais, string numero, string año, string estatus, Form principal)
+        {
+            try
+            {
+                bool verificar = verificar_codigo(codigo);
+                if (verificar == true)
+                {
+                    MessageBox.Show("El libro ya se encuentra registrado");
+                }
+                else
+                {
+                    string query = "INSERT INTO `tb_libro`(`id_libro`, `codigo_libro`, `cantidad_libros`, `nombre`, `autor`, `genero`, `pais_autor`, `no_pag`, `año_edicion`, `estatus`, `prestamos`) VALUES (" + "'" + "" + "'" + "," + "'" + codigo + "'," + "'" + cantidad + "'," + "'" + nombre + "'," + "'" + autor + "'," + "'" + genero + "'" + "," + "'" + pais + "'" + "," + "'" + numero + "'" + "," + "'" + año + "'" + "," + "'" + estatus + "'" + "," + "'0'" + ")";
+                    MySqlConnection databaseConnection = new MySqlConnection(connectionString);
+                    MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
+                    commandDatabase.CommandTimeout = 60;
+                    MySqlDataReader reader;
+                    databaseConnection.Open();
+                    reader = commandDatabase.ExecuteReader();
+                    MessageBox.Show("Se registro correctamente");
+                    principal.Close();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocurrio un problema comuniquese con sistemas");
+            }
+        }
+
+        public bool verificar_codigo(string codigo)
+        {
+            bool verificar = false;
+            try
+            {
+              
+                string query = "SELECT * FROM tb_libro WHERE codigo_libro = " + "'" + codigo + "'";
+                MySqlConnection databaseConnection = new MySqlConnection(connectionString);
+                MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
+                commandDatabase.CommandTimeout = 60;
+                MySqlDataReader reader;
+                databaseConnection.Open();
+
+                reader = commandDatabase.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        verificar = true;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("No se encontro el libro");
+                    verificar = false;
+                }
+
+                databaseConnection.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocurrio un problema comuniquese con sistemas");
+            }
+
+            return verificar;
+        }
     }
 }

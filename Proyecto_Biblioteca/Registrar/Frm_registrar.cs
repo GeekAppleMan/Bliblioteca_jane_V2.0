@@ -136,5 +136,13 @@ namespace Proyecto_Biblioteca
                 registrar();
             }
         }
+
+        private void txt_matricula_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

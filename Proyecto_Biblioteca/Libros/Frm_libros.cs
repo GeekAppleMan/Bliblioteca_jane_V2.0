@@ -92,5 +92,12 @@ namespace Proyecto_Biblioteca.Libros
                 }
             }
         }
+
+        private void btn_agregar_libro_Click(object sender, EventArgs e)
+        {
+            Frm_añadir_libro obj_añadir = new Frm_añadir_libro();
+            obj_añadir.ShowDialog();
+            añadir();
+        }
     }
 }

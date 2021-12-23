@@ -59,14 +59,16 @@ namespace Proyecto_Biblioteca.Usuarios
             this.combo_estatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.combo_estatus.Font = new System.Drawing.Font("Century Gothic", 10.2F);
             this.combo_estatus.FormattingEnabled = true;
+            this.combo_estatus.ItemHeight = 21;
             this.combo_estatus.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
             this.combo_estatus.Location = new System.Drawing.Point(16, 354);
             this.combo_estatus.Name = "combo_estatus";
             this.combo_estatus.Size = new System.Drawing.Size(335, 29);
-            this.combo_estatus.TabIndex = 8;
+            this.combo_estatus.TabIndex = 4;
             this.combo_estatus.Text = "Activo";
+            this.combo_estatus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.combo_estatus_KeyPress);
             // 
             // lbl_estatus
             // 
@@ -123,8 +125,9 @@ namespace Proyecto_Biblioteca.Usuarios
             this.combo_privilegios.Location = new System.Drawing.Point(18, 441);
             this.combo_privilegios.Name = "combo_privilegios";
             this.combo_privilegios.Size = new System.Drawing.Size(335, 29);
-            this.combo_privilegios.TabIndex = 73;
+            this.combo_privilegios.TabIndex = 5;
             this.combo_privilegios.Text = "Administrador";
+            this.combo_privilegios.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.combo_privilegios_KeyPress);
             // 
             // label2
             // 
@@ -165,7 +168,7 @@ namespace Proyecto_Biblioteca.Usuarios
             this.txt_correo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_correo.Name = "txt_correo";
             this.txt_correo.Size = new System.Drawing.Size(330, 21);
-            this.txt_correo.TabIndex = 70;
+            this.txt_correo.TabIndex = 3;
             // 
             // label1
             // 
@@ -186,7 +189,7 @@ namespace Proyecto_Biblioteca.Usuarios
             this.btn_cancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(171, 44);
-            this.btn_cancelar.TabIndex = 69;
+            this.btn_cancelar.TabIndex = 7;
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = true;
             this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
@@ -198,7 +201,7 @@ namespace Proyecto_Biblioteca.Usuarios
             this.btn_modificar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_modificar.Name = "btn_modificar";
             this.btn_modificar.Size = new System.Drawing.Size(171, 44);
-            this.btn_modificar.TabIndex = 68;
+            this.btn_modificar.TabIndex = 6;
             this.btn_modificar.Text = "Modificar";
             this.btn_modificar.UseVisualStyleBackColor = true;
             this.btn_modificar.Click += new System.EventHandler(this.btn_modificar_Click);
@@ -295,6 +298,7 @@ namespace Proyecto_Biblioteca.Usuarios
             this.txt_matricula.Name = "txt_matricula";
             this.txt_matricula.Size = new System.Drawing.Size(330, 21);
             this.txt_matricula.TabIndex = 0;
+            this.txt_matricula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_matricula_KeyPress);
             // 
             // lbl_contraseña
             // 

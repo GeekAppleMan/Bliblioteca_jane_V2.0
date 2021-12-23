@@ -149,6 +149,7 @@ namespace Proyecto_Biblioteca.Alumnos
             this.combo_estatus.Size = new System.Drawing.Size(335, 29);
             this.combo_estatus.TabIndex = 4;
             this.combo_estatus.Text = "Activo";
+            this.combo_estatus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.combo_estatus_KeyPress);
             // 
             // txt_nombres
             // 
@@ -254,6 +255,7 @@ namespace Proyecto_Biblioteca.Alumnos
             this.txt_matricula.Name = "txt_matricula";
             this.txt_matricula.Size = new System.Drawing.Size(330, 21);
             this.txt_matricula.TabIndex = 0;
+            this.txt_matricula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_matricula_KeyPress);
             // 
             // lbl_apellidos
             // 

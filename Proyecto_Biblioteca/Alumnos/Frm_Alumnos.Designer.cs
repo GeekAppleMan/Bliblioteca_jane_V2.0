@@ -169,17 +169,18 @@ namespace Proyecto_Biblioteca
             this.txt_alumno.Size = new System.Drawing.Size(262, 21);
             this.txt_alumno.TabIndex = 14;
             this.txt_alumno.TextChanged += new System.EventHandler(this.txt_alumno_TextChanged);
+            this.txt_alumno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_alumno_KeyPress);
             // 
             // lbl_alumno
             // 
             this.lbl_alumno.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_alumno.AutoSize = true;
             this.lbl_alumno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_alumno.Location = new System.Drawing.Point(94, 19);
+            this.lbl_alumno.Location = new System.Drawing.Point(75, 19);
             this.lbl_alumno.Name = "lbl_alumno";
-            this.lbl_alumno.Size = new System.Drawing.Size(209, 23);
+            this.lbl_alumno.Size = new System.Drawing.Size(220, 23);
             this.lbl_alumno.TabIndex = 15;
-            this.lbl_alumno.Text = "Nombre del alumno";
+            this.lbl_alumno.Text = "Matricula del alumno";
             // 
             // Frm_Alumnos
             // 

@@ -37,5 +37,22 @@ namespace Proyecto_Biblioteca.Alumnos
             obj_alumno.modificar(txt_matricula.Text, txt_nombres.Text, txt_apellidos.Text, txt_domicilio.Text,estatus);
             this.Close();
         }
+
+        private void txt_matricula_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                txt_nombres.Focus();
+            }
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void combo_estatus_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
     }
 }
