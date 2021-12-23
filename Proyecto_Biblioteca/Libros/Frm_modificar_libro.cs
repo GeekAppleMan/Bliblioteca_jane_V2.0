@@ -34,8 +34,14 @@ namespace Proyecto_Biblioteca.Libros
             {
                 estatus = "2";
             }
-            obj_libros.modificar(txt_codigo_libro.Text, txt_nombre.Text, txt_cantidad_libros.Text, txt_autor.Text, txt_genero.Text, txt_pais_autor.Text, txt_numero_pag.Text, txt_año_edicion.Text,estatus);
-            this.Close();
+            if (string.IsNullOrEmpty(txt_codigo_libro.Text) || string.IsNullOrEmpty(txt_nombre.Text) || string.IsNullOrEmpty(txt_cantidad_libros.Text) || string.IsNullOrEmpty(txt_autor.Text) || string.IsNullOrEmpty(txt_genero.Text) || string.IsNullOrEmpty(txt_pais_autor.Text) || string.IsNullOrEmpty(txt_numero_pag.Text) || string.IsNullOrEmpty(txt_año_edicion.Text) || string.IsNullOrEmpty(combo_estatus.Text))
+            {
+                MessageBox.Show("Complete todos los campos");
+            }
+            else
+            {
+                obj_libros.modificar(txt_codigo_libro.Text, txt_nombre.Text, txt_cantidad_libros.Text, txt_autor.Text, txt_genero.Text, txt_pais_autor.Text, txt_numero_pag.Text, txt_año_edicion.Text, estatus,this);
+            }
         }
 
         private void txt_codigo_libro_KeyPress(object sender, KeyPressEventArgs e)

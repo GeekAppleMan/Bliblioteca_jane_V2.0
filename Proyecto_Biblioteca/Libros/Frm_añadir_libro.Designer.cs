@@ -66,6 +66,7 @@ namespace Proyecto_Biblioteca.Libros
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.groupBox2.Controls.Add(this.combo_estatus);
             this.groupBox2.Controls.Add(this.btn_cancelar);
             this.groupBox2.Controls.Add(this.btn_registrar);
@@ -248,6 +249,7 @@ namespace Proyecto_Biblioteca.Libros
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.groupBox1.Controls.Add(this.txt_nombre);
             this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.Controls.Add(this.lbl_nombre);

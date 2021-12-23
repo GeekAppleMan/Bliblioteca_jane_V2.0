@@ -112,7 +112,7 @@ namespace Proyecto_Biblioteca
 
         }
 
-        public void modificar(string matricula, string usuario, string contraseña,string correo ,string estatus,string privilegios)
+        public void modificar(string matricula, string usuario, string contraseña,string correo ,string estatus,string privilegios, Form principal)
         {
             try
             {
@@ -124,6 +124,7 @@ namespace Proyecto_Biblioteca
                 databaseConnection.Open();
                 reader = commandDatabase.ExecuteReader();
                 MessageBox.Show("Se actualizo correctamente");
+                principal.Close();
 
             }
             catch (Exception)

@@ -20,26 +20,32 @@ namespace Proyecto_Biblioteca.Usuarios
 
         private void btn_modificar_Click(object sender, EventArgs e)
         {
-            string estatus = "";
-            string privilegios = "";
-            if (combo_estatus.Text == "Activo")
+            if (string.IsNullOrEmpty(txt_matricula.Text) || string.IsNullOrEmpty(txt_usuario.Text) || string.IsNullOrEmpty(txt_contraseña.Text) || string.IsNullOrEmpty(txt_correo.Text))
             {
-                estatus = "1";
+                MessageBox.Show("Complete todos los campos");
             }
-            else if(combo_estatus.Text == "Inactivo")
+            else
             {
-                estatus = "2";
+                string estatus = "";
+                string privilegios = "";
+                if (combo_estatus.Text == "Activo")
+                {
+                    estatus = "1";
+                }
+                else if (combo_estatus.Text == "Inactivo")
+                {
+                    estatus = "2";
+                }
+                if (combo_privilegios.Text == "Administrador")
+                {
+                    privilegios = "1";
+                }
+                if (combo_privilegios.Text == "Empleado")
+                {
+                    privilegios = "2";
+                }
+                obj_usuarios.modificar(txt_matricula.Text, txt_usuario.Text, txt_contraseña.Text, txt_correo.Text, estatus, privilegios, this);
             }
-            if (combo_privilegios.Text == "Administrador")
-            {
-                privilegios = "1";
-            }
-            if (combo_privilegios.Text == "Empleado")
-            {
-                privilegios = "2";
-            }
-            obj_usuarios.modificar(txt_matricula.Text,txt_usuario.Text,txt_contraseña.Text,txt_correo.Text,estatus,privilegios);
-            this.Close();
         }
 
         private void btn_cancelar_Click(object sender, EventArgs e)

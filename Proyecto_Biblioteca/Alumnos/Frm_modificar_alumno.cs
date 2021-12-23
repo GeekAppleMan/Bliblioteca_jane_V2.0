@@ -25,17 +25,23 @@ namespace Proyecto_Biblioteca.Alumnos
 
         private void btn_modificar_Click(object sender, EventArgs e)
         {
-            string estatus = "";
-            if (combo_estatus.Text == "Activo")
+            if (string.IsNullOrEmpty(txt_matricula.Text) || string.IsNullOrEmpty(txt_nombres.Text) || string.IsNullOrEmpty(txt_apellidos.Text) || string.IsNullOrEmpty(txt_domicilio.Text))
             {
-                estatus = "1";
+                MessageBox.Show("Complete todos los campos");
             }
-            else if (combo_estatus.Text == "Inactivo")
+            else
             {
-                estatus = "2";
+                string estatus = "";
+                if (combo_estatus.Text == "Activo")
+                {
+                    estatus = "1";
+                }
+                else if (combo_estatus.Text == "Inactivo")
+                {
+                    estatus = "2";
+                }
+                obj_alumno.modificar(txt_matricula.Text, txt_nombres.Text, txt_apellidos.Text, txt_domicilio.Text, estatus,this);
             }
-            obj_alumno.modificar(txt_matricula.Text, txt_nombres.Text, txt_apellidos.Text, txt_domicilio.Text,estatus);
-            this.Close();
         }
 
         private void txt_matricula_KeyPress(object sender, KeyPressEventArgs e)
