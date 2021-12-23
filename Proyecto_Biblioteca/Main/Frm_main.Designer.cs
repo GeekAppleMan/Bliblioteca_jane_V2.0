@@ -264,7 +264,7 @@ namespace Proyecto_Biblioteca
             this.panel_barra_titulo.Location = new System.Drawing.Point(200, 0);
             this.panel_barra_titulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel_barra_titulo.Name = "panel_barra_titulo";
-            this.panel_barra_titulo.Size = new System.Drawing.Size(1172, 50);
+            this.panel_barra_titulo.Size = new System.Drawing.Size(1260, 50);
             this.panel_barra_titulo.TabIndex = 0;
             // 
             // lbltitulo
@@ -273,7 +273,7 @@ namespace Proyecto_Biblioteca
             this.lbltitulo.AutoSize = true;
             this.lbltitulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltitulo.ForeColor = System.Drawing.Color.Black;
-            this.lbltitulo.Location = new System.Drawing.Point(551, 14);
+            this.lbltitulo.Location = new System.Drawing.Point(595, 14);
             this.lbltitulo.Name = "lbltitulo";
             this.lbltitulo.Size = new System.Drawing.Size(59, 23);
             this.lbltitulo.TabIndex = 18;
@@ -284,7 +284,7 @@ namespace Proyecto_Biblioteca
             this.pic_fecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic_fecha.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.pic_fecha.Image = global::Proyecto_Biblioteca.Properties.Resources.nota__1_;
-            this.pic_fecha.Location = new System.Drawing.Point(987, 5);
+            this.pic_fecha.Location = new System.Drawing.Point(1075, 5);
             this.pic_fecha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pic_fecha.Name = "pic_fecha";
             this.pic_fecha.Size = new System.Drawing.Size(40, 39);
@@ -298,7 +298,7 @@ namespace Proyecto_Biblioteca
             this.lbl_fecha.AutoSize = true;
             this.lbl_fecha.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_fecha.ForeColor = System.Drawing.Color.Black;
-            this.lbl_fecha.Location = new System.Drawing.Point(1031, 15);
+            this.lbl_fecha.Location = new System.Drawing.Point(1119, 15);
             this.lbl_fecha.Name = "lbl_fecha";
             this.lbl_fecha.Size = new System.Drawing.Size(62, 21);
             this.lbl_fecha.TabIndex = 16;
@@ -337,7 +337,7 @@ namespace Proyecto_Biblioteca
             this.panel_contenedor.Location = new System.Drawing.Point(200, 50);
             this.panel_contenedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel_contenedor.Name = "panel_contenedor";
-            this.panel_contenedor.Size = new System.Drawing.Size(1172, 577);
+            this.panel_contenedor.Size = new System.Drawing.Size(1260, 577);
             this.panel_contenedor.TabIndex = 1;
             // 
             // Frm_main
@@ -345,7 +345,7 @@ namespace Proyecto_Biblioteca
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1372, 627);
+            this.ClientSize = new System.Drawing.Size(1460, 627);
             this.Controls.Add(this.panel_contenedor);
             this.Controls.Add(this.panel_barra_titulo);
             this.Controls.Add(this.panel_barra_izquierda);

@@ -48,6 +48,9 @@ namespace Proyecto_Biblioteca.Ratings
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.combo_limite = new System.Windows.Forms.ComboBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_libros)).BeginInit();
             this.panel2.SuspendLayout();
@@ -56,6 +59,9 @@ namespace Proyecto_Biblioteca.Ratings
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.combo_limite);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.txt_codigo_libro);
@@ -63,7 +69,7 @@ namespace Proyecto_Biblioteca.Ratings
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 50);
+            this.panel1.Size = new System.Drawing.Size(1270, 50);
             this.panel1.TabIndex = 1;
             // 
             // button1
@@ -76,7 +82,7 @@ namespace Proyecto_Biblioteca.Ratings
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(598, 3);
+            this.button1.Location = new System.Drawing.Point(826, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(48, 47);
             this.button1.TabIndex = 16;
@@ -87,7 +93,7 @@ namespace Proyecto_Biblioteca.Ratings
             // 
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Location = new System.Drawing.Point(315, 43);
+            this.panel3.Location = new System.Drawing.Point(543, 43);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(269, 1);
             this.panel3.TabIndex = 17;
@@ -98,7 +104,7 @@ namespace Proyecto_Biblioteca.Ratings
             this.txt_codigo_libro.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txt_codigo_libro.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_codigo_libro.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_codigo_libro.Location = new System.Drawing.Point(317, 18);
+            this.txt_codigo_libro.Location = new System.Drawing.Point(545, 18);
             this.txt_codigo_libro.Name = "txt_codigo_libro";
             this.txt_codigo_libro.Size = new System.Drawing.Size(262, 21);
             this.txt_codigo_libro.TabIndex = 14;
@@ -110,7 +116,7 @@ namespace Proyecto_Biblioteca.Ratings
             this.lbl_codigo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_codigo.AutoSize = true;
             this.lbl_codigo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_codigo.Location = new System.Drawing.Point(127, 17);
+            this.lbl_codigo.Location = new System.Drawing.Point(355, 17);
             this.lbl_codigo.Name = "lbl_codigo";
             this.lbl_codigo.Size = new System.Drawing.Size(167, 23);
             this.lbl_codigo.TabIndex = 15;
@@ -142,7 +148,7 @@ namespace Proyecto_Biblioteca.Ratings
             this.dgv_libros.RowHeadersVisible = false;
             this.dgv_libros.RowHeadersWidth = 51;
             this.dgv_libros.RowTemplate.Height = 24;
-            this.dgv_libros.Size = new System.Drawing.Size(800, 400);
+            this.dgv_libros.Size = new System.Drawing.Size(1270, 671);
             this.dgv_libros.TabIndex = 2;
             // 
             // Codigo
@@ -229,14 +235,59 @@ namespace Proyecto_Biblioteca.Ratings
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 50);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 400);
+            this.panel2.Size = new System.Drawing.Size(1270, 671);
             this.panel2.TabIndex = 3;
+            // 
+            // combo_limite
+            // 
+            this.combo_limite.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.combo_limite.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.combo_limite.FormattingEnabled = true;
+            this.combo_limite.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.combo_limite.Location = new System.Drawing.Point(1106, 17);
+            this.combo_limite.Name = "combo_limite";
+            this.combo_limite.Size = new System.Drawing.Size(152, 24);
+            this.combo_limite.TabIndex = 18;
+            this.combo_limite.Text = "3";
+            this.combo_limite.TextChanged += new System.EventHandler(this.combo_limite_TextChanged);
+            this.combo_limite.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.combo_limite_KeyPress);
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Location = new System.Drawing.Point(1106, 46);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(153, 1);
+            this.panel4.TabIndex = 19;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(898, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(190, 23);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Filtro por cantidad";
             // 
             // Frm_Ratings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1270, 721);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -272,5 +323,8 @@ namespace Proyecto_Biblioteca.Ratings
         private System.Windows.Forms.DataGridViewTextBoxColumn Año_edicion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estatus;
         private System.Windows.Forms.DataGridViewTextBoxColumn Prestamos;
+        private System.Windows.Forms.ComboBox combo_limite;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -35,7 +35,7 @@ namespace Proyecto_Biblioteca.Ratings
 
         private void buscar()
         {
-            obj_libros.mas_prestado(dgv_libros, txt_codigo_libro.Text);
+            obj_libros.mas_prestado(dgv_libros, txt_codigo_libro.Text,combo_limite.Text);
         }
 
         private void txt_codigo_libro_KeyPress(object sender, KeyPressEventArgs e)
@@ -48,6 +48,16 @@ namespace Proyecto_Biblioteca.Ratings
             {
                 e.Handled = true;
             }
+        }
+
+        private void combo_limite_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void combo_limite_TextChanged(object sender, EventArgs e)
+        {
+            buscar();
         }
     }
 }
