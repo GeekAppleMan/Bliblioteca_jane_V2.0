@@ -35,6 +35,7 @@ namespace Proyecto_Biblioteca.Alumnos
                 estatus = "2";
             }
             obj_alumno.modificar(txt_matricula.Text, txt_nombres.Text, txt_apellidos.Text, txt_domicilio.Text,estatus);
+            this.Close();
         }
     }
 }

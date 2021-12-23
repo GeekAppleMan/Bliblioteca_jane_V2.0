@@ -81,6 +81,7 @@ namespace Proyecto_Biblioteca
             this.txt_usuario.TabIndex = 2;
             this.txt_usuario.Text = "Escribir usuario";
             this.txt_usuario.Enter += new System.EventHandler(this.txt_usuario_Enter);
+            this.txt_usuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_usuario_KeyPress);
             this.txt_usuario.Leave += new System.EventHandler(this.txt_usuario_Leave);
             // 
             // txt_contraseña
@@ -97,6 +98,7 @@ namespace Proyecto_Biblioteca
             this.txt_contraseña.TabIndex = 3;
             this.txt_contraseña.Text = "Escribir contraseña";
             this.txt_contraseña.Enter += new System.EventHandler(this.txt_contraseña_Enter);
+            this.txt_contraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_contraseña_KeyPress);
             this.txt_contraseña.Leave += new System.EventHandler(this.txt_contraseña_Leave);
             // 
             // linkLabel1
@@ -158,7 +160,6 @@ namespace Proyecto_Biblioteca
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(539, 398);
             this.panel2.TabIndex = 0;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // pic_cerrar
             // 
@@ -208,7 +209,6 @@ namespace Proyecto_Biblioteca
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_Login";
-            this.Opacity = 0.95D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Frm_Login_Load);

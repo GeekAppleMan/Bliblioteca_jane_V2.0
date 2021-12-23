@@ -35,6 +35,7 @@ namespace Proyecto_Biblioteca.Libros
                 estatus = "2";
             }
             obj_libros.modificar(txt_codigo_libro.Text, txt_nombre.Text, txt_cantidad_libros.Text, txt_autor.Text, txt_genero.Text, txt_pais_autor.Text, txt_numero_pag.Text, txt_año_edicion.Text,estatus);
+            this.Close();
         }
     }
 }

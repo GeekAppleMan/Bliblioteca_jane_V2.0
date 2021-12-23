@@ -277,7 +277,6 @@ namespace Proyecto_Biblioteca.Alumnos
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.Name = "Frm_modificar_alumno";
-            this.Opacity = 0.95D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar";
             this.groupBox1.ResumeLayout(false);

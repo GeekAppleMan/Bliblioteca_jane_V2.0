@@ -33,14 +33,19 @@ namespace Proyecto_Biblioteca
             this.Matricula = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Contraseña = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Privilegios = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Modificar = new System.Windows.Forms.DataGridViewImageColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_agregar_usuario = new System.Windows.Forms.Button();
             this.btn_buscar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txt_usuario = new System.Windows.Forms.TextBox();
             this.lbl_usuario = new System.Windows.Forms.Label();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_usuario)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -58,7 +63,9 @@ namespace Proyecto_Biblioteca
             this.Matricula,
             this.Usuario,
             this.Contraseña,
+            this.Correo,
             this.Estatus,
+            this.Privilegios,
             this.Modificar,
             this.Eliminar});
             this.dgv_usuario.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -89,11 +96,23 @@ namespace Proyecto_Biblioteca
             this.Contraseña.MinimumWidth = 6;
             this.Contraseña.Name = "Contraseña";
             // 
+            // Correo
+            // 
+            this.Correo.HeaderText = "Correo";
+            this.Correo.MinimumWidth = 6;
+            this.Correo.Name = "Correo";
+            // 
             // Estatus
             // 
             this.Estatus.HeaderText = "Estatus";
             this.Estatus.MinimumWidth = 6;
             this.Estatus.Name = "Estatus";
+            // 
+            // Privilegios
+            // 
+            this.Privilegios.HeaderText = "Privilegios";
+            this.Privilegios.MinimumWidth = 6;
+            this.Privilegios.Name = "Privilegios";
             // 
             // Modificar
             // 
@@ -114,6 +133,7 @@ namespace Proyecto_Biblioteca
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.btn_agregar_usuario);
             this.panel1.Controls.Add(this.btn_buscar);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.txt_usuario);
@@ -124,6 +144,21 @@ namespace Proyecto_Biblioteca
             this.panel1.Size = new System.Drawing.Size(800, 50);
             this.panel1.TabIndex = 2;
             // 
+            // btn_agregar_usuario
+            // 
+            this.btn_agregar_usuario.BackgroundImage = global::Proyecto_Biblioteca.Properties.Resources.agregar_usuario;
+            this.btn_agregar_usuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_agregar_usuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_agregar_usuario.FlatAppearance.BorderSize = 0;
+            this.btn_agregar_usuario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_agregar_usuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_agregar_usuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_agregar_usuario.Location = new System.Drawing.Point(11, 3);
+            this.btn_agregar_usuario.Name = "btn_agregar_usuario";
+            this.btn_agregar_usuario.Size = new System.Drawing.Size(48, 47);
+            this.btn_agregar_usuario.TabIndex = 18;
+            this.btn_agregar_usuario.UseVisualStyleBackColor = true;
+            // 
             // btn_buscar
             // 
             this.btn_buscar.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -131,6 +166,8 @@ namespace Proyecto_Biblioteca
             this.btn_buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_buscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_buscar.FlatAppearance.BorderSize = 0;
+            this.btn_buscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_buscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_buscar.Location = new System.Drawing.Point(598, 3);
             this.btn_buscar.Name = "btn_buscar";
@@ -171,6 +208,24 @@ namespace Proyecto_Biblioteca
             this.lbl_usuario.TabIndex = 15;
             this.lbl_usuario.Text = "Nombre del usuario";
             // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.HeaderText = "Modificar";
+            this.dataGridViewImageColumn1.Image = global::Proyecto_Biblioteca.Properties.Resources.editar;
+            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn1.MinimumWidth = 6;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Width = 133;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.HeaderText = "Eliminar";
+            this.dataGridViewImageColumn2.Image = global::Proyecto_Biblioteca.Properties.Resources.eliminar;
+            this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn2.MinimumWidth = 6;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.Width = 133;
+            // 
             // Frm_usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -197,10 +252,15 @@ namespace Proyecto_Biblioteca
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txt_usuario;
         private System.Windows.Forms.Label lbl_usuario;
+        private System.Windows.Forms.Button btn_agregar_usuario;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Matricula;
         private System.Windows.Forms.DataGridViewTextBoxColumn Usuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn Contraseña;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Correo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estatus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Privilegios;
         private System.Windows.Forms.DataGridViewImageColumn Modificar;
         private System.Windows.Forms.DataGridViewImageColumn Eliminar;
     }

@@ -83,5 +83,58 @@ namespace Proyecto_Biblioteca
             Frm_Login obj_login = new Frm_Login();
             obj_login.Show();
         }
+
+        private void txt_correo_Leave(object sender, EventArgs e)
+        {
+            if (txt_correo.Text == "")
+            {
+                txt_correo.Text = "Escribir correo";
+                txt_correo.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txt_correo_Enter(object sender, EventArgs e)
+        {
+
+            if (txt_correo.Text == "Escribir correo")
+            {
+                txt_correo.Text = "";
+                txt_correo.ForeColor = Color.Black;
+            }
+        }
+
+        private void registrar()
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(txt_matricula.Text) || string.IsNullOrEmpty(txt_usuario.Text) || string.IsNullOrEmpty(txt_contraseña.Text) || string.IsNullOrEmpty(txt_correo.Text)|| txt_matricula.Text == "Escribir matricula" || txt_usuario.Text == "Escribir usuario" || txt_contraseña.Text == "Escribir contraseña" || txt_correo.Text == "Escribir correo")
+                {
+                    MessageBox.Show("Agregue todos los campos");
+                }
+                else
+                {
+                    Clases.Cls_registrar obj_registrar = new Clases.Cls_registrar();
+                    obj_registrar.registrar_usuario(txt_matricula.Text, txt_usuario.Text, txt_contraseña.Text, txt_correo.Text);
+                    this.Close();
+                }
+            }
+            catch (Exception)
+            {
+                
+            }
+        }
+
+        private void btn_registrar_Click(object sender, EventArgs e)
+        {
+            registrar();
+        }
+
+        private void txt_contraseña_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                registrar();
+            }
+        }
     }
 }

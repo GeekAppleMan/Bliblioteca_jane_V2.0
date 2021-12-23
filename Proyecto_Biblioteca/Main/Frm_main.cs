@@ -171,5 +171,10 @@ namespace Proyecto_Biblioteca
                 }
             }
         }
+
+        private void btn_cerrar_sesion_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

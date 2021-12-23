@@ -30,6 +30,8 @@ namespace Proyecto_Biblioteca
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.txt_correo = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.txt_matricula = new System.Windows.Forms.TextBox();
             this.pic_cerrar = new System.Windows.Forms.PictureBox();
@@ -49,6 +51,8 @@ namespace Proyecto_Biblioteca
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel2.Controls.Add(this.panel6);
+            this.panel2.Controls.Add(this.txt_correo);
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.txt_matricula);
             this.panel2.Controls.Add(this.pic_cerrar);
@@ -61,8 +65,31 @@ namespace Proyecto_Biblioteca
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(225, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(540, 385);
+            this.panel2.Size = new System.Drawing.Size(540, 449);
             this.panel2.TabIndex = 1;
+            // 
+            // panel6
+            // 
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Location = new System.Drawing.Point(20, 192);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(500, 1);
+            this.panel6.TabIndex = 15;
+            // 
+            // txt_correo
+            // 
+            this.txt_correo.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txt_correo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_correo.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.txt_correo.ForeColor = System.Drawing.Color.Gray;
+            this.txt_correo.Location = new System.Drawing.Point(20, 156);
+            this.txt_correo.Multiline = true;
+            this.txt_correo.Name = "txt_correo";
+            this.txt_correo.Size = new System.Drawing.Size(500, 30);
+            this.txt_correo.TabIndex = 2;
+            this.txt_correo.Text = "Escribir correo";
+            this.txt_correo.Enter += new System.EventHandler(this.txt_correo_Enter);
+            this.txt_correo.Leave += new System.EventHandler(this.txt_correo_Leave);
             // 
             // panel5
             // 
@@ -112,7 +139,7 @@ namespace Proyecto_Biblioteca
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Location = new System.Drawing.Point(20, 271);
+            this.panel4.Location = new System.Drawing.Point(20, 309);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(500, 1);
             this.panel4.TabIndex = 9;
@@ -120,7 +147,7 @@ namespace Proyecto_Biblioteca
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Location = new System.Drawing.Point(20, 200);
+            this.panel3.Location = new System.Drawing.Point(20, 248);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(500, 1);
             this.panel3.TabIndex = 8;
@@ -131,12 +158,13 @@ namespace Proyecto_Biblioteca
             this.btn_registrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_registrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_registrar.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.btn_registrar.Location = new System.Drawing.Point(20, 300);
+            this.btn_registrar.Location = new System.Drawing.Point(20, 345);
             this.btn_registrar.Name = "btn_registrar";
             this.btn_registrar.Size = new System.Drawing.Size(500, 50);
             this.btn_registrar.TabIndex = 0;
             this.btn_registrar.Text = "Registrar";
             this.btn_registrar.UseVisualStyleBackColor = false;
+            this.btn_registrar.Click += new System.EventHandler(this.btn_registrar_Click);
             // 
             // txt_contraseña
             // 
@@ -144,14 +172,15 @@ namespace Proyecto_Biblioteca
             this.txt_contraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_contraseña.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_contraseña.ForeColor = System.Drawing.Color.Gray;
-            this.txt_contraseña.Location = new System.Drawing.Point(20, 235);
+            this.txt_contraseña.Location = new System.Drawing.Point(20, 273);
             this.txt_contraseña.Multiline = true;
             this.txt_contraseña.Name = "txt_contraseña";
             this.txt_contraseña.PasswordChar = '*';
             this.txt_contraseña.Size = new System.Drawing.Size(500, 30);
-            this.txt_contraseña.TabIndex = 3;
+            this.txt_contraseña.TabIndex = 4;
             this.txt_contraseña.Text = "Escribir contraseña";
             this.txt_contraseña.Enter += new System.EventHandler(this.txt_contraseña_Enter);
+            this.txt_contraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_contraseña_KeyPress);
             this.txt_contraseña.Leave += new System.EventHandler(this.txt_contraseña_Leave);
             // 
             // txt_usuario
@@ -160,11 +189,11 @@ namespace Proyecto_Biblioteca
             this.txt_usuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_usuario.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.txt_usuario.ForeColor = System.Drawing.Color.Gray;
-            this.txt_usuario.Location = new System.Drawing.Point(20, 164);
+            this.txt_usuario.Location = new System.Drawing.Point(20, 212);
             this.txt_usuario.Multiline = true;
             this.txt_usuario.Name = "txt_usuario";
             this.txt_usuario.Size = new System.Drawing.Size(500, 30);
-            this.txt_usuario.TabIndex = 2;
+            this.txt_usuario.TabIndex = 3;
             this.txt_usuario.Text = "Escribir usuario";
             this.txt_usuario.Enter += new System.EventHandler(this.txt_usuario_Enter);
             this.txt_usuario.Leave += new System.EventHandler(this.txt_usuario_Leave);
@@ -176,7 +205,7 @@ namespace Proyecto_Biblioteca
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(225, 385);
+            this.panel1.Size = new System.Drawing.Size(225, 449);
             this.panel1.TabIndex = 2;
             // 
             // lbl_jane
@@ -185,7 +214,7 @@ namespace Proyecto_Biblioteca
             this.lbl_jane.AutoSize = true;
             this.lbl_jane.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_jane.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lbl_jane.Location = new System.Drawing.Point(8, 171);
+            this.lbl_jane.Location = new System.Drawing.Point(8, 203);
             this.lbl_jane.Name = "lbl_jane";
             this.lbl_jane.Size = new System.Drawing.Size(203, 28);
             this.lbl_jane.TabIndex = 0;
@@ -195,12 +224,11 @@ namespace Proyecto_Biblioteca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(765, 385);
+            this.ClientSize = new System.Drawing.Size(765, 449);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_registrar";
-            this.Opacity = 0.95D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_registrar";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Frm_registrar_FormClosed);
@@ -227,5 +255,7 @@ namespace Proyecto_Biblioteca
         private System.Windows.Forms.Label lbl_jane;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox txt_matricula;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.TextBox txt_correo;
     }
 }

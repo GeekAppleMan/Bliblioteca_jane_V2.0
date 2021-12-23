@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-12-2021 a las 20:26:23
+-- Tiempo de generación: 23-12-2021 a las 04:33:21
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.12
 
@@ -45,7 +45,7 @@ CREATE TABLE `tb_alumno` (
 
 INSERT INTO `tb_alumno` (`id_alumno`, `matricula`, `nombres`, `apellidos`, `domicilio`, `estatus`, `foto_perfil`, `semestre`, `carrera`) VALUES
 (1, '17340346', 'Jaime Alberto', 'Sanchez Martinez', 'Cuba 790', 1, 'C:\\fotos_test\\itn.png', 9, 'ISC'),
-(2, '123', 'noan', '', '', 1, 'C:\\fotos_test\\itn.png', 8, 'ISC');
+(2, '123', 'noan', 'gonzalez', 'prueba', 1, 'C:\\fotos_test\\itn.png', 8, 'ISC');
 
 -- --------------------------------------------------------
 
@@ -133,6 +133,7 @@ CREATE TABLE `tb_usuarios` (
   `matricula` varchar(50) NOT NULL,
   `usuario` varchar(50) NOT NULL,
   `contraseña` varchar(50) NOT NULL,
+  `correo` varchar(255) NOT NULL,
   `estatus` int(11) NOT NULL,
   `privilegios` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -141,9 +142,10 @@ CREATE TABLE `tb_usuarios` (
 -- Volcado de datos para la tabla `tb_usuarios`
 --
 
-INSERT INTO `tb_usuarios` (`id_usuario`, `matricula`, `usuario`, `contraseña`, `estatus`, `privilegios`) VALUES
-(1, '17340346', 'jaime', '123', 1, 1),
-(2, '123', 'noan', '123', 1, 2);
+INSERT INTO `tb_usuarios` (`id_usuario`, `matricula`, `usuario`, `contraseña`, `correo`, `estatus`, `privilegios`) VALUES
+(1, '17340346', 'jaime', '123', 'jaime@gmail.com\r\n', 1, 1),
+(2, '123', 'noan', '123', 'noan@gmail.com\r\n', 1, 1),
+(3, '1', 'jaime2', '123', 'jaime2@gmail.com', 1, 2);
 
 --
 -- Índices para tablas volcadas
@@ -227,7 +229,7 @@ ALTER TABLE `tb_prestamo`
 -- AUTO_INCREMENT de la tabla `tb_usuarios`
 --
 ALTER TABLE `tb_usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Restricciones para tablas volcadas

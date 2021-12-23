@@ -72,7 +72,6 @@ namespace Proyecto_Biblioteca
             this.dgv_alumnos.Size = new System.Drawing.Size(800, 400);
             this.dgv_alumnos.TabIndex = 3;
             this.dgv_alumnos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_alumnos_CellClick);
-            //this.dgv_alumnos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_alumnos_CellContentClick);
             // 
             // Matricula
             // 
@@ -140,6 +139,8 @@ namespace Proyecto_Biblioteca
             this.btn_buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_buscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_buscar.FlatAppearance.BorderSize = 0;
+            this.btn_buscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_buscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_buscar.Location = new System.Drawing.Point(598, 3);
             this.btn_buscar.Name = "btn_buscar";

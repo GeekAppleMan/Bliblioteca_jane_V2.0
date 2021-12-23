@@ -41,24 +41,26 @@ namespace Proyecto_Biblioteca
 
         private void dgv_usuario_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if ((e.ColumnIndex == 4 || e.ColumnIndex == 5) && e.RowIndex == -1)
+            if ((e.ColumnIndex == 6 || e.ColumnIndex == 7) && e.RowIndex == -1)
             {
 
             }
             else
             {
-                if (e.ColumnIndex == 4)
+                if (e.ColumnIndex == 6)
                 {
                     
                     obj_modificar.txt_matricula.Text = dgv_usuario[0, e.RowIndex].Value.ToString();
                     obj_modificar.txt_usuario.Text = dgv_usuario[1, e.RowIndex].Value.ToString();
                     obj_modificar.txt_contraseña.Text = dgv_usuario[2, e.RowIndex].Value.ToString();
-                    obj_modificar.combo_estatus.Text = dgv_usuario[3, e.RowIndex].Value.ToString();
+                    obj_modificar.txt_correo.Text = dgv_usuario[3, e.RowIndex].Value.ToString();
+                    obj_modificar.combo_estatus.Text = dgv_usuario[4, e.RowIndex].Value.ToString();
+                    obj_modificar.combo_privilegios.Text = dgv_usuario[5, e.RowIndex].Value.ToString();
                     Cls_usuarios.index = e.RowIndex;
                     obj_modificar.ShowDialog();
                     añadir();
                 }
-                if (e.ColumnIndex == 5)
+                if (e.ColumnIndex == 7)
                 {
                     DialogResult result = MessageBox.Show("¿Seguro que desea eliminar el usuario?", "Confirmar", MessageBoxButtons.YesNo);
                     if (result == DialogResult.Yes)

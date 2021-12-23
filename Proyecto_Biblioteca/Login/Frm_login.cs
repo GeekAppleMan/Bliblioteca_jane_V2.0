@@ -76,12 +76,31 @@ namespace Proyecto_Biblioteca
 
         private void btn_iniciar_sesion_Click(object sender, EventArgs e)
         {
-            Clases.Cls_login obj_login = new Clases.Cls_login();
-            obj_login.verificar_usuario_contraseña(txt_usuario.Text, txt_contraseña.Text,this);
-            
+            buscar();
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void buscar()
+        {
+            if (string.IsNullOrEmpty(txt_usuario.Text) || string.IsNullOrEmpty(txt_contraseña.Text) || txt_usuario.Text == "Escribir usuario" || txt_contraseña.Text == "Escribir contraseña")
+            {
+                MessageBox.Show("Ingresa todos los datos");
+            }
+            else
+            {
+                Clases.Cls_login obj_login = new Clases.Cls_login();
+                obj_login.verificar_usuario_contraseña(txt_usuario.Text, txt_contraseña.Text, this);
+            }
+        }
+
+        private void txt_contraseña_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                buscar();
+            }
+        }
+
+        private void txt_usuario_KeyPress(object sender, KeyPressEventArgs e)
         {
 
         }

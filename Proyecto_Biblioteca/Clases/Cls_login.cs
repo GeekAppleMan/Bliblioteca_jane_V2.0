@@ -25,16 +25,16 @@ namespace Proyecto_Biblioteca.Clases
             {
                 while (reader.Read())
                 {
-                    if (reader.GetString(4) == "1")
+                    if (reader.GetString(5) == "1")
                     {
-                        Frm_main.privilegio = Convert.ToInt32(reader.GetString(5));
+                        Frm_main.privilegio = Convert.ToInt32(reader.GetString(6));
                         Frm_main.nombre = reader.GetString(2);
                         login.Hide();
                         Frm_main obj_main = new Frm_main();
                         obj_main.Show();
                         Cls_Prestamos.matricula_usu = reader.GetString(1);
                     }
-                    else if (reader.GetString(4) == "2")
+                    else if (reader.GetString(5) == "2")
                     {
                         MessageBox.Show("El usuario esta inactivo");
                     }

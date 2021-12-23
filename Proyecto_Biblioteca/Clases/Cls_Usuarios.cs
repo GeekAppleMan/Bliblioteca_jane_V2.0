@@ -17,6 +17,7 @@ namespace Proyecto_Biblioteca
         public void buscar(DataGridView tabla, string matricula)
         {
             string estatus = "";
+            string privilegios = "";
             if (tabla_id.Columns.Count == 0)
             {
                 tabla_id.Columns.Add("id_usuario");
@@ -38,15 +39,23 @@ namespace Proyecto_Biblioteca
                 {
                     while (reader.Read())
                     {
-                        if (reader.GetString(4) == "1")
+                        if (reader.GetString(5) == "1")
                         {
                             estatus = "Activo";
                         }
-                        else if(reader.GetString(4) == "2")
+                        if(reader.GetString(5) == "2")
                         {
                             estatus = "Inactivo";
                         }
-                        tabla.Rows.Add(reader.GetString(1), reader.GetString(2), reader.GetString(3), estatus);
+                        if (reader.GetString(6) == "1")
+                        {
+                            privilegios = "Administrador";
+                        }
+                        if (reader.GetString(6) == "2")
+                        {
+                            privilegios = "Empleado";
+                        }
+                        tabla.Rows.Add(reader.GetString(1), reader.GetString(2), reader.GetString(3),reader.GetString(4) ,estatus,privilegios);
                         tabla_id.Rows.Add(reader.GetString(0));
                     }
                 }
@@ -72,19 +81,25 @@ namespace Proyecto_Biblioteca
 
                 if (reader.HasRows)
                 {
-                    while (reader.Read())
+                    if (reader.GetString(5) == "1")
                     {
-                        if (reader.GetString(4) == "1")
-                        {
-                            estatus = "Activo";
-                        }
-                        else if (reader.GetString(4) == "2")
-                        {
-                            estatus = "Inactivo";
-                        }
-                        tabla.Rows.Add(reader.GetString(1), reader.GetString(2), reader.GetString(3), estatus);
-                        tabla_id.Rows.Add(reader.GetString(0));
+                        estatus = "Activo";
                     }
+                    if (reader.GetString(5) == "2")
+                    {
+                        estatus = "Inactivo";
+                    }
+                    if (reader.GetString(6) == "1")
+                    {
+                        privilegios = "Administrador";
+                    }
+                    if (reader.GetString(6) == "2")
+                    {
+                        privilegios = "Empleado";
+                    }
+                    tabla.Rows.Add(reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), estatus, privilegios);
+                    tabla_id.Rows.Add(reader.GetString(0));
+                
                 }
                 else
                 {
@@ -96,11 +111,11 @@ namespace Proyecto_Biblioteca
 
         }
 
-        public void modificar(string matricula, string usuario, string contraseña, string estatus)
+        public void modificar(string matricula, string usuario, string contraseña,string correo ,string estatus,string privilegios)
         {
             try
             {
-                string query = "UPDATE `tb_usuarios` SET  `matricula`= " + "'" + matricula + "'" + ",`usuario`= " + "'" + usuario + "'" + ",`contraseña`= " + "'" + contraseña + "'" + ",`estatus`= " + "'" + estatus + "'" + "WHERE id_usuario = " + "'" + tabla_id.Rows[index]["id_usuario"].ToString() + "'";
+                string query = "UPDATE `tb_usuarios` SET  `matricula`= " + "'" + matricula + "'" + ",`usuario`= " + "'" + usuario + "'" + ",`contraseña`= " + "'" + contraseña + "'" + ",`estatus`= " + "'" + estatus + "'" + ",`privilegios`= " + "'" + privilegios + "'" + "WHERE id_usuario = " + "'" + tabla_id.Rows[index]["id_usuario"].ToString() + "'";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;

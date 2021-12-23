@@ -34,6 +34,7 @@ namespace Proyecto_Biblioteca
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_terminar_pedido = new System.Windows.Forms.Button();
             this.btnañadir = new System.Windows.Forms.Button();
             this.txt_cantidad_dias = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -78,7 +79,6 @@ namespace Proyecto_Biblioteca
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btn_terminar_pedido = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -136,6 +136,20 @@ namespace Proyecto_Biblioteca
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(361, 85);
             this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // btn_terminar_pedido
+            // 
+            this.btn_terminar_pedido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_terminar_pedido.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Italic);
+            this.btn_terminar_pedido.Location = new System.Drawing.Point(183, 2);
+            this.btn_terminar_pedido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_terminar_pedido.Name = "btn_terminar_pedido";
+            this.btn_terminar_pedido.Size = new System.Drawing.Size(175, 44);
+            this.btn_terminar_pedido.TabIndex = 8;
+            this.btn_terminar_pedido.Text = "Terminar";
+            this.btn_terminar_pedido.UseVisualStyleBackColor = true;
+            this.btn_terminar_pedido.Click += new System.EventHandler(this.btn_terminar_pedido_Click);
             // 
             // btnañadir
             // 
@@ -644,20 +658,6 @@ namespace Proyecto_Biblioteca
             this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
             this.dataGridViewImageColumn2.Width = 125;
             // 
-            // btn_terminar_pedido
-            // 
-            this.btn_terminar_pedido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_terminar_pedido.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Italic);
-            this.btn_terminar_pedido.Location = new System.Drawing.Point(183, 2);
-            this.btn_terminar_pedido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_terminar_pedido.Name = "btn_terminar_pedido";
-            this.btn_terminar_pedido.Size = new System.Drawing.Size(175, 44);
-            this.btn_terminar_pedido.TabIndex = 8;
-            this.btn_terminar_pedido.Text = "Terminar";
-            this.btn_terminar_pedido.UseVisualStyleBackColor = true;
-            this.btn_terminar_pedido.Click += new System.EventHandler(this.btn_terminar_pedido_Click);
-            // 
             // Frm_Prestamos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -668,7 +668,6 @@ namespace Proyecto_Biblioteca
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Frm_Prestamos";
-            this.Opacity = 0.95D;
             this.Text = "Frm_Prestamos";
             this.Load += new System.EventHandler(this.Frm_Prestamos_Load);
             this.panel5.ResumeLayout(false);

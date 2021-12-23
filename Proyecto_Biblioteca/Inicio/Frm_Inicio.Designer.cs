@@ -84,7 +84,6 @@ namespace Proyecto_Biblioteca
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_Inicio";
-            this.Opacity = 0.95D;
             this.Text = "Frm_Inicio";
             this.Load += new System.EventHandler(this.Frm_Inicio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

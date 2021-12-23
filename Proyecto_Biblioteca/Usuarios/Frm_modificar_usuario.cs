@@ -21,6 +21,7 @@ namespace Proyecto_Biblioteca.Usuarios
         private void btn_modificar_Click(object sender, EventArgs e)
         {
             string estatus = "";
+            string privilegios = "";
             if (combo_estatus.Text == "Activo")
             {
                 estatus = "1";
@@ -29,7 +30,16 @@ namespace Proyecto_Biblioteca.Usuarios
             {
                 estatus = "2";
             }
-            obj_usuarios.modificar(txt_matricula.Text,txt_usuario.Text,txt_contraseña.Text,estatus);
+            if (combo_privilegios.Text == "Administrador")
+            {
+                privilegios = "1";
+            }
+            if (combo_privilegios.Text == "Empleado")
+            {
+                privilegios = "2";
+            }
+            obj_usuarios.modificar(txt_matricula.Text,txt_usuario.Text,txt_contraseña.Text,txt_correo.Text,estatus,privilegios);
+            this.Close();
         }
 
         private void btn_cancelar_Click(object sender, EventArgs e)

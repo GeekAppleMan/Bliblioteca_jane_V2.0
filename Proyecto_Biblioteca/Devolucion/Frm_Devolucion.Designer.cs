@@ -68,6 +68,8 @@ namespace Proyecto_Biblioteca
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(636, 1);
             this.button1.Name = "button1";
@@ -209,7 +211,6 @@ namespace Proyecto_Biblioteca
             this.Controls.Add(this.panel_busqueda);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_Devolucion";
-            this.Opacity = 0.95D;
             this.Text = "Frm_Historial";
             this.panel_busqueda.ResumeLayout(false);
             this.panel_busqueda.PerformLayout();

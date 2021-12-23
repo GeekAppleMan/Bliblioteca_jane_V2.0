@@ -32,6 +32,14 @@ namespace Proyecto_Biblioteca.Usuarios
             this.combo_estatus = new System.Windows.Forms.ComboBox();
             this.lbl_estatus = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.combo_privilegios = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.txt_correo = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_cancelar = new System.Windows.Forms.Button();
+            this.btn_modificar = new System.Windows.Forms.Button();
             this.txt_usuario = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_usuario = new System.Windows.Forms.Label();
@@ -42,8 +50,6 @@ namespace Proyecto_Biblioteca.Usuarios
             this.lbl_matricula = new System.Windows.Forms.Label();
             this.txt_matricula = new System.Windows.Forms.TextBox();
             this.lbl_contraseña = new System.Windows.Forms.Label();
-            this.btn_cancelar = new System.Windows.Forms.Button();
-            this.btn_modificar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +62,7 @@ namespace Proyecto_Biblioteca.Usuarios
             this.combo_estatus.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.combo_estatus.Location = new System.Drawing.Point(16, 280);
+            this.combo_estatus.Location = new System.Drawing.Point(16, 354);
             this.combo_estatus.Name = "combo_estatus";
             this.combo_estatus.Size = new System.Drawing.Size(335, 29);
             this.combo_estatus.TabIndex = 8;
@@ -68,7 +74,7 @@ namespace Proyecto_Biblioteca.Usuarios
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_estatus.AutoSize = true;
             this.lbl_estatus.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_estatus.Location = new System.Drawing.Point(16, 250);
+            this.lbl_estatus.Location = new System.Drawing.Point(16, 324);
             this.lbl_estatus.Name = "lbl_estatus";
             this.lbl_estatus.Size = new System.Drawing.Size(77, 23);
             this.lbl_estatus.TabIndex = 66;
@@ -77,6 +83,12 @@ namespace Proyecto_Biblioteca.Usuarios
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBox1.Controls.Add(this.combo_privilegios);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.panel6);
+            this.groupBox1.Controls.Add(this.panel4);
+            this.groupBox1.Controls.Add(this.txt_correo);
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btn_cancelar);
             this.groupBox1.Controls.Add(this.btn_modificar);
             this.groupBox1.Controls.Add(this.combo_estatus);
@@ -94,10 +106,102 @@ namespace Proyecto_Biblioteca.Usuarios
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(380, 415);
+            this.groupBox1.Size = new System.Drawing.Size(380, 561);
             this.groupBox1.TabIndex = 59;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del usuario";
+            // 
+            // combo_privilegios
+            // 
+            this.combo_privilegios.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.combo_privilegios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.combo_privilegios.Font = new System.Drawing.Font("Century Gothic", 10.2F);
+            this.combo_privilegios.FormattingEnabled = true;
+            this.combo_privilegios.Items.AddRange(new object[] {
+            "Administrador",
+            "Empleado"});
+            this.combo_privilegios.Location = new System.Drawing.Point(18, 441);
+            this.combo_privilegios.Name = "combo_privilegios";
+            this.combo_privilegios.Size = new System.Drawing.Size(335, 29);
+            this.combo_privilegios.TabIndex = 73;
+            this.combo_privilegios.Text = "Administrador";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(18, 411);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(102, 23);
+            this.label2.TabIndex = 75;
+            this.label2.Text = "Privilegios";
+            // 
+            // panel6
+            // 
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Location = new System.Drawing.Point(18, 475);
+            this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(333, 1);
+            this.panel6.TabIndex = 74;
+            // 
+            // panel4
+            // 
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Location = new System.Drawing.Point(16, 312);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(333, 1);
+            this.panel4.TabIndex = 72;
+            // 
+            // txt_correo
+            // 
+            this.txt_correo.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txt_correo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_correo.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_correo.Location = new System.Drawing.Point(19, 287);
+            this.txt_correo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_correo.Name = "txt_correo";
+            this.txt_correo.Size = new System.Drawing.Size(330, 21);
+            this.txt_correo.TabIndex = 70;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(16, 250);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(194, 23);
+            this.label1.TabIndex = 71;
+            this.label1.Text = "Correo electronico";
+            // 
+            // btn_cancelar
+            // 
+            this.btn_cancelar.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Italic);
+            this.btn_cancelar.Location = new System.Drawing.Point(194, 506);
+            this.btn_cancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_cancelar.Name = "btn_cancelar";
+            this.btn_cancelar.Size = new System.Drawing.Size(171, 44);
+            this.btn_cancelar.TabIndex = 69;
+            this.btn_cancelar.Text = "Cancelar";
+            this.btn_cancelar.UseVisualStyleBackColor = true;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
+            // 
+            // btn_modificar
+            // 
+            this.btn_modificar.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Italic);
+            this.btn_modificar.Location = new System.Drawing.Point(17, 506);
+            this.btn_modificar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_modificar.Name = "btn_modificar";
+            this.btn_modificar.Size = new System.Drawing.Size(171, 44);
+            this.btn_modificar.TabIndex = 68;
+            this.btn_modificar.Text = "Modificar";
+            this.btn_modificar.UseVisualStyleBackColor = true;
+            this.btn_modificar.Click += new System.EventHandler(this.btn_modificar_Click);
             // 
             // txt_usuario
             // 
@@ -134,7 +238,7 @@ namespace Proyecto_Biblioteca.Usuarios
             // panel5
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Location = new System.Drawing.Point(16, 314);
+            this.panel5.Location = new System.Drawing.Point(16, 388);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(333, 1);
@@ -204,40 +308,15 @@ namespace Proyecto_Biblioteca.Usuarios
             this.lbl_contraseña.TabIndex = 55;
             this.lbl_contraseña.Text = "Contraseña";
             // 
-            // btn_cancelar
-            // 
-            this.btn_cancelar.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Italic);
-            this.btn_cancelar.Location = new System.Drawing.Point(190, 340);
-            this.btn_cancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_cancelar.Name = "btn_cancelar";
-            this.btn_cancelar.Size = new System.Drawing.Size(171, 44);
-            this.btn_cancelar.TabIndex = 69;
-            this.btn_cancelar.Text = "Cancelar";
-            this.btn_cancelar.UseVisualStyleBackColor = true;
-            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
-            // 
-            // btn_modificar
-            // 
-            this.btn_modificar.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Italic);
-            this.btn_modificar.Location = new System.Drawing.Point(13, 340);
-            this.btn_modificar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_modificar.Name = "btn_modificar";
-            this.btn_modificar.Size = new System.Drawing.Size(171, 44);
-            this.btn_modificar.TabIndex = 68;
-            this.btn_modificar.Text = "Modificar";
-            this.btn_modificar.UseVisualStyleBackColor = true;
-            this.btn_modificar.Click += new System.EventHandler(this.btn_modificar_Click);
-            // 
             // Frm_modificar_usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(380, 415);
+            this.ClientSize = new System.Drawing.Size(380, 561);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.Name = "Frm_modificar_usuario";
-            this.Opacity = 0.95D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar";
             this.groupBox1.ResumeLayout(false);
@@ -262,5 +341,11 @@ namespace Proyecto_Biblioteca.Usuarios
         private System.Windows.Forms.Button btn_cancelar;
         private System.Windows.Forms.Button btn_modificar;
         public System.Windows.Forms.ComboBox combo_estatus;
+        public System.Windows.Forms.ComboBox combo_privilegios;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel4;
+        public System.Windows.Forms.TextBox txt_correo;
+        private System.Windows.Forms.Label label1;
     }
 }

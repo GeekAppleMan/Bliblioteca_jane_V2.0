@@ -100,7 +100,6 @@ namespace Proyecto_Biblioteca.Devolucion
             this.Controls.Add(this.lbl_matricula);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_devolver";
-            this.Opacity = 0.95D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_devolver";
             this.ResumeLayout(false);
