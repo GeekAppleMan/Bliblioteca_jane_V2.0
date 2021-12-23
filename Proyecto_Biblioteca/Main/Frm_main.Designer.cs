@@ -84,7 +84,7 @@ namespace Proyecto_Biblioteca
             this.btn_cerrar_sesion.FlatAppearance.BorderSize = 0;
             this.btn_cerrar_sesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cerrar_sesion.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cerrar_sesion.ForeColor = System.Drawing.Color.Black;
+            this.btn_cerrar_sesion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btn_cerrar_sesion.Image = global::Proyecto_Biblioteca.Properties.Resources.salida;
             this.btn_cerrar_sesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_cerrar_sesion.Location = new System.Drawing.Point(0, 580);
@@ -98,6 +98,7 @@ namespace Proyecto_Biblioteca
             // 
             // btn_rating
             // 
+            this.btn_rating.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btn_rating.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_rating.FlatAppearance.BorderSize = 0;
             this.btn_rating.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -105,17 +106,18 @@ namespace Proyecto_Biblioteca
             this.btn_rating.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btn_rating.Image = global::Proyecto_Biblioteca.Properties.Resources.analitica_de_datos__1_;
             this.btn_rating.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_rating.Location = new System.Drawing.Point(4, 368);
+            this.btn_rating.Location = new System.Drawing.Point(3, 379);
             this.btn_rating.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_rating.Name = "btn_rating";
             this.btn_rating.Size = new System.Drawing.Size(192, 47);
             this.btn_rating.TabIndex = 5;
             this.btn_rating.Text = "Ratings";
-            this.btn_rating.UseVisualStyleBackColor = true;
+            this.btn_rating.UseVisualStyleBackColor = false;
             this.btn_rating.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_devolucion
             // 
+            this.btn_devolucion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btn_devolucion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_devolucion.FlatAppearance.BorderSize = 0;
             this.btn_devolucion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -129,11 +131,12 @@ namespace Proyecto_Biblioteca
             this.btn_devolucion.Size = new System.Drawing.Size(192, 47);
             this.btn_devolucion.TabIndex = 3;
             this.btn_devolucion.Text = "      Devolucion";
-            this.btn_devolucion.UseVisualStyleBackColor = true;
+            this.btn_devolucion.UseVisualStyleBackColor = false;
             this.btn_devolucion.Click += new System.EventHandler(this.btn_devolucion_Click);
             // 
             // btn_historial_prestamos
             // 
+            this.btn_historial_prestamos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btn_historial_prestamos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_historial_prestamos.FlatAppearance.BorderSize = 0;
             this.btn_historial_prestamos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -141,17 +144,18 @@ namespace Proyecto_Biblioteca
             this.btn_historial_prestamos.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btn_historial_prestamos.Image = global::Proyecto_Biblioteca.Properties.Resources.carpeta;
             this.btn_historial_prestamos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_historial_prestamos.Location = new System.Drawing.Point(3, 230);
+            this.btn_historial_prestamos.Location = new System.Drawing.Point(3, 226);
             this.btn_historial_prestamos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_historial_prestamos.Name = "btn_historial_prestamos";
             this.btn_historial_prestamos.Size = new System.Drawing.Size(192, 47);
             this.btn_historial_prestamos.TabIndex = 2;
             this.btn_historial_prestamos.Text = "  Historial";
-            this.btn_historial_prestamos.UseVisualStyleBackColor = true;
+            this.btn_historial_prestamos.UseVisualStyleBackColor = false;
             this.btn_historial_prestamos.Click += new System.EventHandler(this.btn_historial_prestamos_Click);
             // 
             // btnlibros
             // 
+            this.btnlibros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btnlibros.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnlibros.FlatAppearance.BorderSize = 0;
             this.btnlibros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -159,17 +163,18 @@ namespace Proyecto_Biblioteca
             this.btnlibros.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnlibros.Image = global::Proyecto_Biblioteca.Properties.Resources.carpeta;
             this.btnlibros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnlibros.Location = new System.Drawing.Point(3, 322);
+            this.btnlibros.Location = new System.Drawing.Point(3, 328);
             this.btnlibros.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnlibros.Name = "btnlibros";
             this.btnlibros.Size = new System.Drawing.Size(192, 47);
             this.btnlibros.TabIndex = 4;
             this.btnlibros.Text = "Libros";
-            this.btnlibros.UseVisualStyleBackColor = true;
+            this.btnlibros.UseVisualStyleBackColor = false;
             this.btnlibros.Click += new System.EventHandler(this.btnlibros_Click);
             // 
             // btnalumnos
             // 
+            this.btnalumnos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btnalumnos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnalumnos.FlatAppearance.BorderSize = 0;
             this.btnalumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -177,17 +182,18 @@ namespace Proyecto_Biblioteca
             this.btnalumnos.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnalumnos.Image = global::Proyecto_Biblioteca.Properties.Resources.usuario;
             this.btnalumnos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnalumnos.Location = new System.Drawing.Point(3, 470);
+            this.btnalumnos.Location = new System.Drawing.Point(3, 481);
             this.btnalumnos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnalumnos.Name = "btnalumnos";
             this.btnalumnos.Size = new System.Drawing.Size(192, 47);
             this.btnalumnos.TabIndex = 7;
             this.btnalumnos.Text = "Alumnos";
-            this.btnalumnos.UseVisualStyleBackColor = true;
+            this.btnalumnos.UseVisualStyleBackColor = false;
             this.btnalumnos.Click += new System.EventHandler(this.btnalumnos_Click);
             // 
             // btnusuarios
             // 
+            this.btnusuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btnusuarios.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnusuarios.FlatAppearance.BorderSize = 0;
             this.btnusuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -195,17 +201,18 @@ namespace Proyecto_Biblioteca
             this.btnusuarios.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnusuarios.Image = global::Proyecto_Biblioteca.Properties.Resources.usuario;
             this.btnusuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnusuarios.Location = new System.Drawing.Point(3, 417);
+            this.btnusuarios.Location = new System.Drawing.Point(3, 430);
             this.btnusuarios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnusuarios.Name = "btnusuarios";
             this.btnusuarios.Size = new System.Drawing.Size(192, 47);
             this.btnusuarios.TabIndex = 6;
             this.btnusuarios.Text = "Usuarios";
-            this.btnusuarios.UseVisualStyleBackColor = true;
+            this.btnusuarios.UseVisualStyleBackColor = false;
             this.btnusuarios.Click += new System.EventHandler(this.btnusuarios_Click);
             // 
             // btnprestamos
             // 
+            this.btnprestamos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btnprestamos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnprestamos.FlatAppearance.BorderSize = 0;
             this.btnprestamos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -213,13 +220,13 @@ namespace Proyecto_Biblioteca
             this.btnprestamos.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnprestamos.Image = global::Proyecto_Biblioteca.Properties.Resources.documento__1_;
             this.btnprestamos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnprestamos.Location = new System.Drawing.Point(3, 177);
+            this.btnprestamos.Location = new System.Drawing.Point(3, 175);
             this.btnprestamos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnprestamos.Name = "btnprestamos";
             this.btnprestamos.Size = new System.Drawing.Size(192, 47);
             this.btnprestamos.TabIndex = 1;
             this.btnprestamos.Text = "     Prestamos";
-            this.btnprestamos.UseVisualStyleBackColor = true;
+            this.btnprestamos.UseVisualStyleBackColor = false;
             this.btnprestamos.Click += new System.EventHandler(this.btnprestamos_Click);
             // 
             // pic_menu
