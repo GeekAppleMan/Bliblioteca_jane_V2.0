@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-12-2021 a las 04:33:21
+-- Tiempo de generación: 23-12-2021 a las 20:52:22
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.12
 
@@ -103,8 +103,8 @@ CREATE TABLE `tb_libro` (
 --
 
 INSERT INTO `tb_libro` (`id_libro`, `codigo_libro`, `cantidad_libros`, `nombre`, `autor`, `genero`, `pais_autor`, `no_pag`, `año_edicion`, `estatus`, `prestamos`) VALUES
-(1, '1', 16, 'Harry potter', 'prueba', 'prueba', 'USA', 200, '2000', 1, 13),
-(2, '2', 16, 'Harry potter 2', 'prueba', 'prueba', 'prueba', 200, '2001', 1, 7);
+(1, '1', 17, 'Harry potter', 'prueba', 'prueba', 'USA', 200, '2000', 1, 16),
+(2, '2', 16, 'Harry potter 2', 'prueba', 'prueba', 'prueba', 200, '2001', 1, 10);
 
 -- --------------------------------------------------------
 
@@ -144,8 +144,7 @@ CREATE TABLE `tb_usuarios` (
 
 INSERT INTO `tb_usuarios` (`id_usuario`, `matricula`, `usuario`, `contraseña`, `correo`, `estatus`, `privilegios`) VALUES
 (1, '17340346', 'jaime', '123', 'jaime@gmail.com\r\n', 1, 1),
-(2, '123', 'noan', '123', 'noan@gmail.com\r\n', 1, 1),
-(3, '1', 'jaime2', '123', 'jaime2@gmail.com', 1, 2);
+(2, '123', 'noan', '123', 'noan@gmail.com\r\n', 1, 1);
 
 --
 -- Índices para tablas volcadas
@@ -217,19 +216,19 @@ ALTER TABLE `tb_estatus`
 -- AUTO_INCREMENT de la tabla `tb_libro`
 --
 ALTER TABLE `tb_libro`
-  MODIFY `id_libro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_libro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `tb_prestamo`
 --
 ALTER TABLE `tb_prestamo`
-  MODIFY `id_prestamo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=109;
+  MODIFY `id_prestamo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=115;
 
 --
 -- AUTO_INCREMENT de la tabla `tb_usuarios`
 --
 ALTER TABLE `tb_usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Restricciones para tablas volcadas
