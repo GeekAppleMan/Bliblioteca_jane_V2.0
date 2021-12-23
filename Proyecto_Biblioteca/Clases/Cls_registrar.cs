@@ -10,7 +10,7 @@ namespace Proyecto_Biblioteca.Clases
 {
     class Cls_registrar : Cls_Conexion
     {
-        public void registrar_usuario(string matricula, string usuario, string contraseña, string correo)
+        public void registrar_usuario(string matricula, string usuario, string contraseña, string correo,Form principal)
         {
             try
             {
@@ -22,6 +22,7 @@ namespace Proyecto_Biblioteca.Clases
                 databaseConnection.Open();
                 reader = commandDatabase.ExecuteReader();
                 MessageBox.Show("Registro completado");
+                principal.Close();
             }
             catch (Exception)
             {

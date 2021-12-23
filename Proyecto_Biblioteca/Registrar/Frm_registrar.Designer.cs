@@ -89,6 +89,7 @@ namespace Proyecto_Biblioteca
             this.txt_correo.TabIndex = 2;
             this.txt_correo.Text = "Escribir correo";
             this.txt_correo.Enter += new System.EventHandler(this.txt_correo_Enter);
+            this.txt_correo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_correo_KeyPress);
             this.txt_correo.Leave += new System.EventHandler(this.txt_correo_Leave);
             // 
             // panel5
@@ -197,6 +198,7 @@ namespace Proyecto_Biblioteca
             this.txt_usuario.TabIndex = 3;
             this.txt_usuario.Text = "Escribir usuario";
             this.txt_usuario.Enter += new System.EventHandler(this.txt_usuario_Enter);
+            this.txt_usuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_usuario_KeyPress);
             this.txt_usuario.Leave += new System.EventHandler(this.txt_usuario_Leave);
             // 
             // panel1

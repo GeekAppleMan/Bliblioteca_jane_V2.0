@@ -118,155 +118,83 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="button_blank_red_14987" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\button_blank_red_14987.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="menu (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\menu (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cerrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cerrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icono-menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icono-menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cerrar-sesion (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cerrar-sesion (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="nota" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\nota.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="negocio (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\negocio (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="nota (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\nota (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Max" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Max.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="menu (6)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\menu (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_blank_yellow_14988" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\button_blank_yellow_14988.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="menu (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\menu (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cerrar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cerrar1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cerrar-sesion (5)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cerrar-sesion (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="atras" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\atras.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="menu-desplegable" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\menu-desplegable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pagina-de-inicio (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pagina-de-inicio (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-devolver-libro-96" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-devolver-libro-96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="editar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\editar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pagina-de-inicio (2)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pagina-de-inicio (2)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cerrar-sesion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cerrar-sesion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="analitica-de-datos (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\analitica-de-datos (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="menu_91084" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\menu_91084.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="usuario (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\usuario (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="menu (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\menu (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cerrar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cerrar1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="folder_saved_search_16890" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\folder_saved_search_16890.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="atras" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\atras.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="button_blank_blue_14984" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\button_blank_blue_14984.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cerrar-sesion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cerrar-sesion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="itn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\itn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Abstract-background-blue-and-red_1600x900" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Abstract-background-blue-and-red_1600x900.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="eliminar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\eliminar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="reloj" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\reloj.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cerrar-sesion (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cerrar-sesion (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pagina-de-inicio (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pagina-de-inicio (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Max" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Max.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cerrar-sesion (8)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cerrar-sesion (8).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cerrar-sesion (7)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cerrar-sesion (7).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Min1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Min1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="proximo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\proximo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cerrar-sesion (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cerrar-sesion (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="caja (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\caja (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="eliminar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eliminar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cerrar-sesion (6)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cerrar-sesion (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="negocio" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\negocio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="menu (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="menu (5)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\menu (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="documento" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\documento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Min" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Min.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="folder_saved_search_16890" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\folder_saved_search_16890.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Min1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Min1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="menu (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="menu (7)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\menu (7).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="agregar-usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\agregar-usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pagina-de-inicio (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pagina-de-inicio (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1486564398-menu2_81519" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1486564398-menu2_81519.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="button_blank_yellow_14988" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_blank_yellow_14988.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="salida" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\salida.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cerrar-sesion (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cerrar-sesion (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pagina-de-inicio (2)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pagina-de-inicio (2)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pagina-de-inicio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pagina-de-inicio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="itn1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\itn1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menu (6)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="anadir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\anadir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="caja (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\caja (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="avatardefault_92824" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\avatardefault_92824.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -274,43 +202,118 @@
   <data name="usuario1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\usuario1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="menu (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\menu (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cerrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cerrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pagina-de-inicio" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pagina-de-inicio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Abstract-background-blue-and-red_1600x900" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Abstract-background-blue-and-red_1600x900.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="editar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\editar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="menu (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="eliminar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\eliminar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="menu-desplegable" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu-desplegable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="usuario (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\usuario (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="anadir" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\anadir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="itn1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\itn1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="documento" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\documento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1486564398-menu2_81519" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1486564398-menu2_81519.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cerrar-sesion (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cerrar-sesion (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="documento (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\documento (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cerrar-sesion (7)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cerrar-sesion (7).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pagina-de-inicio (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pagina-de-inicio (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nota" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nota.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="usuario (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\usuario (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="carpeta" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\carpeta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="negocio (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\negocio (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="eliminar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eliminar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="reloj" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\reloj.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Min" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Min.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cerrar-sesion (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cerrar-sesion (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cerrar-sesion (5)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cerrar-sesion (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ajustes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ajustes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="analitica-de-datos (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\analitica-de-datos (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cerrar-sesion (9)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cerrar-sesion (9).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="documento (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\documento (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_blank_blue_14984" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_blank_blue_14984.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="salida" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\salida.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menu (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-devolver-libro-96" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-devolver-libro-96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="itn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\itn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_blank_red_14987" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_blank_red_14987.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="editar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\editar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menu (5)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nota (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nota (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="proximo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\proximo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="negocio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\negocio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icono-menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icono-menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cerrar-sesion (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cerrar-sesion (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menu_91084" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu_91084.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="agregar-usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\agregar-usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1486564412-plus_81511 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1486564412-plus_81511 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

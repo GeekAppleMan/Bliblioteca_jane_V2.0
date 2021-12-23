@@ -73,6 +73,16 @@ namespace Proyecto_Biblioteca.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1486564412_plus_81511__1_ {
+            get {
+                object obj = ResourceManager.GetObject("1486564412-plus_81511 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Abstract_background_blue_and_red_1600x900 {
             get {
                 object obj = ResourceManager.GetObject("Abstract-background-blue-and-red_1600x900", resourceCulture);

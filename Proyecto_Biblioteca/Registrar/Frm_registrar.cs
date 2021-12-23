@@ -114,8 +114,7 @@ namespace Proyecto_Biblioteca
                 else
                 {
                     Clases.Cls_registrar obj_registrar = new Clases.Cls_registrar();
-                    obj_registrar.registrar_usuario(txt_matricula.Text, txt_usuario.Text, txt_contraseña.Text, txt_correo.Text);
-                    this.Close();
+                    obj_registrar.registrar_usuario(txt_matricula.Text, txt_usuario.Text, txt_contraseña.Text, txt_correo.Text,this);
                 }
             }
             catch (Exception)
@@ -134,13 +133,37 @@ namespace Proyecto_Biblioteca
             if (e.KeyChar == (char)Keys.Enter)
             {
                 registrar();
+                e.Handled = true;
             }
         }
 
         private void txt_matricula_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                registrar();
+                e.Handled = true;
+            }
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
+                e.Handled = true;
+            }
+        }
+
+        private void txt_correo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                registrar();
+                e.Handled = true;
+            }
+        }
+
+        private void txt_usuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                registrar();
                 e.Handled = true;
             }
         }

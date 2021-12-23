@@ -109,7 +109,7 @@ namespace Proyecto_Biblioteca
             else
             {
                 //eliminar prestamo
-                string query = "DELETE FROM `tb_devolucion` WHERE id_devolucion = " + "'" + tabla_prestamo.Rows[index]["id_devolucion"]+ "'";
+                string query = "DELETE FROM `tb_devolucion` WHERE id_devolucion = " + "'" + tabla_prestamo.Rows[index]["id_devolucion"] + "'";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;
@@ -118,6 +118,7 @@ namespace Proyecto_Biblioteca
                 reader = commandDatabase.ExecuteReader();
 
                 databaseConnection.Close();
+                tabla_prestamo.Rows.RemoveAt(index);
 
                 query = "SELECT cantidad_libros FROM tb_libro WHERE id_libro = " + "'" + tabla_prestamo.Rows[index]["id_libro"] + "'";
                 databaseConnection = new MySqlConnection(connectionString);

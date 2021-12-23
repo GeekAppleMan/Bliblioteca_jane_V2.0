@@ -99,6 +99,7 @@ namespace Proyecto_Biblioteca
 
         public void mas_prestado(DataGridView tabla, string codigo_libro, string cantidad)
         {
+            string estatus = "";
             if (codigo_libro == "")
             {
                 tabla.Rows.Clear();
@@ -115,7 +116,15 @@ namespace Proyecto_Biblioteca
                 {
                     while (reader.Read() )
                     {
-                        tabla.Rows.Add(reader.GetString(1), reader.GetString(3), reader.GetString(2), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(7), reader.GetString(8), reader.GetString(9),reader.GetString(10));
+                        if (reader.GetString(9) == "1")
+                        {
+                            estatus = "Activo";
+                        }
+                        else if (reader.GetString(9) == "2")
+                        {
+                            estatus = "Inactivo";
+                        }
+                        tabla.Rows.Add(reader.GetString(1), reader.GetString(3), reader.GetString(2), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(7), reader.GetString(8), estatus,reader.GetString(10));
                     }
                 }
                 else
@@ -128,7 +137,7 @@ namespace Proyecto_Biblioteca
             else
             {
                 tabla.Rows.Clear();
-                string query = "SELECT * FROM tb_libro WHERE codigo_libro LIKE " + "'%" + codigo_libro + "%'" + "ORDER BY prestamos DESC LIMIT " + "'" + cantidad + "'";
+                string query = "SELECT * FROM tb_libro WHERE codigo_libro LIKE " + "'%" + codigo_libro + "%'" + "ORDER BY prestamos DESC";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;
@@ -141,7 +150,15 @@ namespace Proyecto_Biblioteca
                 {
                     while (reader.Read())
                     {
-                        tabla.Rows.Add(reader.GetString(1), reader.GetString(3), reader.GetString(2), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(7), reader.GetString(8), reader.GetString(9), reader.GetString(10));
+                        if (reader.GetString(9) == "1")
+                        {
+                            estatus = "Activo";
+                        }
+                        else if (reader.GetString(9) == "2")
+                        {
+                            estatus = "Inactivo";
+                        }
+                        tabla.Rows.Add(reader.GetString(1), reader.GetString(3), reader.GetString(2), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(7), reader.GetString(8), estatus, reader.GetString(10));
                     }
                 }
                 else

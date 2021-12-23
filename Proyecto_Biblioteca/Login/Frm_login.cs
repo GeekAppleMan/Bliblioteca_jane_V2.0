@@ -97,12 +97,17 @@ namespace Proyecto_Biblioteca
             if (e.KeyChar == (char)Keys.Enter)
             {
                 buscar();
+                e.Handled = true;
             }
         }
 
         private void txt_usuario_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                buscar();
+                e.Handled = true;
+            }
         }
     }
 }
