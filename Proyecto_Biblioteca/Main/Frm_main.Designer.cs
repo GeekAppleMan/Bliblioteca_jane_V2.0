@@ -31,15 +31,6 @@ namespace Proyecto_Biblioteca
         {
             this.components = new System.ComponentModel.Container();
             this.panel_barra_izquierda = new System.Windows.Forms.Panel();
-            this.lbl_jane = new System.Windows.Forms.Label();
-            this.panel_barra_titulo = new System.Windows.Forms.Panel();
-            this.lbltitulo = new System.Windows.Forms.Label();
-            this.lbl_fecha = new System.Windows.Forms.Label();
-            this.lbl_hora = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.panel_contenedor = new System.Windows.Forms.Panel();
-            this.pic_fecha = new System.Windows.Forms.PictureBox();
-            this.pic_hora = new System.Windows.Forms.PictureBox();
             this.btn_cerrar_sesion = new System.Windows.Forms.Button();
             this.btn_rating = new System.Windows.Forms.Button();
             this.btn_devolucion = new System.Windows.Forms.Button();
@@ -49,11 +40,20 @@ namespace Proyecto_Biblioteca
             this.btnusuarios = new System.Windows.Forms.Button();
             this.btnprestamos = new System.Windows.Forms.Button();
             this.pic_menu = new System.Windows.Forms.PictureBox();
+            this.lbl_jane = new System.Windows.Forms.Label();
+            this.panel_barra_titulo = new System.Windows.Forms.Panel();
+            this.lbltitulo = new System.Windows.Forms.Label();
+            this.pic_fecha = new System.Windows.Forms.PictureBox();
+            this.lbl_fecha = new System.Windows.Forms.Label();
+            this.lbl_hora = new System.Windows.Forms.Label();
+            this.pic_hora = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel_contenedor = new System.Windows.Forms.Panel();
             this.panel_barra_izquierda.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_menu)).BeginInit();
             this.panel_barra_titulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_fecha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_hora)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_menu)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_barra_izquierda
@@ -76,113 +76,16 @@ namespace Proyecto_Biblioteca
             this.panel_barra_izquierda.Size = new System.Drawing.Size(200, 627);
             this.panel_barra_izquierda.TabIndex = 0;
             // 
-            // lbl_jane
-            // 
-            this.lbl_jane.AutoSize = true;
-            this.lbl_jane.Font = new System.Drawing.Font("Century Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_jane.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lbl_jane.Location = new System.Drawing.Point(12, 91);
-            this.lbl_jane.Name = "lbl_jane";
-            this.lbl_jane.Size = new System.Drawing.Size(167, 25);
-            this.lbl_jane.TabIndex = 0;
-            this.lbl_jane.Text = "Jane Software";
-            // 
-            // panel_barra_titulo
-            // 
-            this.panel_barra_titulo.Controls.Add(this.lbltitulo);
-            this.panel_barra_titulo.Controls.Add(this.pic_fecha);
-            this.panel_barra_titulo.Controls.Add(this.lbl_fecha);
-            this.panel_barra_titulo.Controls.Add(this.lbl_hora);
-            this.panel_barra_titulo.Controls.Add(this.pic_hora);
-            this.panel_barra_titulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_barra_titulo.Location = new System.Drawing.Point(200, 0);
-            this.panel_barra_titulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel_barra_titulo.Name = "panel_barra_titulo";
-            this.panel_barra_titulo.Size = new System.Drawing.Size(1172, 50);
-            this.panel_barra_titulo.TabIndex = 0;
-            // 
-            // lbltitulo
-            // 
-            this.lbltitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbltitulo.AutoSize = true;
-            this.lbltitulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltitulo.ForeColor = System.Drawing.Color.Black;
-            this.lbltitulo.Location = new System.Drawing.Point(551, 14);
-            this.lbltitulo.Name = "lbltitulo";
-            this.lbltitulo.Size = new System.Drawing.Size(59, 23);
-            this.lbltitulo.TabIndex = 18;
-            this.lbltitulo.Text = "Inicio";
-            // 
-            // lbl_fecha
-            // 
-            this.lbl_fecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_fecha.AutoSize = true;
-            this.lbl_fecha.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_fecha.ForeColor = System.Drawing.Color.Black;
-            this.lbl_fecha.Location = new System.Drawing.Point(1031, 15);
-            this.lbl_fecha.Name = "lbl_fecha";
-            this.lbl_fecha.Size = new System.Drawing.Size(62, 21);
-            this.lbl_fecha.TabIndex = 16;
-            this.lbl_fecha.Text = "Fecha";
-            // 
-            // lbl_hora
-            // 
-            this.lbl_hora.AutoSize = true;
-            this.lbl_hora.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_hora.ForeColor = System.Drawing.Color.Black;
-            this.lbl_hora.Location = new System.Drawing.Point(57, 15);
-            this.lbl_hora.Name = "lbl_hora";
-            this.lbl_hora.Size = new System.Drawing.Size(50, 21);
-            this.lbl_hora.TabIndex = 15;
-            this.lbl_hora.Text = "Hora";
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // panel_contenedor
-            // 
-            this.panel_contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_contenedor.Location = new System.Drawing.Point(200, 50);
-            this.panel_contenedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel_contenedor.Name = "panel_contenedor";
-            this.panel_contenedor.Size = new System.Drawing.Size(1172, 577);
-            this.panel_contenedor.TabIndex = 1;
-            // 
-            // pic_fecha
-            // 
-            this.pic_fecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic_fecha.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.pic_fecha.Image = global::Proyecto_Biblioteca.Properties.Resources.nota__1_;
-            this.pic_fecha.Location = new System.Drawing.Point(987, 5);
-            this.pic_fecha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pic_fecha.Name = "pic_fecha";
-            this.pic_fecha.Size = new System.Drawing.Size(40, 39);
-            this.pic_fecha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_fecha.TabIndex = 17;
-            this.pic_fecha.TabStop = false;
-            // 
-            // pic_hora
-            // 
-            this.pic_hora.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.pic_hora.Image = global::Proyecto_Biblioteca.Properties.Resources.reloj;
-            this.pic_hora.Location = new System.Drawing.Point(13, 6);
-            this.pic_hora.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pic_hora.Name = "pic_hora";
-            this.pic_hora.Size = new System.Drawing.Size(40, 39);
-            this.pic_hora.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_hora.TabIndex = 14;
-            this.pic_hora.TabStop = false;
-            // 
             // btn_cerrar_sesion
             // 
+            this.btn_cerrar_sesion.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_cerrar_sesion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_cerrar_sesion.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btn_cerrar_sesion.FlatAppearance.BorderSize = 0;
             this.btn_cerrar_sesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cerrar_sesion.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cerrar_sesion.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_cerrar_sesion.Image = global::Proyecto_Biblioteca.Properties.Resources.cerrar_sesion__8_;
+            this.btn_cerrar_sesion.ForeColor = System.Drawing.Color.Black;
+            this.btn_cerrar_sesion.Image = global::Proyecto_Biblioteca.Properties.Resources.salida;
             this.btn_cerrar_sesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_cerrar_sesion.Location = new System.Drawing.Point(0, 580);
             this.btn_cerrar_sesion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -190,7 +93,7 @@ namespace Proyecto_Biblioteca
             this.btn_cerrar_sesion.Size = new System.Drawing.Size(200, 47);
             this.btn_cerrar_sesion.TabIndex = 8;
             this.btn_cerrar_sesion.Text = "      Cerrar sesion";
-            this.btn_cerrar_sesion.UseVisualStyleBackColor = true;
+            this.btn_cerrar_sesion.UseVisualStyleBackColor = false;
             this.btn_cerrar_sesion.Click += new System.EventHandler(this.btn_cerrar_sesion_Click);
             // 
             // btn_rating
@@ -332,6 +235,104 @@ namespace Proyecto_Biblioteca
             this.pic_menu.TabStop = false;
             this.pic_menu.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // lbl_jane
+            // 
+            this.lbl_jane.AutoSize = true;
+            this.lbl_jane.Font = new System.Drawing.Font("Century Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_jane.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lbl_jane.Location = new System.Drawing.Point(12, 91);
+            this.lbl_jane.Name = "lbl_jane";
+            this.lbl_jane.Size = new System.Drawing.Size(167, 25);
+            this.lbl_jane.TabIndex = 0;
+            this.lbl_jane.Text = "Jane Software";
+            // 
+            // panel_barra_titulo
+            // 
+            this.panel_barra_titulo.Controls.Add(this.lbltitulo);
+            this.panel_barra_titulo.Controls.Add(this.pic_fecha);
+            this.panel_barra_titulo.Controls.Add(this.lbl_fecha);
+            this.panel_barra_titulo.Controls.Add(this.lbl_hora);
+            this.panel_barra_titulo.Controls.Add(this.pic_hora);
+            this.panel_barra_titulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_barra_titulo.Location = new System.Drawing.Point(200, 0);
+            this.panel_barra_titulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel_barra_titulo.Name = "panel_barra_titulo";
+            this.panel_barra_titulo.Size = new System.Drawing.Size(1172, 50);
+            this.panel_barra_titulo.TabIndex = 0;
+            // 
+            // lbltitulo
+            // 
+            this.lbltitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbltitulo.AutoSize = true;
+            this.lbltitulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltitulo.ForeColor = System.Drawing.Color.Black;
+            this.lbltitulo.Location = new System.Drawing.Point(551, 14);
+            this.lbltitulo.Name = "lbltitulo";
+            this.lbltitulo.Size = new System.Drawing.Size(59, 23);
+            this.lbltitulo.TabIndex = 18;
+            this.lbltitulo.Text = "Inicio";
+            // 
+            // pic_fecha
+            // 
+            this.pic_fecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pic_fecha.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.pic_fecha.Image = global::Proyecto_Biblioteca.Properties.Resources.nota__1_;
+            this.pic_fecha.Location = new System.Drawing.Point(987, 5);
+            this.pic_fecha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pic_fecha.Name = "pic_fecha";
+            this.pic_fecha.Size = new System.Drawing.Size(40, 39);
+            this.pic_fecha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_fecha.TabIndex = 17;
+            this.pic_fecha.TabStop = false;
+            // 
+            // lbl_fecha
+            // 
+            this.lbl_fecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_fecha.AutoSize = true;
+            this.lbl_fecha.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_fecha.ForeColor = System.Drawing.Color.Black;
+            this.lbl_fecha.Location = new System.Drawing.Point(1031, 15);
+            this.lbl_fecha.Name = "lbl_fecha";
+            this.lbl_fecha.Size = new System.Drawing.Size(62, 21);
+            this.lbl_fecha.TabIndex = 16;
+            this.lbl_fecha.Text = "Fecha";
+            // 
+            // lbl_hora
+            // 
+            this.lbl_hora.AutoSize = true;
+            this.lbl_hora.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_hora.ForeColor = System.Drawing.Color.Black;
+            this.lbl_hora.Location = new System.Drawing.Point(57, 15);
+            this.lbl_hora.Name = "lbl_hora";
+            this.lbl_hora.Size = new System.Drawing.Size(50, 21);
+            this.lbl_hora.TabIndex = 15;
+            this.lbl_hora.Text = "Hora";
+            // 
+            // pic_hora
+            // 
+            this.pic_hora.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.pic_hora.Image = global::Proyecto_Biblioteca.Properties.Resources.reloj;
+            this.pic_hora.Location = new System.Drawing.Point(13, 6);
+            this.pic_hora.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pic_hora.Name = "pic_hora";
+            this.pic_hora.Size = new System.Drawing.Size(40, 39);
+            this.pic_hora.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_hora.TabIndex = 14;
+            this.pic_hora.TabStop = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // panel_contenedor
+            // 
+            this.panel_contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_contenedor.Location = new System.Drawing.Point(200, 50);
+            this.panel_contenedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel_contenedor.Name = "panel_contenedor";
+            this.panel_contenedor.Size = new System.Drawing.Size(1172, 577);
+            this.panel_contenedor.TabIndex = 1;
+            // 
             // Frm_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -351,11 +352,11 @@ namespace Proyecto_Biblioteca
             this.SizeChanged += new System.EventHandler(this.Frm_main_SizeChanged);
             this.panel_barra_izquierda.ResumeLayout(false);
             this.panel_barra_izquierda.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_menu)).EndInit();
             this.panel_barra_titulo.ResumeLayout(false);
             this.panel_barra_titulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_fecha)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_hora)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_menu)).EndInit();
             this.ResumeLayout(false);
 
         }
