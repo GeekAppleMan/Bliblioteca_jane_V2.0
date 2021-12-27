@@ -51,11 +51,10 @@ namespace Proyecto_Biblioteca.Clases
 
         public bool verificar_correo(string correo)
         {
-            // por alguna razon no funciona
             bool verificar = false;
             try
             {
-                string query = "SELECT * FROM tb_usuarios WHERE correo = " + "'" + correo + "'";
+                string query = "SELECT * FROM tb_usuarios";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;
@@ -63,15 +62,18 @@ namespace Proyecto_Biblioteca.Clases
                 databaseConnection.Open();
                 reader = commandDatabase.ExecuteReader();
 
-                reader.Read();
-
-                string correo2 = reader.GetString(4);
-                if (correo2 == correo)
+                if (reader.HasRows)
                 {
-                    verificar = true;
+                    while(reader.Read())
+                    {
+                        string correo_bd = reader.GetString(4);
+                        if (correo_bd == correo)
+                        {
+                            verificar = true;
+                        }
+                    }
                 }
-                   
-          
+
                 databaseConnection.Close();
             }
             catch (Exception)
