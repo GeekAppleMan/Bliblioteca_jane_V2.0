@@ -98,6 +98,7 @@
     <Compile Include="Clases\Cls_Prestamos.cs" />
     <Compile Include="Clases\Cls_Libros.cs" />
     <Compile Include="Clases\Cls_Alumnos.cs" />
+    <Compile Include="Clases\Cls_recuperar_contraseña.cs" />
     <Compile Include="Clases\Cls_registrar.cs" />
     <Compile Include="Clases\Cls_Usuarios.cs" />
     <Compile Include="Devolucion\Frm_Devolucion.cs">

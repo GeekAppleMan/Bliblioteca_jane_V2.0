@@ -43,6 +43,7 @@ namespace Proyecto_Biblioteca.Recuperar_contraseña
             this.txt_contraseña = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_jane = new System.Windows.Forms.Label();
+            this.link_enviar_codigo = new System.Windows.Forms.LinkLabel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_cerrar)).BeginInit();
             this.panel1.SuspendLayout();
@@ -51,6 +52,7 @@ namespace Proyecto_Biblioteca.Recuperar_contraseña
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel2.Controls.Add(this.link_enviar_codigo);
             this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.txt_correo);
             this.panel2.Controls.Add(this.panel5);
@@ -95,7 +97,7 @@ namespace Proyecto_Biblioteca.Recuperar_contraseña
             // panel5
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Location = new System.Drawing.Point(20, 189);
+            this.panel5.Location = new System.Drawing.Point(20, 212);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(500, 1);
             this.panel5.TabIndex = 13;
@@ -104,13 +106,14 @@ namespace Proyecto_Biblioteca.Recuperar_contraseña
             // 
             this.txt_codigo.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txt_codigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_codigo.Enabled = false;
             this.txt_codigo.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.txt_codigo.ForeColor = System.Drawing.Color.Gray;
-            this.txt_codigo.Location = new System.Drawing.Point(20, 153);
+            this.txt_codigo.Location = new System.Drawing.Point(20, 176);
             this.txt_codigo.Multiline = true;
             this.txt_codigo.Name = "txt_codigo";
             this.txt_codigo.Size = new System.Drawing.Size(500, 30);
-            this.txt_codigo.TabIndex = 2;
+            this.txt_codigo.TabIndex = 3;
             this.txt_codigo.Text = "Escribir codigo";
             this.txt_codigo.Enter += new System.EventHandler(this.txt_codigo_Enter);
             this.txt_codigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_codigo_KeyPress);
@@ -141,7 +144,7 @@ namespace Proyecto_Biblioteca.Recuperar_contraseña
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Location = new System.Drawing.Point(20, 309);
+            this.panel4.Location = new System.Drawing.Point(20, 332);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(500, 1);
             this.panel4.TabIndex = 9;
@@ -149,7 +152,7 @@ namespace Proyecto_Biblioteca.Recuperar_contraseña
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Location = new System.Drawing.Point(20, 248);
+            this.panel3.Location = new System.Drawing.Point(20, 271);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(500, 1);
             this.panel3.TabIndex = 8;
@@ -166,18 +169,20 @@ namespace Proyecto_Biblioteca.Recuperar_contraseña
             this.btn_registrar.TabIndex = 0;
             this.btn_registrar.Text = "Modificar";
             this.btn_registrar.UseVisualStyleBackColor = false;
+            this.btn_registrar.Click += new System.EventHandler(this.btn_registrar_Click_1);
             // 
             // txt_verificar_contraseña
             // 
             this.txt_verificar_contraseña.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txt_verificar_contraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_verificar_contraseña.Enabled = false;
             this.txt_verificar_contraseña.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_verificar_contraseña.ForeColor = System.Drawing.Color.Gray;
-            this.txt_verificar_contraseña.Location = new System.Drawing.Point(20, 273);
+            this.txt_verificar_contraseña.Location = new System.Drawing.Point(20, 296);
             this.txt_verificar_contraseña.Multiline = true;
             this.txt_verificar_contraseña.Name = "txt_verificar_contraseña";
             this.txt_verificar_contraseña.Size = new System.Drawing.Size(500, 30);
-            this.txt_verificar_contraseña.TabIndex = 4;
+            this.txt_verificar_contraseña.TabIndex = 5;
             this.txt_verificar_contraseña.Text = "Verificar contraseña";
             this.txt_verificar_contraseña.Enter += new System.EventHandler(this.txt_verificar_contraseña_Enter);
             this.txt_verificar_contraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_verificar_contraseña_KeyPress);
@@ -187,13 +192,14 @@ namespace Proyecto_Biblioteca.Recuperar_contraseña
             // 
             this.txt_contraseña.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txt_contraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_contraseña.Enabled = false;
             this.txt_contraseña.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.txt_contraseña.ForeColor = System.Drawing.Color.Gray;
-            this.txt_contraseña.Location = new System.Drawing.Point(20, 212);
+            this.txt_contraseña.Location = new System.Drawing.Point(20, 235);
             this.txt_contraseña.Multiline = true;
             this.txt_contraseña.Name = "txt_contraseña";
             this.txt_contraseña.Size = new System.Drawing.Size(500, 30);
-            this.txt_contraseña.TabIndex = 3;
+            this.txt_contraseña.TabIndex = 4;
             this.txt_contraseña.Text = "Escribir contraseña nueva";
             this.txt_contraseña.Enter += new System.EventHandler(this.txt_contraseña_Enter);
             this.txt_contraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_contraseña_KeyPress);
@@ -220,6 +226,21 @@ namespace Proyecto_Biblioteca.Recuperar_contraseña
             this.lbl_jane.Size = new System.Drawing.Size(203, 28);
             this.lbl_jane.TabIndex = 0;
             this.lbl_jane.Text = "JANE SOFTWARE";
+            // 
+            // link_enviar_codigo
+            // 
+            this.link_enviar_codigo.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(214)))));
+            this.link_enviar_codigo.AutoSize = true;
+            this.link_enviar_codigo.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.link_enviar_codigo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.link_enviar_codigo.LinkColor = System.Drawing.Color.Black;
+            this.link_enviar_codigo.Location = new System.Drawing.Point(16, 137);
+            this.link_enviar_codigo.Name = "link_enviar_codigo";
+            this.link_enviar_codigo.Size = new System.Drawing.Size(124, 21);
+            this.link_enviar_codigo.TabIndex = 2;
+            this.link_enviar_codigo.TabStop = true;
+            this.link_enviar_codigo.Text = "Enviar codigo";
+            this.link_enviar_codigo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // Frm_recuperar_contraseña
             // 
@@ -258,5 +279,6 @@ namespace Proyecto_Biblioteca.Recuperar_contraseña
         private System.Windows.Forms.Label lbl_jane;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TextBox txt_correo;
+        private System.Windows.Forms.LinkLabel link_enviar_codigo;
     }
 }
