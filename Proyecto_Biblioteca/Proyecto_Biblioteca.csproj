@@ -136,6 +136,12 @@
     <Compile Include="Ratings\Frm_Ratings.Designer.cs">
       <DependentUpon>Frm_Ratings.cs</DependentUpon>
     </Compile>
+    <Compile Include="Recuperar_contraseña\Frm_recuperar_contraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recuperar_contraseña\Frm_recuperar_contraseña.Designer.cs">
+      <DependentUpon>Frm_recuperar_contraseña.cs</DependentUpon>
+    </Compile>
     <Compile Include="Usuarios\Frm_modificar_usuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ratings\Frm_Ratings.resx">
       <DependentUpon>Frm_Ratings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recuperar_contraseña\Frm_recuperar_contraseña.resx">
+      <DependentUpon>Frm_recuperar_contraseña.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registrar\Frm_registrar.resx">
       <DependentUpon>Frm_registrar.cs</DependentUpon>

@@ -228,3 +228,4 @@ C:\xampp\htdocs\Repos\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\obj\Debug\Proyec
 C:\xampp\htdocs\Repos\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\obj\Debug\Proyecto_Biblioteca.Ratings.Frm_Ratings.resources
 C:\xampp\htdocs\Repos\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\obj\Debug\Proyecto_Biblioteca.Usuarios.Frm_modificar_usuario.resources
 C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\obj\Debug\Proyecto_Biblioteca.Libros.Frm_añadir_libro.resources
+C:\Users\Jaime\Desktop\Git_hub_biblioteca\Proyecto_Biblioteca\Bliblioteca_jane_V2.0\Proyecto_Biblioteca\obj\Debug\Proyecto_Biblioteca.Recuperar_contraseña.Frm_recuperar_contraseña.resources

@@ -109,5 +109,12 @@ namespace Proyecto_Biblioteca
                 e.Handled = true;
             }
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Recuperar_contraseña.Frm_recuperar_contraseña obj_recuperar = new Recuperar_contraseña.Frm_recuperar_contraseña();
+            obj_recuperar.Show();
+            this.Hide();
+        }
     }
 }

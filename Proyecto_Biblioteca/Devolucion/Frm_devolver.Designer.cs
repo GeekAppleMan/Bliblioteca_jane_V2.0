@@ -55,6 +55,7 @@ namespace Proyecto_Biblioteca.Devolucion
             this.txt_codigo_libro.Name = "txt_codigo_libro";
             this.txt_codigo_libro.Size = new System.Drawing.Size(262, 21);
             this.txt_codigo_libro.TabIndex = 0;
+            this.txt_codigo_libro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_codigo_libro_KeyPress);
             // 
             // lbl_matricula
             // 
