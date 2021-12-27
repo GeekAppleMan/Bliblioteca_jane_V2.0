@@ -136,13 +136,8 @@ namespace Proyecto_Biblioteca.Recuperar_contraseña
             if (e.KeyChar == (char)Keys.Enter)
             {
                 e.Handled = true;
-                modificar();
+                mandar_correo();
             }
-        }
-
-        private void modificar()
-        {
-            
         }
 
         private void generar_codigo()
